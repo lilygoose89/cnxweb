@@ -5,10 +5,41 @@
   margin: 0;
   border: solid 0.25px powderblue;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 body {
   background-color: #fafafa;
   font-family: prompt;
-  color: #394861;
+  color: lightblack;
+}
+h1 {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+h5 {
+  font-size: 0.8em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+h6 {
+  font-size: 0.8em;
+  font-weight: 300;
 }
 p {
   font-weight: 300;
@@ -17,20 +48,251 @@ ul {
   list-style-type: disc;
   margin-left: 3%;
 }
+/* link styling stolen from wired.com */
+a {
+  text-decoration: none;
+  border-bottom: 3px solid #fee717;
+  box-shadow: inset 0 -5px 0 #fee717;
+  color: inherit;
+  -webkit-transition: background .15s cubic-bezier(.33,.66,.66,1);
+  transition: background .15s cubic-bezier(.33,.66,.66,1);
+}
+a:hover {
+  text-decoration: none;
+  background-color: #fee717;
+}
+.button-main {
+  background-color: transparent;
+  border: solid 3px #fee717;
+  color: lightblack;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 1% 2%;
+}
+.button-main:hover {
+  background-color: #fee717;
+  border: solid 3px #fee717;
+  color: lightblack;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 1% 2%;
+}
+/* header styles */
+nav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 10px grey;
+}
+nav h2 {
+  font-size: 2em;
+}
+nav a {
+  border-bottom: none;
+  box-shadow: none;
+}
+nav a:hover {
+  background-color: transparent;
+  text-shadow: 1px 0.5px 8px rgba(203, 203, 203, 0.6);
+}
+.nav-box {
+  min-height: 250px;
+  max-width: 100px;
+  overflow-x: visible;
+  padding: 0.5%;
+  background-color: #fee717;
+  -webkit-transform: skewY(4deg);
+  -moz-transform: skewY(4deg);
+  -ms-transform: skewY(4deg);
+  -o-transform: skewY(4deg);
+  transform: skewY(4deg);
+  background-color: #fee317;
+  width: 321px;
+  position: relative;
+  top: -2vh;
+  right: -12px;
+  height: 40px;
+  z-index: -1;
+}
+.nav-menu {
+  position: absolute;
+  top: 1vh;
+  right: 12px;
+}
+/* homepage header */
+.header-hero {
+  max-height: 100vh;
+  overflow: hidden;
+}
+.header-wrapper {
+  position: absolute;
+  z-index: 97;
+  top: 20%;
+  left: 10%;
+  width: 40%;
+  height: 50%;
+}
+.header-logo {
+  position: relative;
+  z-index: 98;
+  top: 0vh;
+  left: 15vw;
+  width: 52vw;
+}
+.header-down-arrow {
+  position: absolute;
+  top: 80%;
+  left: 49%;
+}
+section {
+  padding: 2% 20%;
+}
+.full-width {
+  padding: 0;
+}
+/* footer styles */
+footer {
+  padding: 2% 20%;
+}
+footer h2 {
+  color: #fee717;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+footer i {
+  color: #fee717;
+}
+footer a {
+  border-bottom: none;
+  box-shadow: none;
+}
+footer a:hover {
+  background-color: none;
+  text-shadow: 1px 0.5px 8px rgba(203, 203, 203, 0.6);
+}
+
+/* for styling the homepage nav and collapsed main nav*/
+/*header {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-image: url(images/stormygrass.jpeg);
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+header h1#logo {
+    display: inline-block;
+    height: 150px;
+    line-height: 150px;
+    float: left;
+    font-size: 60px;
+    color: white;
+    font-weight: 400;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+header nav {
+    display: inline-block;
+    float: right;
+}
+header nav a {
+    line-height: 150px;
+    margin-left: 20px;
+    color: #fee717;
+    font-weight: 700;
+    font-size: 18px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+header nav a:hover {
+    color: white;
+}
+header.smaller {
+    height: 75px;
+}
+header.smaller h1#logo {
+    width: 150px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 30px;
+}
+header.smaller nav a {
+    line-height: 75px;
+}
+
+@media all and (max-width: 660px) {
+    header h1#logo {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+    header nav {
+        display: block;
+        float: none;
+        height: 50px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    header nav a {
+        line-height: 50px;
+        margin: 0 10px;
+    }
+    header.smaller {
+        height: 75px;
+    }
+    header.smaller h1#logo {
+        height: 40px;
+        line-height: 40px;
+        font-size: 30px;
+    }
+    header.smaller nav {
+        height: 35px;
+    }
+    header.smaller nav a {
+        line-height: 35px;
+    }
+}*/
+
 
 /* helpers */
+
+/* background colors */
 .bg-navy {
-  background-color: #606c80
+  background-color: rgba(57,72,97,0.8);
 }
 .bg-yellow {
-  background-color: #fee717
+  background-color: #fee717;
+}
+.bg-yellow-transp {
+  background-color: rgba(254,231,24,0.7)
 }
 .bg-grey {
-  background-color: #cbcbcb
+  background-color: #cbcbcb;
 }
 .bg-white {
-  background-color: #fff
+  background-color: #fff;
 }
+/* text colors */
 .text-navy {
   color: #394861;
 }
@@ -43,7 +305,145 @@ ul {
 .text-white {
   color: #fff;
 }
-/* stylers/effects */
+/* alignment */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.container-center {
+  margin: 0 auto;
+  max-width: 960px;
+}
+/* padding/margins */
+.pad-all-xs {
+  padding: 1%;
+}
+.pad-all-s {
+  padding: 5%;
+}
+.pad-all-m {
+  padding: 10%;
+}
+.pad-all-l {
+  padding: 20%;
+}
+.pad-top-xs {
+  padding-top: 1%;
+}
+.pad-top-s {
+  padding-top: 5%;
+}
+.pad-top-m {
+  padding-top: 10%;
+}
+.pad-top-l {
+  padding-top: 20%;
+}
+.pad-right-s {
+  padding-right: 5%;
+}
+.pad-right-m {
+  padding-right: 10%;
+}
+.pad-right-l {
+  padding-right: 20%;
+}
+.pad-bottom-s {
+  padding-bottom: 5%;
+}
+.pad-bottom-m {
+  padding-bottom: 10%;
+}
+.pad-bottom-l {
+  padding-bottom: 20%;
+}
+.pad-left-s {
+  padding-left: 5%;
+}
+.pad-left-m {
+  padding-left: 10%;
+}
+.pad-left-l {
+  padding-left: 20%;
+}
+.margin-all-xs {
+  margin: 1%
+}
+.margin-all-s {
+  margin: 5%
+}
+.margin-all-m {
+  margin: 10%
+}
+.margin-all-l {
+  margin: 20%
+}
+.margin-top-xs {
+  margin-top: 1%
+}
+.margin-top-s {
+  margin-top: 5%
+}
+.margin-top-m {
+  margin-top: 10%
+}
+.margin-top-l {
+  margin-top: 20%
+}
+.margin-right-xs {
+  margin-right: 1%
+}
+.margin-right-s {
+  margin-right: 5%
+}
+.margin-right-m {
+  margin-right: 10%
+}
+.margin-right-l {
+  margin-right: 20%
+}
+.margin-bottom-xs {
+  margin-bottom: 1%
+}
+.margin-bottom-s {
+  margin-bottom: 5%
+}
+.margin-bottom-m {
+  margin-bottom: 10%
+}
+.margin-bottom-l {
+  margin-bottom: 20%
+}
+.margin-left-xs {
+  margin-left: 1%
+}
+.margin-left-s {
+  margin-left: 5%
+}
+.margin-left-m {
+  margin-left: 10%
+}
+.margin-left-l {
+  margin-left: 20%
+}
+.add-object-fit {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+/* position */
+.position-rel {
+  position: relative;
+}
+.position-abs {
+  position: absolute;
+}
+/* graphic elements */
 .hor-line {
   display: block;
   height: 1px;
@@ -51,4 +451,31 @@ ul {
   border-top: 1px solid #394861;
   margin: 1em 0;
   padding: 0;
+}
+.hor-line-yellow {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #FEE317;
+  margin: 1em 0;
+  padding: 0;
+}
+/*.bottom-skew {
+  -webkit-transform: skewY(2deg);
+  -moz-transform: skewY(2deg);
+  -ms-transform: skewY(2deg);
+  -o-transform: skewY(2deg);
+  transform: skewY(2deg);
+  background-color: #fee317;
+  width: 321px;
+  position: relative;
+  top: -1vh;
+  right: -12px;
+  height: 40px;
+  z-index: -1;
+}*/
+.vert-block-yellow {
+  background-color: #fee317;
+  height: 60%;
+  width: 15%;
 }
