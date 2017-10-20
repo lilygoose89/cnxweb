@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
-    <link href="https://fonts.googleapis.com/css?family=Prompt:300,500,700,900&amp;subset=thai" rel="stylesheet">
-    <link rel="stylesheet" href="style/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,500,700&amp;subset=thai" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.js"/>
@@ -16,16 +16,20 @@
   <header>
     <!-- this is the main sticky nav used throughout the website -->
     <nav id="main-nav" class="nav grid-spaceBetween">
-      <h2 class="col-2"><a>login</a></h2>
-      <a href="/" class="col-4 text-center"><h1>CNX Web</h1></a>
-      <div class="col-2 nav-box"></div>
-        <div class="nav-menu text-right">
-          <h2><a href="services.html">services</a></h2>
-          <h2><a href="examples.html">examples</a></h2>
-          <h2><a href="about.html">about</a></h2>
-          <h2><a href="contact.html">contact</a></h2>
-          <p><a>ไทย</a>/<a></a>EN</p>
-        </div>
+      <div class="col-2_sm-0">
+        <h2 class="text-nav hide-nav margin-left-xs margin-top-s"><a>login</a></h2>
+      </div>
+      <div class="col-8">
+        <h2 class="text-logo text-center"><a href="/">CNX Web</a></h2>
+      </div>
+      <div class="nav-box hide-nav"></div>
+      <div class="col-2 nav-menu hide-nav text-right">
+        <h2 class="text-nav"><a href="services.html">services</a></h2>
+        <h2 class="text-nav"><a href="examples.html">examples</a></h2>
+        <h2 class="text-nav"><a href="about.html">about</a></h2>
+        <h2 class="text-nav"><a href="contact.html">contact</a></h2>
+        <p class="text-nav"><a>ไทย</a>/<a></a>EN</p>
+      </div>
     </nav>
   </header>
   <!-- this is where each page's content will go -->
@@ -122,10 +126,10 @@
 </section>
 
   <!-- this is the main footer used throughout the site -->
-  <footer class="bg-navy">
+  <footer class="bg-navy-transp">
     <!-- this is the column on the left -->
     <div class="grid-middle-center text-center">
-      <div class="col-1_md-12 ">
+      <div class="col-1_md-12">
         <div class="col-12">
           <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
         </div>

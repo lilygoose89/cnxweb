@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
-    <link href="https://fonts.googleapis.com/css?family=Prompt:300,500,700,900&amp;subset=thai" rel="stylesheet">
-    <link rel="stylesheet" href="style/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,500,700&amp;subset=thai" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.js"/>
@@ -16,16 +16,20 @@
   <header>
     <!-- this is the main sticky nav used throughout the website -->
     <nav id="main-nav" class="nav grid-spaceBetween">
-      <h2 class="col-2"><a>login</a></h2>
-      <a href="/" class="col-4 text-center"><h1>CNX Web</h1></a>
-      <div class="col-2 nav-box"></div>
-        <div class="nav-menu text-right">
-          <h2><a href="services.html">services</a></h2>
-          <h2><a href="examples.html">examples</a></h2>
-          <h2><a href="about.html">about</a></h2>
-          <h2><a href="contact.html">contact</a></h2>
-          <p><a>ไทย</a>/<a></a>EN</p>
-        </div>
+      <div class="col-2_sm-0">
+        <h2 class="text-nav hide-nav margin-left-xs margin-top-s"><a>login</a></h2>
+      </div>
+      <div class="col-8">
+        <h2 class="text-logo text-center"><a href="/">CNX Web</a></h2>
+      </div>
+      <div class="nav-box hide-nav"></div>
+      <div class="col-2 nav-menu hide-nav text-right">
+        <h2 class="text-nav"><a href="services.html">services</a></h2>
+        <h2 class="text-nav"><a href="examples.html">examples</a></h2>
+        <h2 class="text-nav"><a href="about.html">about</a></h2>
+        <h2 class="text-nav"><a href="contact.html">contact</a></h2>
+        <p class="text-nav"><a>ไทย</a>/<a></a>EN</p>
+      </div>
     </nav>
   </header>
   <!-- this is where each page's content will go -->
@@ -39,59 +43,88 @@
       <div class="header-logo">
         <img src="images/cnxweb-logo.png" alt="CNX Web" class="logo"/>
       </div>
-      <h2>a new website to grow your <!-- add javascript here to change text that follows -->business</h2>
+      <h2>a new website for your <!-- add javascript here to change text that follows -->business</h2>
     </div>
   </div>
-  <div class="header-down-arrow text-yellow">
+  <div class="header-down-arrow text-yellow hide-nav">
     <h2><i class="fa fa-chevron-down" aria-hidden="true" style="font-size: 1.2em;"></i></h2>
   </div>
 </header>
 <!-- this is my introductory why work with me section -->
-<section id="why">
-  <!-- this is the yellow block which will float behind content -->
-  <div class="vert-block-yellow"></div>
-  <!-- this wrapper holds the text content -->
-  <div class="offset-wrapper">
-    <h3>Why work with me?</h3>
-    <!-- this is the line between the header and text -->
-    <div class="hor-line"></div>
-    <p class="text-p-bigger">
-      With my experience helping small businesses and startups, I don’t just help you build a website, I help you build a foundation to grow your business and reach your goals.
-    </p>
-  </div>
-  <div class="grid-spaceAround">
-    <h4 class="col-12 text-center">Your website will be:</h4>
-    <div class="col-3_md-12 bg-navy text-white text-center">
-      <h5>Beautiful</h5>
-      <i class="fa fa-magic" aria-hidden="true" style="font-size: 3em;"></i>
-      <p>
-        Elegant, minimalist design that focuses on the content. All websites are mobile responsive and will look great on any screen.
-      </p>
+<section id="why" class="grid">
+    <!-- this is the yellow block which will float behind content -->
+    <div class="col-2_sm-0_xs-0 vert-block-yellow"></div>
+    <!-- this wrapper that holds all of the content -->
+    <div class="col-10 overlap">
+      <!-- this wrapper holds the text content -->
+        <h3 class="text-h-bigger">Why work with me?</h3>
+        <!-- this is the line between the header and text -->
+        <div class="hor-line"></div>
+        <p class="text-p-bigger margin-left-m">
+          With my experience helping small businesses and startups, I don’t just help you build a website, I help you build a foundation to grow your business and reach your goals.
+        </p>
+      <div class="grid-spaceAround margin-top-s margin-bottom-s pad-right-s">
+        <h4 class="col-12 text-center">Your website will be:</h4>
+
+        
+        <div class="col-3_md-12 pad-websitewillbe text-white text-center">
+          <h5>Beautiful</h5>
+          <i class="fa fa-magic" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            Elegant, minimalist design that focuses on the content. All websites are mobile responsive and will look great on any screen.
+          </p>
+        </div>
+        
+        <div class="col-3_md-12 pad-websitewillbe text-white text-center">
+          <h5>Easy to Use</h5>
+          <i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            All the right things in all the right places - make it easy for your customers to find the information they need and get in contact.
+          </p>
+        </div>
+        
+        <div class="col-3_md-12 pad-websitewillbe text-white text-center">
+          <h5>Easy to Find</h5>
+          <i class="fa fa-search" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            Optimized for SEO and speedy load times. Put yourself in front of more customers so your business can grow.
+          </p>
+        </div>
+        
+
+        <!-- <div class="col-3_md-12 bg-navy pad-top-s bad-bottom-s pad-left-xs pad-right-xs text-white text-center">
+          <h5>Beautiful</h5>
+          <i class="fa fa-magic" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            Elegant, minimalist design that focuses on the content. All websites are mobile responsive and will look great on any screen.
+          </p>
+        </div>
+        <div class="col-3_md-12 bg-navy pad-all-xs text-white text-center">
+          <h5>Easy to Use</h5>
+          <i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            All the right things in all the right places - make it easy for your customers to find the information they need and get in contact.
+          </p>
+        </div>
+        <div class="col-3_md-12 bg-navy pad-all-xs text-white text-center">
+          <h5>Easy to Find</h5>
+          <i class="fa fa-search" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            Optimized for SEO and speedy load times. Put yourself in front of more customers so your business can grow.
+          </p>
+        </div> -->
+
+      </div>
+      <div>
+        <h3 class="text-h-bigger">FREE Thai-English translation</h3>
+        <h3 class="text-h-bigger">FREE to update your own website</h3>
+      </div>
+      <div class="margin-top-xs margin-left-m">
+        <p>
+          You just pay for hosting and the service package of your choice - starting at only ฿800 per month.
+        </p>
+      </div>
     </div>
-    <div class="col-3_md-12 bg-navy text-white text-center">
-      <h5>Easy to Use</h5>
-      <i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 3em;"></i>
-      <p>
-        All the right things in all the right places - make it easy for your customers to find the information they need and get in contact.
-      </p>
-    </div>
-    <div class="col-3_md-12 bg-navy text-white text-center">
-      <h5>Easy to Find</h5>
-      <i class="fa fa-search" aria-hidden="true" style="font-size: 3em;"></i>
-      <p>
-        Optimized for SEO and speedy load times. Put yourself in front of more customers so your business can grow.
-      </p>
-    </div>
-  </div>
-  <div>
-    <h3>FREE Thai-English translation</h3>
-    <h3>FREE to update your own website</h3>
-  </div>
-  <div>
-    <p>
-      You just pay for hosting and the service package of your choice - starting at only ฿800 per month.
-    </p>
-  </div>
 </section>
 <!-- this is my cta to get started -->
 <section class="grid full-width" id="cta">
@@ -130,15 +163,15 @@
     </div>
   </div>
   <!-- this is the yellow block which will float behind content -->
-  <div class="vert-block-yellow">
+  <div class="vert-block-yellow position-rel">
   </div>
 </section>
 
   <!-- this is the main footer used throughout the site -->
-  <footer class="bg-navy">
+  <footer class="bg-navy-transp">
     <!-- this is the column on the left -->
     <div class="grid-middle-center text-center">
-      <div class="col-1_md-12 ">
+      <div class="col-1_md-12">
         <div class="col-12">
           <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
         </div>

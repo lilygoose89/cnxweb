@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
-    <link href="https://fonts.googleapis.com/css?family=Prompt:300,500,700,900&amp;subset=thai" rel="stylesheet">
-    <link rel="stylesheet" href="style/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,500,700&amp;subset=thai" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.js"/>
@@ -15,20 +15,16 @@
   <body>
   <header>
     <!-- this is the main sticky nav used throughout the website -->
-    <nav id="main-nav" class="grid nav">
-      <div class="bg-yellow nav-menu">
-        <h2><a href="contact.html">contact</a></h2>
-        <div>
-          <p>
-            ไทย
-          </p>
-          <p>
-            /
-          </p>
-          <p>
-            EN
-          </p>
-        </div>
+    <nav class="grid-spaceBetween">
+      <div class="col-2_xs-0">
+        <h2 class="text-nav margin-left-xs margin-top-s"><a>login</a></h2>
+      </div>
+      <div class="col-8">
+        <h2 class="text-logo text-center"><a href="/">CNX Web</a></h2>
+      </div>
+      <div class="nav-box-mini position-abs grid"></div>
+      <div class="col-2_xs-0 nav-menu text-right">
+        <p class="text-nav"><a>ไทย</a>/<a></a>EN</p>
       </div>
     </nav>
   </header>

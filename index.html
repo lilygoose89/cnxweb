@@ -1,6 +1,16 @@
 ---
 layout: main
 title: cnx web
+websitewillbe:
+  - title: Beautiful
+    icon: magic
+    description: Elegant, minimalist design that focuses on the content. All websites are mobile responsive and will look great on any screen.
+  - title: Easy to Use
+    icon: thumbs-o-up
+    description: All the right things in all the right places - make it easy for your customers to find the information they need and get in contact.
+  - title: Easy to Find
+    icon: search
+    description: Optimized for SEO and speedy load times. Put yourself in front of more customers so your business can grow.
 ---
 <!-- this is my homepage header which should collapse into a sticky nav when scrolling down -->
 <header>
@@ -12,59 +22,72 @@ title: cnx web
       <div class="header-logo">
         <img src="images/cnxweb-logo.png" alt="CNX Web" class="logo"/>
       </div>
-      <h2>a new website to grow your <!-- add javascript here to change text that follows -->business</h2>
+      <h2>a new website for your <!-- add javascript here to change text that follows -->business</h2>
     </div>
   </div>
-  <div class="header-down-arrow text-yellow">
+  <div class="header-down-arrow text-yellow hide-nav">
     <h2><i class="fa fa-chevron-down" aria-hidden="true" style="font-size: 1.2em;"></i></h2>
   </div>
 </header>
 <!-- this is my introductory why work with me section -->
-<section id="why">
-  <!-- this is the yellow block which will float behind content -->
-  <div class="vert-block-yellow"></div>
-  <!-- this wrapper holds the text content -->
-  <div class="offset-wrapper">
-    <h3>Why work with me?</h3>
-    <!-- this is the line between the header and text -->
-    <div class="hor-line"></div>
-    <p class="text-p-bigger">
-      With my experience helping small businesses and startups, I don’t just help you build a website, I help you build a foundation to grow your business and reach your goals.
-    </p>
-  </div>
-  <div class="grid-spaceAround">
-    <h4 class="col-12 text-center">Your website will be:</h4>
-    <div class="col-3_md-12 bg-navy text-white text-center">
-      <h5>Beautiful</h5>
-      <i class="fa fa-magic" aria-hidden="true" style="font-size: 3em;"></i>
-      <p>
-        Elegant, minimalist design that focuses on the content. All websites are mobile responsive and will look great on any screen.
-      </p>
+<section id="why" class="grid">
+    <!-- this is the yellow block which will float behind content -->
+    <div class="col-2_sm-0_xs-0 vert-block-yellow"></div>
+    <!-- this wrapper that holds all of the content -->
+    <div class="col-10 overlap">
+      <!-- this wrapper holds the text content -->
+        <h3 class="text-h-bigger">Why work with me?</h3>
+        <!-- this is the line between the header and text -->
+        <div class="hor-line"></div>
+        <p class="text-p-bigger margin-left-m">
+          With my experience helping small businesses and startups, I don’t just help you build a website, I help you build a foundation to grow your business and reach your goals.
+        </p>
+      <div class="grid-spaceAround margin-top-s margin-bottom-s pad-right-s">
+        <h4 class="col-12 text-center">Your website will be:</h4>
+
+        {% for websitewillbe in page.websitewillbe %}
+        <div class="col-3_md-12 pad-websitewillbe text-white text-center">
+          <h5>{{websitewillbe.title}}</h5>
+          <i class="fa fa-{{websitewillbe.icon}}" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            {{websitewillbe.description}}
+          </p>
+        </div>
+        {% endfor %}
+
+        <!-- <div class="col-3_md-12 bg-navy pad-top-s bad-bottom-s pad-left-xs pad-right-xs text-white text-center">
+          <h5>Beautiful</h5>
+          <i class="fa fa-magic" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            Elegant, minimalist design that focuses on the content. All websites are mobile responsive and will look great on any screen.
+          </p>
+        </div>
+        <div class="col-3_md-12 bg-navy pad-all-xs text-white text-center">
+          <h5>Easy to Use</h5>
+          <i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            All the right things in all the right places - make it easy for your customers to find the information they need and get in contact.
+          </p>
+        </div>
+        <div class="col-3_md-12 bg-navy pad-all-xs text-white text-center">
+          <h5>Easy to Find</h5>
+          <i class="fa fa-search" aria-hidden="true" style="font-size: 3em;"></i>
+          <p class="text-thin">
+            Optimized for SEO and speedy load times. Put yourself in front of more customers so your business can grow.
+          </p>
+        </div> -->
+
+      </div>
+      <div>
+        <h3 class="text-h-bigger">FREE Thai-English translation</h3>
+        <h3 class="text-h-bigger">FREE to update your own website</h3>
+      </div>
+      <div class="margin-top-xs margin-left-m">
+        <p>
+          You just pay for hosting and the service package of your choice - starting at only ฿800 per month.
+        </p>
+      </div>
     </div>
-    <div class="col-3_md-12 bg-navy text-white text-center">
-      <h5>Easy to Use</h5>
-      <i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 3em;"></i>
-      <p>
-        All the right things in all the right places - make it easy for your customers to find the information they need and get in contact.
-      </p>
-    </div>
-    <div class="col-3_md-12 bg-navy text-white text-center">
-      <h5>Easy to Find</h5>
-      <i class="fa fa-search" aria-hidden="true" style="font-size: 3em;"></i>
-      <p>
-        Optimized for SEO and speedy load times. Put yourself in front of more customers so your business can grow.
-      </p>
-    </div>
-  </div>
-  <div>
-    <h3>FREE Thai-English translation</h3>
-    <h3>FREE to update your own website</h3>
-  </div>
-  <div>
-    <p>
-      You just pay for hosting and the service package of your choice - starting at only ฿800 per month.
-    </p>
-  </div>
 </section>
 <!-- this is my cta to get started -->
 <section class="grid full-width" id="cta">
@@ -103,6 +126,6 @@ title: cnx web
     </div>
   </div>
   <!-- this is the yellow block which will float behind content -->
-  <div class="vert-block-yellow">
+  <div class="vert-block-yellow position-rel">
   </div>
 </section>

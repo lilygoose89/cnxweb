@@ -12,37 +12,34 @@ img {
 body {
   background-color: #fafafa;
   font-family: prompt;
-  color: lightblack;
+  color: #333333;
 }
-h1 {
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 2em;
-}
-h2 {
+h1, h2 {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 h3 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 h4 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 h5 {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-weight: 300;
   text-transform: uppercase;
 }
 h6 {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-weight: 300;
 }
 p {
   font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 ul {
   list-style-type: disc;
@@ -65,7 +62,7 @@ a:hover {
   background-color: transparent;
   border: solid 3px #fee717;
   color: lightblack;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1% 2%;
 }
@@ -73,22 +70,29 @@ a:hover {
   background-color: #fee717;
   border: solid 3px #fee717;
   color: lightblack;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1% 2%;
 }
-/* header styles */
+/* nav styles */
 nav {
   position: fixed;
-  z-index: 99;
+  z-index: 97;
   top: 0;
   height: 50px;
   width: 100%;
   background-color: white;
   box-shadow: 2px 2px 10px grey;
 }
-nav h2 {
-  font-size: 2em;
+.text-nav {
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.text-logo {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 nav a {
   border-bottom: none;
@@ -99,37 +103,69 @@ nav a:hover {
   text-shadow: 1px 0.5px 8px rgba(203, 203, 203, 0.6);
 }
 .nav-box {
-  min-height: 250px;
-  max-width: 100px;
+  min-height: 140px;
+  width: 200px;
   overflow-x: visible;
   padding: 0.5%;
   background-color: #fee717;
+  position: absolute;
+  top: -2vh;
+  right: -2px;
+  z-index: 98;
   -webkit-transform: skewY(4deg);
   -moz-transform: skewY(4deg);
   -ms-transform: skewY(4deg);
   -o-transform: skewY(4deg);
   transform: skewY(4deg);
-  background-color: #fee317;
-  width: 321px;
+}
+.nav-box-mini {
+  min-height: 80px;
+  width: 200px;
+  overflow-x: visible;
+  padding: 0.5%;
+  background-color: #fee717;
   position: relative;
   top: -2vh;
-  right: -12px;
-  height: 40px;
-  z-index: -1;
+  right: -2px;
+  -webkit-transform: skewY(4deg);
+  -moz-transform: skewY(4deg);
+  -ms-transform: skewY(4deg);
+  -o-transform: skewY(4deg);
+  transform: skewY(4deg);
 }
 .nav-menu {
-  position: absolute;
+  position: relative;
+  z-index: 99;
   top: 1vh;
-  right: 12px;
 }
-/* homepage header */
+@media all and (max-width:768px) {
+  .nav-box {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+  }
+  .nav-box-mini {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+  }
+  .nav-menu {
+    position: relative;
+    z-index: 99;
+    top: 1vh;
+  }
+  .hide-nav {
+    display: none;
+  }
+}
+/* homepage header styles */
 .header-hero {
   max-height: 100vh;
   overflow: hidden;
 }
 .header-wrapper {
   position: absolute;
-  z-index: 97;
+  z-index: 95;
   top: 20%;
   left: 10%;
   width: 40%;
@@ -137,7 +173,7 @@ nav a:hover {
 }
 .header-logo {
   position: relative;
-  z-index: 98;
+  z-index: 96;
   top: 0vh;
   left: 15vw;
   width: 52vw;
@@ -147,9 +183,16 @@ nav a:hover {
   top: 80%;
   left: 49%;
 }
+/* section styles */
 section {
   padding: 2% 20%;
 }
+@media all and (max-width:768px) {
+  section {
+    padding: 2% 10%;
+  }
+}
+
 .full-width {
   padding: 0;
 }
@@ -160,8 +203,8 @@ footer {
 footer h2 {
   color: #fee717;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.5em;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 footer i {
   color: #fee717;
@@ -278,6 +321,9 @@ header.smaller nav a {
 
 /* background colors */
 .bg-navy {
+  background-color: #394861;
+}
+.bg-navy-transp {
   background-color: rgba(57,72,97,0.8);
 }
 .bg-yellow {
@@ -292,7 +338,19 @@ header.smaller nav a {
 .bg-white {
   background-color: #fff;
 }
-/* text colors */
+/* text */
+.text-thin {
+  font-weight: 200;
+}
+.text-p-bigger {
+  font-size: 1rem ;
+}
+.text-p-smaller {
+  font-size: 0.8rem ;
+}
+.text-h-bigger {
+  font-size: 1.5rem;
+}
 .text-navy {
   color: #394861;
 }
@@ -344,6 +402,9 @@ header.smaller nav a {
 .pad-top-l {
   padding-top: 20%;
 }
+.pad-right-xs {
+  padding-right: 1%;
+}
 .pad-right-s {
   padding-right: 5%;
 }
@@ -353,6 +414,9 @@ header.smaller nav a {
 .pad-right-l {
   padding-right: 20%;
 }
+.pad-bottom-xs {
+  padding-bottom: 1%;
+}
 .pad-bottom-s {
   padding-bottom: 5%;
 }
@@ -361,6 +425,9 @@ header.smaller nav a {
 }
 .pad-bottom-l {
   padding-bottom: 20%;
+}
+.pad-left-xs {
+  padding-left: 1%;
 }
 .pad-left-s {
   padding-left: 5%;
@@ -436,6 +503,11 @@ header.smaller nav a {
   width: 100%;
   height: 100%;
 }
+.pad-websitewillbe {
+  background-color: #394861;
+  padding: 2%;
+  margin: 1%;
+}
 /* position */
 .position-rel {
   position: relative;
@@ -443,6 +515,15 @@ header.smaller nav a {
 .position-abs {
   position: absolute;
 }
+.overlap {
+  margin: 2em -4.5em;
+}
+@media all and (max-width:768px) {
+  .overlap {
+    margin: 0;
+  }
+}
+
 /* graphic elements */
 .hor-line {
   display: block;
@@ -460,22 +541,6 @@ header.smaller nav a {
   margin: 1em 0;
   padding: 0;
 }
-/*.bottom-skew {
-  -webkit-transform: skewY(2deg);
-  -moz-transform: skewY(2deg);
-  -ms-transform: skewY(2deg);
-  -o-transform: skewY(2deg);
-  transform: skewY(2deg);
-  background-color: #fee317;
-  width: 321px;
-  position: relative;
-  top: -1vh;
-  right: -12px;
-  height: 40px;
-  z-index: -1;
-}*/
 .vert-block-yellow {
   background-color: #fee317;
-  height: 60%;
-  width: 15%;
 }
