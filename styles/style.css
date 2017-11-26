@@ -48,27 +48,27 @@ ul {
 /* link styling stolen from wired.com */
 a {
   text-decoration: none;
-  border-bottom: 3px solid #fee717;
-  box-shadow: inset 0 -5px 0 #fee717;
+  border-bottom: 3px solid #0ff4c6;
+  box-shadow: inset 0 -5px 0 #0ff4c6;
   color: inherit;
   -webkit-transition: background .15s cubic-bezier(.33,.66,.66,1);
   transition: background .15s cubic-bezier(.33,.66,.66,1);
 }
 a:hover {
   text-decoration: none;
-  background-color: #fee717;
+  background-color: #0ff4c6;
 }
 .button-main {
   background-color: transparent;
-  border: solid 3px #fee717;
+  border: solid 3px #0ff4c6;
   color: lightblack;
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1% 2%;
 }
 .button-main:hover {
-  background-color: #fee717;
-  border: solid 3px #fee717;
+  background-color: #0ff4c6;
+  border: solid 3px #0ff4c6;
   color: lightblack;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -107,7 +107,7 @@ nav a:hover {
   width: 200px;
   overflow-x: visible;
   padding: 0.5%;
-  background-color: #fee717;
+  background-color: #0ff4c6;
   position: absolute;
   top: -2vh;
   right: -2px;
@@ -123,7 +123,7 @@ nav a:hover {
   width: 200px;
   overflow-x: visible;
   padding: 0.5%;
-  background-color: #fee717;
+  background-color: #0ff4c6;
   position: relative;
   top: -2vh;
   right: -2px;
@@ -160,8 +160,8 @@ nav a:hover {
 }
 /* homepage header styles */
 .header-hero {
-  max-height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0ff4c6 , #c6f1e8, white);
 }
 .header-wrapper {
   position: absolute;
@@ -201,13 +201,13 @@ footer {
   padding: 2% 20%;
 }
 footer h2 {
-  color: #fee717;
+  color: #0ff4c6;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
 }
 footer i {
-  color: #fee717;
+  color: #0ff4c6;
 }
 footer a {
   border-bottom: none;
@@ -255,7 +255,7 @@ header nav {
 header nav a {
     line-height: 150px;
     margin-left: 20px;
-    color: #fee717;
+    color: #0ff4c6;
     font-weight: 700;
     font-size: 18px;
     -webkit-transition: all 0.3s;
@@ -320,24 +320,25 @@ header.smaller nav a {
 /* helpers */
 
 /* background colors */
-.bg-navy {
-  background-color: #394861;
+.bg-dark {
+  background-color: #071013;
 }
-.bg-navy-transp {
-  background-color: rgba(57,72,97,0.8);
+.bg-dark-transp {
+  background-color: rgba(7,16,19,0.8);
 }
-.bg-yellow {
-  background-color: #fee717;
+.bg-bright {
+  background-color: #0ff4c6;
 }
-.bg-yellow-transp {
-  background-color: rgba(254,231,24,0.7)
+.bg-bright-transp {
+  background-color: rgba(15,244,198,0.7)
 }
 .bg-grey {
-  background-color: #cbcbcb;
+  background-color: #798086;
 }
 .bg-white {
   background-color: #fff;
 }
+
 /* text */
 .text-thin {
   font-weight: 200;
@@ -352,10 +353,10 @@ header.smaller nav a {
   font-size: 1.5rem;
 }
 .text-navy {
-  color: #394861;
+  color: #071013;
 }
-.text-yellow {
-  color: #fee717;
+.text-bright {
+  color: #0ff4c6;
 }
 .text-grey {
   color: #cbcbcb;
@@ -504,7 +505,7 @@ header.smaller nav a {
   height: 100%;
 }
 .pad-websitewillbe {
-  background-color: #394861;
+  background-color: #071013;
   padding: 2%;
   margin: 1%;
 }
@@ -529,18 +530,18 @@ header.smaller nav a {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #394861;
+  border-top: 1px solid #071013;
   margin: 1em 0;
   padding: 0;
 }
-.hor-line-yellow {
+.hor-line-bright {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #FEE317;
+  border-top: 1px solid #0ff4c6;
   margin: 1em 0;
   padding: 0;
 }
-.vert-block-yellow {
-  background-color: #fee317;
+.vert-block-bright {
+  background-color: #0ff4c6;
 }
