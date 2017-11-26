@@ -74,6 +74,7 @@ a:hover {
   text-transform: uppercase;
   padding: 1% 2%;
 }
+
 /* nav styles */
 nav {
   position: fixed;
@@ -183,6 +184,23 @@ nav a:hover {
   top: 80%;
   left: 49%;
 }
+/* homepage cta styles */
+.cta-image-wrapper {
+  overflow-y: hidden;
+  max-height: 30vh;
+}
+.cta-image {
+  max-width: 105%;
+}
+@media all and (max-width:768px) {
+  .cta-image {
+    display: none;
+  }
+  .cta-text {
+    padding: 10%, 5%;
+    text-align: center;
+  }
+}
 /* section styles */
 section {
   padding: 2% 20%;
@@ -192,7 +210,6 @@ section {
     padding: 2% 10%;
   }
 }
-
 .full-width {
   padding: 0;
 }
@@ -320,16 +337,16 @@ header.smaller nav a {
 /* helpers */
 
 /* background colors */
-.bg-navy {
-  background-color: #394861;
+.bg-dark {
+  background-color: #01435d;
 }
-.bg-navy-transp {
-  background-color: rgba(57,72,97,0.8);
+.bg-dark-transp {
+  background-color: rgba(1,67,93,0.8);
 }
-.bg-yellow {
+.bg-bright {
   background-color: #fee717;
 }
-.bg-yellow-transp {
+.bg-bright-transp {
   background-color: rgba(254,231,24,0.7)
 }
 .bg-grey {
@@ -351,10 +368,10 @@ header.smaller nav a {
 .text-h-bigger {
   font-size: 1.5rem;
 }
-.text-navy {
-  color: #394861;
+.text-dark {
+  color: #01435d;
 }
-.text-yellow {
+.text-bright {
   color: #fee717;
 }
 .text-grey {
@@ -504,9 +521,17 @@ header.smaller nav a {
   height: 100%;
 }
 .pad-websitewillbe {
-  background-color: #394861;
+  background-color: #01435d;
   padding: 2%;
   margin: 1%;
+}
+.margin-text-nudge-r {
+  margin-left: 12%;
+}
+@media all and (max-width:768px) {
+  .margin-text-nudge-r {
+    margin-left: 0;
+  }
 }
 /* position */
 .position-rel {
@@ -518,7 +543,16 @@ header.smaller nav a {
 .overlap {
   margin: 2em -4.5em;
 }
+.image-wrapper {
+  overflow: hidden;
+}
 @media all and (max-width:768px) {
+  .position-rel {
+    position: static;
+  }
+  .position-abs {
+    position: static;
+  }
   .overlap {
     margin: 0;
   }
@@ -529,11 +563,11 @@ header.smaller nav a {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #394861;
+  border-top: 1px solid #01435d;
   margin: 1em 0;
   padding: 0;
 }
-.hor-line-yellow {
+.hor-line-bright {
   display: block;
   height: 1px;
   border: 0;
@@ -541,6 +575,6 @@ header.smaller nav a {
   margin: 1em 0;
   padding: 0;
 }
-.vert-block-yellow {
+.vert-block-bright {
   background-color: #fee317;
 }
