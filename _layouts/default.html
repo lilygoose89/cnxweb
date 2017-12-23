@@ -2,10 +2,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
-  <title> - </title>
-  <meta name="description" content=""/>
-  <meta name="keywords" content=""/>
-  <meta name="author" content="">
+  <title>{{page.title}} - {{page.tagline}}</title>
+  <meta name="description" content="{{page.description}}"/>
+  <meta name="keywords" content="{{page.keywords}}"/>
+  <meta name="author" content="{{page.author}}">
   <link href="https://fonts.googleapis.com/css?family=Athiti|Kanit:600&amp;subset=thai" rel="stylesheet">
   <link rel="stylesheet" href="/styles/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css"/>
@@ -34,7 +34,7 @@
       </div>
     </nav>
   </header>
-  
+  {{content}}
   <footer>
     <div>
       <i class="fa fa-envelope" aria-hidden="true"></i>
