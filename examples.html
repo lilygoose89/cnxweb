@@ -1,3 +1,36 @@
 ---
 layout: default
+title: CNX Web - Examples
+description: Portfolio of websites and and projects completed by CNX Web.
 ---
+<section>
+  <h1>Examples of my work</h1>
+  <h3>Click the website images below to learn more about each of the projects.</h3>
+  <div>
+    <div>
+      {% for example in site.example %}
+      <div>
+        <img src="{{site.example|image}}"/>
+      </div>
+      {% endfor %}
+    </div>
+    <div>
+      {% for example in site.example %}
+      <div>
+        <img src="{{site.example|image}}"/>
+      </div>
+      {% endfor %}
+    </div>
+    <div>
+      {% for example in site.example %}
+      <div>
+        <img src="{{site.example|image}}"/>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div>
+    <h3>Ready to get your own beautiful website?</h3>
+    <a class="button">Yes!</a>
+  </div>
+</section>

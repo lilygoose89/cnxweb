@@ -1,0 +1,101 @@
+---
+layout: default
+title:
+description:
+image:
+price:
+steps:
+  - number:
+    description:
+    details:
+what-include:
+  - include:
+what-else-add:
+  - add:
+what-not-include:
+  - not-include:
+form:
+faq:
+  - question:
+    answer:
+---
+<!-- copy styling from services section headers -->
+<section>
+  <div>
+    <img src="{{page.image}}" alt="{{page.title}} image"/>
+    <h1>{{page.title}}</h1>
+    <h2>{{page.price}}</h2>
+  </div>
+</section>
+<section>
+  <!-- the description of the service goes here ------------------------------>
+  {{content}}
+</section>
+<section>
+  <!-- the required steps for this service go here --------------------------->
+  {% for steps in page.steps %}
+  <div>
+    <h2>{{ steps.number }}</h2>
+  </div>
+  <div>
+    <h3>{{ description in steps.description }}</h3>
+    <h4>{{ details in steps.details }}</h4>
+  </div>
+  {% endfor %}
+</section>
+<section id="{{page.title}}-what">
+  <!-- what's included, optional, and not included for this service goes here -->
+  <h3>What's included?</h3>
+  <ul>
+    {% for what-include in page.what-include %}
+      <li>
+        {{ include in page.include }}
+      </li>
+    {% endfor %}
+  </ul>
+  <h3>What else can be added?</h3>
+  <ul>
+    {% for what-else-add in page.what-else-add %}
+    <li>
+      {{ add in page.what-else-add }}
+    </li>
+    {% endfor %}
+  </ul>
+  <h3>What's <i>not</i>included?</h3>
+    <ul>
+    {% for what-not-include in page.what-not-include %}
+      <li>
+        {{ not-include in page.what-not-include }}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+<section>
+  <h2>Let's do this!</h2>
+  <h4>Please complete the following form to submit your website request. Submitting all your content and materials now will help me to create your website faster, but they are not required in order to begin. If you’d like, you can <a href="link to download form">download a checklist to prepare at this link</a>.</h4>
+  <!-- the embedded form to sign up for this service goes here --------------->
+  <div>{{page.form}}</div>
+</section>
+<section>
+  <a><div>
+    <h2>get some website inspiration</h2>
+  </div></a>
+  <a><div>
+    <h2>get help with this form</h2>
+  </div></a>
+</section>
+<section id="{{page.title}}-faq">
+  <!-- the faq for this service  goes here ----------------------------------->
+  <div class="bg-grey">
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      {% for faq in page.faq %}
+      <li>
+        <!-- accordion style faqs go here -->
+        <h5>{{question in faq.question}}</h5>
+        <h6>{{answer in faq.answer}}</h6>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

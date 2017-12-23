@@ -2,3 +2,9 @@ collections:
   examples:
     output: true
     permalink: /:collection/:name
+  blog:
+    output: true
+    permalink: /:collection/:name
+  start:
+    output: true
+    permalink: /:collection/:name
