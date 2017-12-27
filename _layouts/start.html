@@ -7,9 +7,9 @@ price:
 steps:
   - number:
     description:
-    details:
+    detail:
 what-include:
-  - include:
+  - does-include:
 what-else-add:
   - add:
 what-not-include:
@@ -35,11 +35,11 @@ faq:
   <!-- the required steps for this service go here --------------------------->
   {% for steps in page.steps %}
   <div>
-    <h2>{{ steps.number }}</h2>
+    <h2>{{steps.number}}</h2>
   </div>
   <div>
-    <h3>{{ description in steps.description }}</h3>
-    <h4>{{ details in steps.details }}</h4>
+    <h3>{{steps.description}}</h3>
+    <h4>{{steps.detail}}</h4>
   </div>
   {% endfor %}
 </section>
@@ -49,7 +49,7 @@ faq:
   <ul>
     {% for what-include in page.what-include %}
       <li>
-        {{ include in page.include }}
+        {{include.does-include}}
       </li>
     {% endfor %}
   </ul>
@@ -57,7 +57,7 @@ faq:
   <ul>
     {% for what-else-add in page.what-else-add %}
     <li>
-      {{ add in page.what-else-add }}
+      {{what-else-add.add}}
     </li>
     {% endfor %}
   </ul>
@@ -65,7 +65,7 @@ faq:
     <ul>
     {% for what-not-include in page.what-not-include %}
       <li>
-        {{ not-include in page.what-not-include }}
+        {{what-not-include.not-include}}
       </li>
     {% endfor %}
   </ul>
@@ -92,8 +92,8 @@ faq:
       {% for faq in page.faq %}
       <li>
         <!-- accordion style faqs go here -->
-        <h5>{{question in faq.question}}</h5>
-        <h6>{{answer in faq.answer}}</h6>
+        <h5>{{faq.question}}</h5>
+        <h6>{{faq.answer}}</h6>
       </li>
       {% endfor %}
     </ul>
