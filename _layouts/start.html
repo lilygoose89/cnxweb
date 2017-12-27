@@ -22,9 +22,9 @@ faq:
 <!-- copy styling from services section headers -->
 <section>
   <div>
-    <img src="{{page.image}}" alt="{{page.title}} image"/>
-    <h1>{{page.title}}</h1>
-    <h2>{{page.price}}</h2>
+    <img src="{{page.plan-image}}" alt="{{page.title}} image"/>
+    <h1 class="text-bg-black">{{page.title}}</h1>
+    <h3>{{page.price}}</h3>
   </div>
 </section>
 <section>
@@ -35,7 +35,7 @@ faq:
   <!-- the required steps for this service go here --------------------------->
   {% for steps in page.steps %}
   <div>
-    <h2>{{steps.number}}</h2>
+    <h2 class="text-orange">{{steps.number}}</h2>
   </div>
   <div>
     <h3>{{steps.description}}</h3>
@@ -71,23 +71,15 @@ faq:
   </ul>
 </section>
 <section>
-  <h2>Let's do this!</h2>
+  <h2 class="text-bg-black">Let's do this!</h2>
   <h4>Please complete the following form to submit your website request. Submitting all your content and materials now will help me to create your website faster, but they are not required in order to begin. If you’d like, you can <a href="link to download form">download a checklist to prepare at this link</a>.</h4>
   <!-- the embedded form to sign up for this service goes here --------------->
   <div>{{page.form}}</div>
 </section>
-<section>
-  <a><div>
-    <h2>get some website inspiration</h2>
-  </div></a>
-  <a><div>
-    <h2>get help with this form</h2>
-  </div></a>
-</section>
 <section id="{{page.title}}-faq">
   <!-- the faq for this service  goes here ----------------------------------->
   <div class="bg-grey">
-    <h2>Frequently Asked Questions</h2>
+    <h3>Frequently Asked Questions</h3>
     <ul>
       {% for faq in page.faq %}
       <li>
@@ -98,4 +90,13 @@ faq:
       {% endfor %}
     </ul>
   </div>
+</section>
+<section class="text-center">
+  <a><div>
+    <h2 class="text-black">get some website inspiration</h2>
+  </div></a>
+  <div class="hor-line"></div>
+  <a><div>
+    <h2 class="text-black">get help with this form</h2>
+  </div></a>
 </section>

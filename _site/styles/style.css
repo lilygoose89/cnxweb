@@ -1,6 +1,172 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: solid 0.25px powderblue;
+}
+[class*=grid-],[class*=grid_],[class~=grid]{
+  margin: 0;
+}
+[class*=col-], [class*=col_], [class~=col] {
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* typography */
+h1,h2 {
+  font-family: 'Kanit', sans-serif;
+  color: white;
+}
+h3,h4,h5,h6,p {
+  font-family: 'Athiti', sans-serif;
+  color: #2d2a32;
+}
+.text-orange {
+  color: #f85a3e;
+}
+.text-white {
+  color: #fff;
+}
+.text-black {
+  color: #2d2a32;
+}
+.text-bg-black {
+  background-color: #2d2a32;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+
+/* site-wide padding */
+section {
+  padding: 3.5% 5.6%;
+}
+.hero-image {
+  background-size: cover;
+  background-position: center;
+  height: 78vh;
+}
+
+/* links and buttons */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+p a:hover {
+  text-decoration: underline;
+  color: inherit;
+  background-color: #ffd23f;
+}
+p a:visited {
+  color: inherit;
+}
+a.button {
+  background-color: #ffd23f;
+  color: #2d2a32;
+  font-weight: bold;
+  font-family: 'Athiti', serif;
+  line-height: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 45px;
+  padding: 5px 20px;
+}
+a.button:hover {
+  box-shadow:
+  transition: all .2s ease-in-out;
+}
+
+
+/* nav styles */
+nav a {
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.full-nav {
+
+}
+.nav-cta {
+
+}
+.translation-icon {
+  max-height: 40px;
+  max-width: 40px;
+}
+
+/* heading paddings */
+
+
+
+/* footer styles */
+.footer-icon {
+  color: white;
+  font-size: 2rem;
+}
+.line-icon {
+  max-height: 25px;
+  max-width: 25px;
+}
+
+
+/* borders and backgrounds */
+.hor-line {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #2d2a32;
+    margin: 1em 0;
+    padding: 0;
+}
+.hor-line-white {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid white;
+    margin: 1em 0;
+    padding: 0;
+}
 .bg-turq {
   background-color: #4ecdc4;
 }
+.bg-orange {
+  background-color: #f85a3e;
+}
+.bg-yellow {
+  background-color: #ffd23f;
+}
 .bg-black {
   background-color: #2d2a32;
+}
+.bg-grey {
+  background-color: #EFEFEF;
+}
+.outline-turq {
+  border: solid 5px #4ecdc4;
+}
+.outline-orange {
+  border: solid 5px #f85a3e;
+}
+
+/* positioning */
+.container-center {
+  margin: 0 auto !important;
+}
+.container-right {
+  margin-left: auto;
+  margin-right: 0;
 }

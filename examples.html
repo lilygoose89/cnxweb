@@ -10,27 +10,29 @@ description: Portfolio of websites and and projects completed by CNX Web.
     <div>
       {% for example in site.example %}
       <div>
-        <img src="{{site.example|image}}"/>
+        <img src="{{example.image limit:6}}"/>
       </div>
       {% endfor %}
     </div>
     <div>
       {% for example in site.example %}
       <div>
-        <img src="{{site.example|image}}"/>
+        <img src="{{example.image limit:5 offset:6}}"/>
       </div>
       {% endfor %}
     </div>
     <div>
       {% for example in site.example %}
       <div>
-        <img src="{{site.example|image}}"/>
+        <img src="{{example.image limit:5 offset:11}}"/>
       </div>
       {% endfor %}
     </div>
   </div>
-  <div>
-    <h3>Ready to get your own beautiful website?</h3>
-    <a href="start/entrepreneur.html" class="button">Yes!</a>
+  <div class="grid">
+    <div class="container-right text-right col-4">
+      <h3>Ready to get your own beautiful website?</h3>
+      <a href="start/entrepreneur.html" class="button">Yes!</a>
+    </div>
   </div>
 </section>

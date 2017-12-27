@@ -4,19 +4,27 @@ title: CNX Web - Blog Posts
 description: Tips, tricks, and useful information about websites and small business marketing.
 ---
 <section>
+  <div>
+    <img src="{{post.hero-image}}" alt="{{post.title}} hero image"/>
+    <h1 class="text-bg-black">post title</h1>
+  </div>
+  <!-- container for blog post and author card and tags -->
   {% for post in site.posts limit:1 %}
   <div>
     <img src="{{post.hero-image}}" alt="{{post.title}} hero image"/>
-    <h1>{{post.title}}</h1>
+    <h1 class="text-bg-black">{{post.title}}</h1>
   </div>
   <!-- container for blog post and author card and tags -->
-  <div>
+  <div class="grid">
     <!-- container for blog post content - left column -->
-    <h6>Published {{post.date | date: '%B %d, %Y'}}</h6>
-    <p>
+    <div class="col-9">
+      <h6>Published {{post.date | date: '%B %d, %Y'}}</h6>
+      <p>
       {{post.content}}
-    </p>
-    <div>
+      </p>
+    </div>
+    <!-- container for author card and tags - right column -->
+    <div class="col-3 text-center">
       <img src="{{post.author-image}}" alt="{{post.author}} image"/>
       <h5>Author: {{post.author}}</h5>
       <h5>Filed Under:</h5>
@@ -24,21 +32,20 @@ description: Tips, tricks, and useful information about websites and small busin
       <!-- tags go here -->
       </div>
     </div>
-    <!-- container for author card and tags - right column -->
   </div>
   {% endfor %}
   <div class="hor-lin"></div>
 </section>
 <section>
-  <h2>Older Posts:</h2>
+  <h2 class="text-bg-black">Older Posts:</h2>
   {% for posts in site.post limit:5 offset:1 %}
-  <div>
+  <div class="outline-turq">
     <h3>{{post.title}}</h3>
     <p>{{post.excerpt}}</p>
     <a href="{{post.url}}" class="button">Read More</a>
   </div>
   {% endfor %}
-  <h2>Explore Tags:</h2>
+  <h2 class="text-bg-black">Explore Tags:</h2>
   {% for tags in site.tags %}
   <!-- list of all tags go here linking to tag listing pages -->
   <div>

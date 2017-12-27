@@ -2,13 +2,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
-  <title>CNX Web - Website Starter Plan - </title>
+  <title>CNX Web - Website Starter Plan</title>
   <meta name="description" content=""/>
   <meta name="keywords" content=""/>
   <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css?family=Athiti|Kanit:600&amp;subset=thai" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Athiti|Kanit&amp;subset=thai" rel="stylesheet">
   <link rel="stylesheet" href="/styles/normalize.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css"/>
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -19,22 +19,33 @@
   <header>
     <!-- <div id="hero" class="hero-image" style="background-image: url('')">
     </div> -->
-    <nav>
-      <div class="bg-turq">
-        <div>
+    <nav class="grid">
+      <!-- main nav div splits into two for logo+links and getstarted+translationicon-->
+      <!-- splits again into 2 divs for logo and links -->
+      <div class="col-9 full-nav bg-turq grid">
+        <!-- logo -->
+        <div class="col-2">
           <a href="/"><img src="/images/cnx-web-logo.png" alt="cnx web logo"/></a>
         </div>
-        <a href="services"><h2>services</h2></a>
-        <a href="examples"><h2>examples</h2></a>
-        <a href="about"><h2>about</h2></a>
-        <a href="blog"><h2>blog</h2></a>
-        <a href="contact"><h2>contact</h2></a>
+        <!-- links -->
+        <div class="col-10 grid-spaceAround-bottom nav-links">
+          <a href="/services"><h2>services</h2></a>
+          <a href="/examples"><h2>examples</h2></a>
+          <a href="/about"><h2>about</h2></a>
+          <a href="/blog"><h2>blog</h2></a>
+          <a href="/contact"><h2>contact</h2></a>
+        </div>
       </div>
-      <div>
-        <a href="start/entrepreneur.html"><h2>get started</h2></a>
-      </div>
-      <div>
-        <a><img src="/images/orange-languageicon-english-thai.png" alt="english-thai translation icon"/></a>
+      <!-- and here it splits into two for getstarted+translationicon -->
+      <div class="col-3 grid-bottom nav-cta">
+        <!-- get started -->
+        <!-- <div class="col-9"> -->
+          <h2 class="col-9 text-orange"><a href="start/entrepreneur.html">get started</a></h2>
+        <!-- </div> -->
+        <!-- translation icon -->
+        <!-- <div class="col-3"> -->
+          <a class="col-3"><img class="translation-icon" src="/images/orange-languageicon-english-thai.png" alt="english-thai translation icon"/></a>
+        <!-- </div> -->
       </div>
     </nav>
   </header>
@@ -42,8 +53,8 @@
 <section>
   <div>
     <img src="" alt="CNX Web - Website Starter Plan image"/>
-    <h1>CNX Web - Website Starter Plan</h1>
-    <h2></h2>
+    <h1 class="text-bg-black">CNX Web - Website Starter Plan</h1>
+    <h3></h3>
   </div>
 </section>
 <section>
@@ -71,46 +82,47 @@
   </ul>
 </section>
 <section>
-  <h2>Let's do this!</h2>
+  <h2 class="text-bg-black">Let's do this!</h2>
   <h4>Please complete the following form to submit your website request. Submitting all your content and materials now will help me to create your website faster, but they are not required in order to begin. If you’d like, you can <a href="link to download form">download a checklist to prepare at this link</a>.</h4>
   <!-- the embedded form to sign up for this service goes here --------------->
   <div></div>
 </section>
-<section>
-  <a><div>
-    <h2>get some website inspiration</h2>
-  </div></a>
-  <a><div>
-    <h2>get help with this form</h2>
-  </div></a>
-</section>
 <section id="CNX Web - Website Starter Plan-faq">
   <!-- the faq for this service  goes here ----------------------------------->
   <div class="bg-grey">
-    <h2>Frequently Asked Questions</h2>
+    <h3>Frequently Asked Questions</h3>
     <ul>
       
     </ul>
   </div>
 </section>
+<section class="text-center">
+  <a><div>
+    <h2 class="text-black">get some website inspiration</h2>
+  </div></a>
+  <div class="hor-line"></div>
+  <a><div>
+    <h2 class="text-black">get help with this form</h2>
+  </div></a>
+</section>
 
-  <footer class="bg-black">
-    <div>
-      <a href="mailto:lily@cnxweb.site"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-      <a href="tel:+66612791306"><i class="fa fa-phone" aria-hidden="true"></i></a>
-      <div>
+  <footer class="grid bg-black text-center ">
+    <div class="col-2">
+      <h2><a href="mailto:lily@cnxweb.site"><i class="fa fa-envelope" aria-hidden="true"></i></a></h2>
+      <h2><a href="tel:+66612791306"><i class="fa fa-phone" aria-hidden="true"></i></a></h2>
+      <div class="container-center line-icon">
         <a target="blank" href="http://line.me/ti/p/~cnxlily"><img src="/images/lineicon.png" alt="english-thai translation icon"/></a>
       </div>
     </div>
-    <div>
+    <div class="col-8">
       <a href="start/entrepreneur.html"><h2>start your website</h2></a>
-      <div class="hor-line"></div>
+      <div class="hor-line-white"></div>
       <a href="contact.html"><h2>get in touch</h2></a>
     </div>
-    <div>
-      <a href="https://www.facebook.com/cnxwebsite/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+    <div class="col-2">
+      <h2><a href="https://www.facebook.com/cnxwebsite/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></h2>
+      <h2><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></h2>
+      <h2><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></h2>
     </div>
   </footer>
 </body>
