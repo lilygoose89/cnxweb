@@ -1,10 +1,18 @@
 ---
 layout: default
-title: CNX Web - Blog Posts
-description: Tips, tricks, and useful information about websites and small business marketing.
+title:
+description:
+author:
+author-image:
+date:
+hero-image:
+excerpt_separator: <!-- excerpt -->
+tags:
+  - websites
+keywords:
 ---
 <section>
-  {% for post in site.posts limit:1 %}
+  {{post.title}}
   <div>
     <img src="{{post.hero-image}}" alt="{{post.title}} hero image"/>
     <h1>{{post.title}}</h1>
@@ -14,35 +22,17 @@ description: Tips, tricks, and useful information about websites and small busin
     <!-- container for blog post content - left column -->
     <h6>Published {{post.date | date: '%B %d, %Y'}}</h6>
     <p>
-      {{post.content}}
+      {{content}}
     </p>
     <div>
       <img src="{{post.author-image}}" alt="{{post.author}} image"/>
       <h5>Author: {{post.author}}</h5>
       <h5>Filed Under:</h5>
       <div>
-      <!-- tags go here -->
+        {{tags in site.tags}}
       </div>
     </div>
     <!-- container for author card and tags - right column -->
   </div>
-  {% endfor %}
   <div class="hor-lin"></div>
-</section>
-<section>
-  <h2>Older Posts:</h2>
-  {% for posts in site.post limit:5 offset:1 %}
-  <div>
-    <h3>{{post.title}}</h3>
-    <p>{{post.excerpt}}</p>
-    <a href="{{post.url}}" class="button">Read More</a>
-  </div>
-  {% endfor %}
-  <h2>Explore Tags:</h2>
-  {% for tags in site.tags %}
-  <!-- list of all tags go here linking to tag listing pages -->
-  <div>
-    <h3></h3>
-  </div>
-  {% endfor %}
 </section>

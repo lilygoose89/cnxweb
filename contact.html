@@ -1,3 +1,36 @@
 ---
 layout: default
+title: CNX Web - Contact
+description: Get in touch with CNX Web with your questions about web design and business consulting in Chiang Mai.
 ---
+<section>
+  <h1>Get in touch</h1>
+  <h3>I’m here to help and to answer your questions.</h3>
+  <!-- embed contact form here ---------------------------------------------->
+  <div class="bg-orange">
+    <form method="POST" action="http://formspree.io/lily@cnxweb.site">
+      <h3>Name</h3>
+      <input type="name" name="name" placeholder="Your Name" required>
+      <h3>Email</h3>
+      <input type="email" name="email" placeholder="Your email" required>
+      <h3>Phone</h3>
+      <input type="tel" name="phone" placeholder="Your phone number" required>
+      <h3>Are you a current CNX Web client?</h3>
+      <select name="customer" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+      <h3>If yes, what is your current domain name?</h3>
+      <input type="url" name="customer-domain" placeholder="Your domain name" required>
+      <h3>What are you writing about today?</h3>
+      <select name="subject" required>
+        <option value="I'd like to learn more about your services">I'd like to learn more about your services</option>
+        <option value="I would like to hire you">I would like to hire you</option>
+        <option value="I would like to collaborate with you">I would like to collaborate with you</option>
+        <option value="Other">Other</option>
+      </select>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
