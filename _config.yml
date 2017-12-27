@@ -1,8 +1,8 @@
 collections:
-  examples:
+  example:
     output: true
     permalink: /:collection/:name
-  posts:
+  post:
     output: true
     permalink: /:collection/:name
   start:
