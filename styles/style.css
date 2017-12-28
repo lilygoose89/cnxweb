@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  border: solid 0.25px powderblue;
+  /* border: solid 0.25px powderblue; */
 }
 [class*=grid-],[class*=grid_],[class~=grid]{
   margin: 0;
@@ -20,9 +20,18 @@ h1,h2 {
   font-family: 'Kanit', sans-serif;
   color: white;
 }
+h2 {
+  font-size: 2.5rem;
+}
 h3,h4,h5,h6,p {
   font-family: 'Athiti', sans-serif;
   color: #2d2a32;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.2rem;
 }
 .text-orange {
   color: #f85a3e;
@@ -35,6 +44,11 @@ h3,h4,h5,h6,p {
 }
 .text-bg-black {
   background-color: #2d2a32;
+  display: inline-block;
+  padding: 0.3% 0.5%;
+}
+.text-caps {
+  text-transform: uppercase;
 }
 .text-center {
   text-align: center;
@@ -42,11 +56,20 @@ h3,h4,h5,h6,p {
 .text-right {
   text-align: right;
 }
+.text-b {
+  font-size: 2.5rem;
+}
+.text-m {
+  font-size: 1.5rem;
+}
 
 
 /* site-wide padding */
 section {
-  padding: 3.5% 5.6%;
+  padding: 7.5% 10%;
+}
+.hero-section {
+  padding: 7.5% 5.6% 0 5.6%;
 }
 .hero-image {
   background-size: cover;
@@ -92,6 +115,11 @@ a.button:hover {
 
 
 /* nav styles */
+nav {
+  position: fixed;
+  background: rgba(255, 255, 252, 0.5);
+  top: -1px;
+}
 nav h2 {
   font-weight: 300;
   font-size: 1rem;
@@ -162,6 +190,9 @@ nav a {
   }
 }
 @media all and (max-width:576px) {
+  nav {
+    background: none;
+  }
   .nav-links {
     display: none;
   }
@@ -173,7 +204,7 @@ nav a {
   }
   .mobile-menu {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 10px;
     top: 0px;
     height: 55px;
@@ -183,18 +214,22 @@ nav a {
 }
 
 
-/* heading paddings */
-
-
-
 /* footer styles */
 .footer-icon {
   color: white;
   font-size: 2rem;
 }
 .line-icon {
-  max-height: 25px;
-  max-width: 25px;
+  max-height: 40px;
+  max-width: 40px;
+}
+
+
+/* services page */
+.services-box {
+  min-width: 300px;
+  min-height: 260px;
+  font-family: 'Athiti', serif;
 }
 
 
@@ -236,12 +271,11 @@ nav a {
 .outline-orange {
   border: solid 5px #f85a3e;
 }
+
+
 /* padding/margins helpers ------------------------------------------------- */
 .container-center {
   margin: 0 auto !important;
-}
-.container-middle {
-  margin: auto 0 !important;
 }
 .container-right {
   margin-left: auto;
