@@ -98,6 +98,9 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
+a:visited {
+  color: inherit;
+}
 p a {
   text-decoration: none;
   border-bottom: 0px solid rgba(255, 210, 63, 0.7);
@@ -111,18 +114,10 @@ p a:hover {
   background-color: rgba(255, 210, 63, 0.7);
   }
 }
-a:visited {
-  color: inherit;
-}
-p a:hover {
-  text-decoration: underline;
-  color: inherit;
-  background-color: #ffd23f;
-}
 p a:visited {
   color: inherit;
 }
-a.button {
+.button {
   background-color: #ffd23f;
   color: #2d2a32;
   font-weight: bold;
@@ -132,10 +127,11 @@ a.button {
   text-transform: uppercase;
   border-radius: 45px;
   padding: 5px 20px;
+  position: relative;
 }
-a.button:hover {
-  box-shadow:
-  transition: all .2s ease-in-out;
+.button:hover {
+  transform: translateY(-4px);
+  transition: all 2s ease-in-out;
 }
 
 
@@ -252,8 +248,8 @@ nav a {
 
 /* services page */
 .line-icon-orange {
-  max-height: 30px;
-  max-width: 30px;
+  max-height: 28px;
+  max-width: 28px;
 }
 
 
