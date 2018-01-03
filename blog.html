@@ -4,12 +4,12 @@ title: CNX Web - Blog Posts
 description: Tips, tricks, and useful information about websites and small business marketing.
 ---
 <section>
-  <div>
-    <img src="{{post.hero-image}}" alt="{{post.title}} hero image"/>
-    <h1 class="text-bg-black">post title</h1>
+  {% for post in site.posts limit:1 %}
+  <div style="background-image: url('{{post.hero-image}}')">
+    <h1 class="text-bg-black">{{post.title}}</h1>
+    <a href="{{post.url}}" class="button">Read More</a>
   </div>
   <!-- container for blog post and author card and tags -->
-  {% for post in site.posts limit:1 %}
   <div>
     <img src="{{post.hero-image}}" alt="{{post.title}} hero image"/>
     <h1 class="text-bg-black">{{post.title}}</h1>
@@ -45,6 +45,8 @@ description: Tips, tricks, and useful information about websites and small busin
     <a href="{{post.url}}" class="button">Read More</a>
   </div>
   {% endfor %}
+</section>
+<section>
   <h2 class="text-bg-black">Explore Tags:</h2>
   {% for tags in site.tags %}
   <!-- list of all tags go here linking to tag listing pages -->

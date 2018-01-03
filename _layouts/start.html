@@ -26,24 +26,20 @@ faq:
     <h1 class="text-bg-black">{{page.title}}</h1>
     <h3>{{page.price}}</h3>
   </div>
-</section>
-<section>
   <!-- the description of the service goes here ------------------------------>
   {{content}}
-</section>
-<section>
   <!-- the required steps for this service go here --------------------------->
   {% for steps in page.steps %}
-  <div>
-    <h2 class="text-orange">{{steps.number}}</h2>
-  </div>
-  <div>
-    <h3>{{steps.description}}</h3>
-    <h4>{{steps.detail}}</h4>
+  <div class="grid-middle">
+    <div class="col-1">
+      <h2 class="text-orange text-vb ">{{steps.number}}</h2>
+    </div>
+    <div class="col-11">
+      <h3>{{steps.description}}</h3>
+      <h4>{{steps.detail}}</h4>
+    </div>
   </div>
   {% endfor %}
-</section>
-<section id="{{page.title}}-what">
   <!-- what's included, optional, and not included for this service goes here -->
   <h3>What's included?</h3>
   <ul>
@@ -61,7 +57,7 @@ faq:
     </li>
     {% endfor %}
   </ul>
-  <h3>What's <i>not</i>included?</h3>
+  <h3>What's <i>not</i> included?</h3>
     <ul>
     {% for what-not-include in page.what-not-include %}
       <li>
@@ -78,25 +74,15 @@ faq:
 </section>
 <section id="{{page.title}}-faq">
   <!-- the faq for this service  goes here ----------------------------------->
-  <div class="bg-grey">
+  <!-- <div class="bg-grey">
     <h3>Frequently Asked Questions</h3>
     <ul>
       {% for faq in page.faq %}
       <li>
-        <!-- accordion style faqs go here -->
         <h5>{{faq.question}}</h5>
         <h6>{{faq.answer}}</h6>
       </li>
       {% endfor %}
     </ul>
-  </div>
-</section>
-<section class="text-center">
-  <a><div>
-    <h2 class="text-black">get some website inspiration</h2>
-  </div></a>
-  <div class="hor-line"></div>
-  <a><div>
-    <h2 class="text-black">get help with this form</h2>
-  </div></a>
+  </div> -->
 </section>

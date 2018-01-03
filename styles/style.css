@@ -24,7 +24,7 @@ h1,h2 {
 /* h2 {
   font-size: 2.5rem;
 } */
-h3,h4,h5,h6,p {
+h3,h4,h5,h6,p,ul {
   font-family: 'Athiti', sans-serif;
   color: #2d2a32;
 }
@@ -38,6 +38,10 @@ h4 {
   line-height: 1.5;
 }
 p {
+  line-height: 1.5;
+}
+ul {
+  padding-left: 30px;
   line-height: 1.5;
 }
 .text-orange {
@@ -54,6 +58,11 @@ p {
   display: inline-block;
   padding: 0.3% 0.5%;
 }
+.text-bg-orange {
+  background-color: #2d2a32;
+  display: inline-block;
+  padding: 0.2% 0.3%;
+}
 .text-caps {
   text-transform: uppercase;
 }
@@ -62,6 +71,9 @@ p {
 }
 .text-right {
   text-align: right;
+}
+.text-vb {
+  font-size: 5rem;
 }
 .text-b {
   font-size: 2.5rem;
@@ -119,6 +131,7 @@ p a:visited {
 }
 .button {
   background-color: #ffd23f;
+  border-color: #ffd23f;
   color: #2d2a32;
   font-weight: bold;
   font-family: 'Athiti', serif;
@@ -134,10 +147,37 @@ p a:visited {
   transition: all 2s ease-in-out;
 }
 
+/* form styling */
+.short-section {
+  padding: 5% 10% 2.5% 10%;
+}
+input,textarea,button,select {
+  font-family: 'Athiti', sans-serif;
+  color: #2d2a32;
+}
+label {
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.2rem;
+  line-height: 2;
+  text-transform: uppercase;
+  color: white;
+  display: block;
+}
+input {
+  width: 100%;
+  height: 2rem;
+}
+textarea {
+  width: 100%;
+  height: 5rem;
+  border: 0.25px inset rgba(121,121,121,0.5);
+}
+
 
 /* nav styles */
 nav {
   position: fixed;
+  z-index: 99;
   background: rgba(255, 255, 252, 0.5);
   top: -1px;
 }
@@ -226,6 +266,7 @@ nav a {
   .mobile-menu {
     display: block;
     position: fixed;
+    z-index: 99;
     right: 10px;
     top: 0px;
     height: 55px;
@@ -250,6 +291,15 @@ nav a {
 .line-icon-orange {
   max-height: 28px;
   max-width: 28px;
+}
+
+
+/* about page */
+.hero-image-about {
+  background-image: url("/images/man-people-space-desk.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 78vh;
 }
 
 

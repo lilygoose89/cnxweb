@@ -3,40 +3,66 @@ layout: default
 title: CNX Web - Contact
 description: Get in touch with CNX Web with your questions about web design and business consulting in Chiang Mai.
 ---
-<section>
+<section class="short-section">
   <h1 class="text-bg-black">Get in touch</h1>
-  <h3>I’m here to help and to answer your questions.</h3>
-  <!-- embed contact form here ---------------------------------------------->
-  <div class="bg-orange">
-    <form method="POST" action="http://formspree.io/lily@cnxweb.site">
-      <h3>Name</h3>
-      <input type="name" name="name" placeholder="Your Name" required>
-      <h3>Email</h3>
-      <input type="email" name="email" placeholder="Your email" required>
-      <h3>Phone</h3>
-      <input type="tel" name="phone" placeholder="Your phone number" required>
-      <h3>Are you a current CNX Web client?</h3>
-      <select name="customer" required>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-      </select>
-      <h3>If yes, what is your current domain name?</h3>
-      <input type="url" name="customer-domain" placeholder="Your domain name" required>
-      <h3>What are you writing about today?</h3>
-      <select name="subject" required>
-        <option value="I'd like to learn more about your services">I'd like to learn more about your services</option>
-        <option value="I would like to hire you">I would like to hire you</option>
-        <option value="I would like to collaborate with you">I would like to collaborate with you</option>
-        <option value="I need help a website you made for me">I need help a website you made for me</option>
-        <option value="Other">Other</option>
-      </select>
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <select name="services" multiple>
-        <option value="Web Design">Web Design</option>
-        <option value="Digital Marketing">Digital Marketing</option>
-        <option value="Business Automation">Business Automation</option>
-      </select>
-      <button type="submit">Send</button>
+  <h4>I’m here to help and to answer your questions.</h4>
+</section>
+<section class="bg-orange short-section" id="contact-form">
+  <div>
+    <form method="POST" action="http://formspree.io/lily@cnxweb.site" class="grid-spaceBetween margin-all-xs">
+      <div class="col-12 pad-bottom-xs">
+        <label for="name">Name</label>
+        <input type="name" name="name"placeholder="Your Name" required class="col-6">
+      </div>
+      <div class="col-5_sm-12 pad-bottom-xs">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Your email" required class="col-6">
+      </div>
+      <div class="col-5_sm-12 pad-bottom-xs">
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" placeholder="Your phone number" required>
+      </div>
+      <div class="col-12 pad-bottom-xs">
+        <label for="client">Are you a current CNX Web client?</label>
+        <div class="grid">
+          <label><input type="radio" name="client" value="yes"/>Yes</label>
+          <label><input type="radio" name="client" value="no"/>No</label>
+        </div>
+        <!-- <select   class="checkbox" required>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select> -->
+      </div>
+      <div class="col-7 pad-bottom-xs">
+        <label for="client-domain">If yes, what is your current domain name?</label>
+        <input type="url" name="client-domain" placeholder="Your domain name" required>
+      </div>
+      <div class="col-7 pad-bottom-xs">
+        <label for="subject">What are you writing about today?</label>
+        <select name="subject" required>
+          <option value="I'd like to learn more about your services">I'd like to learn more about your services</option>
+          <option value="I would like to hire you">I would like to hire you</option>
+          <option value="I would like to collaborate with you">I would like to collaborate with you</option>
+          <option value="I need help a website you made for me">I need help a website you made for me</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="col-7 pad-bottom-xs">
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Your message" required></textarea>
+      </div>
+      <div class="col-12 pad-bottom-xs">
+        <label for="services">What services are you interested in?</label>
+        <select name="services" multiple>
+          <option value="Web Design">Web Design</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Business Automation">Business Automation</option>
+        </select>
+      </div>
+      <button type="submit" class="button container-center">Send</button>
     </form>
   </div>
+</section>
+<section>
+
 </section>
