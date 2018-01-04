@@ -59,7 +59,7 @@ ul {
   padding: 0.3% 0.5%;
 }
 .text-bg-orange {
-  background-color: #2d2a32;
+  background-color: #f85a3e;
   display: inline-block;
   padding: 0.2% 0.3%;
 }
@@ -146,6 +146,25 @@ p a:visited {
   transform: translateY(-4px);
   transition: all 2s ease-in-out;
 }
+.button-wide {
+  background-color: #ffd23f;
+  border-color: #ffd23f;
+  color: #2d2a32;
+  font-weight: bold;
+  font-family: 'Athiti', serif;
+  line-height: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 45px;
+  padding: 5px 20px;
+  position: relative;
+  width: 40%;
+}
+.button-wide:hover {
+  transform: translateY(-4px);
+  transition: all 2s ease-in-out;
+}
+
 
 /* form styling */
 .short-section {
@@ -312,18 +331,18 @@ nav a {
 }
 .nav-cta {
   height: 33px;
-  background-color: #f85a3e;
+  background-color: #ffd23f;
 }
 .nav-links {
   height: 50px;
 }
 .orange-outline-skew {
-  border-bottom: solid 33px #f85a3e;
+  border-bottom: solid 33px #ffd23f;
   border-left: 33px solid transparent;
   position: relative;
 }
 .translation-icon {
-  background-image: url("/images/orange-languageicon-english-thai.png");
+  background-image: url("/images/black-language-icon-english-thai.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -335,7 +354,7 @@ nav a {
 }
 @media all and (max-width:1024px) {
   .turq-skew {
-    border-right: 50px solid #f85a3e;
+    border-right: 50px solid #ffd23f;
   }
   .nav-cta {
     height: 50px;
@@ -344,7 +363,7 @@ nav a {
     display: none;
   }
   .translation-icon {
-    background-image: url("/images/white-languageicon-english-thai.png");
+    background-image: url("/images/black-language-icon-english-thai.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -383,23 +402,67 @@ nav a {
     top: 0px;
     height: 55px;
     width: 55px;
-    background-color: #f85a3e;
+    background-color: #ffd23f;
   }
 }
 
 
 /* footer styles */
+footer {
+  min-height: 20vh;
+}
+footer h3 {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
 .footer-icon {
   color: white;
   font-size: 2rem;
 }
 .line-icon {
-  max-height: 40px;
-  max-width: 40px;
+  max-width: 20px;
+}
+
+
+/* homepage */
+.hero-image-home {
+  background-image: url("/images/man-people-space-desk.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 78vh;
 }
 
 
 /* services page */
+.bg-wd {
+  background-image: url("https://images.pexels.com/photos/326424/pexels-photo-326424.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 25vw;
+  height: 30vh;
+}
+.bg-dm {
+  background-image: url("https://images.pexels.com/photos/7374/startup-photos.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 25vw;
+  height: 30vh;
+}
+.bg-ba {
+  background-image: url("https://images.pexels.com/photos/53874/pexels-photo-53874.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 25vw;
+  height: 30vh;
+}
+.product-title {
+  background-color: #f85a3e;
+  color: white;
+  font-weight: bolder;
+  padding: 0.2% 0.3%;
+}
 .line-icon-orange {
   max-height: 28px;
   max-width: 28px;
@@ -513,6 +576,9 @@ nav a {
 }
 .pad-right-l {
   padding-right: 20%;
+}
+.pad-right-xl {
+  padding-right: 40%;
 }
 .pad-bottom-xs {
   padding-bottom: 1%;
