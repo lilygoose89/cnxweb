@@ -57,16 +57,24 @@
 <section class="bg-orange short-section" id="contact-form">
   <div>
     <form method="POST" action="http://formspree.io/lily@cnxweb.site" class="grid-spaceBetween margin-all-xs">
-      <div class="col-12 pad-bottom-xs">
-        <label for="name">Name</label>
-        <input type="name" name="name"placeholder="Your Name" required class="col-6">
+      <input class="hidden" type="text" name="_replyto" placeholder="lily@cnxweb.site" />
+      <input type="hidden" name="_next" value="/thank-you.html" />
+      <input type="hidden" name="_language" value="es" />
+      
+      <div class="col-5_sm-12 pad-bottom-xs">
+        <label for="name">Name *</label>
+        <input type="name" name="name"placeholder="Your Name" required>
       </div>
       <div class="col-5_sm-12 pad-bottom-xs">
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="Your email" required class="col-6">
+        <label for="name">Company</label>
+        <input type="name" name="name"placeholder="Name of your company or business">
       </div>
       <div class="col-5_sm-12 pad-bottom-xs">
-        <label for="phone">Phone</label>
+        <label for="email">Email *</label>
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="col-5_sm-12 pad-bottom-xs">
+        <label for="phone">Phone *</label>
         <input type="tel" name="phone" placeholder="Your phone number" required>
       </div>
       <div class="col-12 pad-bottom-xs">
@@ -78,11 +86,11 @@
       </div>
       <div class="col-7 pad-bottom-xs">
         <label for="client-domain">If yes, what is your current domain name?</label>
-        <input type="url" name="client-domain" placeholder="Your domain name">
+        <input type="text" name="client-domain" placeholder="Your domain name">
       </div>
       <div class="col-7 pad-bottom-xs">
-        <label for="subject">What are you writing about today?</label>
-        <select name="subject" required>
+        <label for="_subject">What are you writing about today?</label>
+        <select name="subject">
           <option value="I'd like to learn more about your services">I'd like to learn more about your services</option>
           <option value="I would like to hire you">I would like to hire you</option>
           <option value="I would like to collaborate with you">I would like to collaborate with you</option>
@@ -91,14 +99,14 @@
         </select>
       </div>
       <div class="col-7 pad-bottom-xs">
-        <label for="message">Message</label>
+        <label for="message">Message *</label>
         <textarea name="message" placeholder="Your message" required></textarea>
       </div>
       <div class="col-12 pad-bottom-xs">
         <label>What services are you interested in?</label>
-        <label class="checkmark-container"><input type="checkbox" name="client" value="Web Design">Web Design<span class="checkmark"></span></label>
-        <label class="checkmark-container"><input type="checkbox" name="client" value="Digital Marketing">Digital Marketing<span class="checkmark"></span></label>
-        <label class="checkmark-container"><input type="checkbox" name="client" value="Business Automation">Business Automation<span class="checkmark"></span></label>
+        <label class="checkmark-container"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
+        <label class="checkmark-container"><input type="checkbox" name="dm" value="Digital Marketing">Digital Marketing<span class="checkmark"></span></label>
+        <label class="checkmark-container"><input type="checkbox" name="ba" value="Business Automation">Business Automation<span class="checkmark"></span></label>
       </div>
       <button type="submit" class="button container-center">Send</button>
     </form>
