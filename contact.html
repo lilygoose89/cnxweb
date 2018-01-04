@@ -23,19 +23,15 @@ description: Get in touch with CNX Web with your questions about web design and 
         <input type="tel" name="phone" placeholder="Your phone number" required>
       </div>
       <div class="col-12 pad-bottom-xs">
-        <label for="client">Are you a current CNX Web client?</label>
+        <label>Are you a current CNX Web client?</label>
         <div class="grid">
-          <label><input type="radio" name="client" value="yes"/>Yes</label>
-          <label><input type="radio" name="client" value="no"/>No</label>
+          <label class="radio-container col-2"><input type="radio" name="client" value="yes"/>Yes<span class="radio"></span></label>
+          <label class="radio-container col-2"><input type="radio" name="client" value="no"/>Not Yet<span class="radio"></span></label>
         </div>
-        <!-- <select   class="checkbox" required>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select> -->
       </div>
       <div class="col-7 pad-bottom-xs">
         <label for="client-domain">If yes, what is your current domain name?</label>
-        <input type="url" name="client-domain" placeholder="Your domain name" required>
+        <input type="url" name="client-domain" placeholder="Your domain name">
       </div>
       <div class="col-7 pad-bottom-xs">
         <label for="subject">What are you writing about today?</label>
@@ -43,7 +39,7 @@ description: Get in touch with CNX Web with your questions about web design and 
           <option value="I'd like to learn more about your services">I'd like to learn more about your services</option>
           <option value="I would like to hire you">I would like to hire you</option>
           <option value="I would like to collaborate with you">I would like to collaborate with you</option>
-          <option value="I need help a website you made for me">I need help a website you made for me</option>
+          <option value="I need help a website you made for me">I need help with a website you made for me</option>
           <option value="Other">Other</option>
         </select>
       </div>
@@ -52,12 +48,10 @@ description: Get in touch with CNX Web with your questions about web design and 
         <textarea name="message" placeholder="Your message" required></textarea>
       </div>
       <div class="col-12 pad-bottom-xs">
-        <label for="services">What services are you interested in?</label>
-        <select name="services" multiple>
-          <option value="Web Design">Web Design</option>
-          <option value="Digital Marketing">Digital Marketing</option>
-          <option value="Business Automation">Business Automation</option>
-        </select>
+        <label>What services are you interested in?</label>
+        <label class="checkmark-container"><input type="checkbox" name="client" value="Web Design">Web Design<span class="checkmark"></span></label>
+        <label class="checkmark-container"><input type="checkbox" name="client" value="Digital Marketing">Digital Marketing<span class="checkmark"></span></label>
+        <label class="checkmark-container"><input type="checkbox" name="client" value="Business Automation">Business Automation<span class="checkmark"></span></label>
       </div>
       <button type="submit" class="button container-center">Send</button>
     </form>
