@@ -129,7 +129,7 @@ p a:hover {
 p a:visited {
   color: inherit;
 }
-.button {
+button {
   background-color: #ffd23f;
   border-color: #ffd23f;
   color: #2d2a32;
@@ -141,28 +141,45 @@ p a:visited {
   border-radius: 45px;
   padding: 5px 20px;
   position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.button:hover {
-  transform: translateY(-4px);
-  transition: all 2s ease-in-out;
+button:hover {
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  transform: translateY(3px);
 }
 .button-wide {
-  background-color: #ffd23f;
-  border-color: #ffd23f;
-  color: #2d2a32;
-  font-weight: bold;
-  font-family: 'Athiti', serif;
-  line-height: 2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 45px;
-  padding: 5px 20px;
-  position: relative;
   width: 40%;
 }
-.button-wide:hover {
-  transform: translateY(-4px);
-  transition: all 2s ease-in-out;
+.read-more {
+  position: relative;
+  top: 8px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.read-more:hover {
+  top: 11px;
+}
+.read-more:visited {
+  transform: rotate(180deg);
+}
+
+
+/* animations */
+.nudge-down {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.nudge-down:hover {
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  transform: translateY(3px);
 }
 
 
@@ -197,7 +214,6 @@ textarea {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
-  cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -254,7 +270,6 @@ textarea {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
-  cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -319,9 +334,21 @@ nav h2 {
 }
 nav a {
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+nav a:hover {
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  transform: translateY(3px);
 }
 .height-50 {
   min-height: 50px;
+}
+.nav-links {
+  height: 50px;
 }
 .turq-skew {
   width: 0;
@@ -329,17 +356,14 @@ nav a {
   border-top: 50px solid #4ecdc4;
   border-right: 50px solid transparent;
 }
-.nav-cta {
-  height: 33px;
-  background-color: #ffd23f;
-}
-.nav-links {
-  height: 50px;
-}
-.orange-outline-skew {
+.yellow-outline-skew {
   border-bottom: solid 33px #ffd23f;
   border-left: 33px solid transparent;
   position: relative;
+}
+.nav-cta {
+  height: 33px;
+  background-color: #ffd23f;
 }
 .translation-icon {
   background-image: url("/images/black-language-icon-english-thai.png");
@@ -359,7 +383,7 @@ nav a {
   .nav-cta {
     height: 50px;
   }
-  .orange-outline-skew {
+  .yellow-outline-skew {
     display: none;
   }
   .translation-icon {
@@ -469,6 +493,56 @@ footer h3 {
 }
 
 
+/* package descriptions on service page */
+/* .open{
+  display:block;
+} */
+.expanded{
+  transition: all .3s ease-in-out;
+}
+.packageDescription{
+  display:none;
+}
+/* .faq-t{
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  display: inline-block;
+  float:right;
+  position:relative;
+  top:-55px;
+  right:10px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  transition: all .3s ease-in-out;
+}
+.faq-o{
+  top:-50px;
+   -moz-transform: rotate(-224deg);
+  -ms-transform: rotate(-224deg);
+  -webkit-transform: rotate(-224deg);
+  transform: rotate(-224deg);
+}
+@media only screen and (max-width: 480px) {
+  .faq-t {
+    display:none;
+  }
+  .question{
+  padding-right: 0px;
+  }
+  .packageDescription{
+  margin-bottom:30px;
+  padding-left:0px;
+  padding-right:0px;
+  }
+} */
+
+
+
 /* about page */
 .hero-image-about {
   background-image: url("/images/man-people-space-desk.jpg");
@@ -486,6 +560,7 @@ footer h3 {
 .image-thank-you {
   max-height: 50vh;
 }
+
 
 /* borders and backgrounds */
 .hor-line {
@@ -642,6 +717,9 @@ footer h3 {
 }
 .margin-right-l {
   margin-right: 20%
+}
+.margin-right-xl {
+  margin-right: 40%;
 }
 .margin-bottom-xs {
   margin-bottom: 1%

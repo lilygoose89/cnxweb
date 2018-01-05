@@ -2,7 +2,7 @@
 layout: default
 title: CNX Web Services
 description: How can CNX Web help your business to grow online?
-marketing-service:
+marketing-package:
   - name: Strategy Session
     price: ฿5,000
     description: Having a great website is only the first step. To succeed online, you also need to have a strategy for how to expand your reach, whether that's through content marketing, social media marketing, or advertising. Let's sit down with each other for up to 3 hours to come up with a concrete plan for bring more visitors to your website and converting that into better business.
@@ -18,7 +18,7 @@ marketing-service:
   - name: Content Marketing
     price: ฿30,000
     description:
-business-service:
+business-package:
   - name:
     price:
     description:
@@ -46,17 +46,17 @@ business-service:
     <p>For your convenience, I'm offering my best web design and consulting services as fixed-price packages. If you don't find the service package to meet your needs below, please don't hesitate to <a href="/contact">get in touch with me for a free consultation</a>.</p>
   </div>
   <div class="grid-spaceBetween-middle pad-top-s text-center">
-    <a href="#wd" class="bg-wd pad-top-s pad-bottom-s margin-bottom-xs col-3_sm-12">
+    <a href="#wd" class="bg-wd pad-top-s pad-bottom-s margin-bottom-xs col-3_sm-12 nudge-down">
       <h3 class="text-white text-center text-b text-bg-orange">Web</h3><br>
       <h3 class="text-white text-center text-b text-bg-orange">Design</h3>
     </a>
-    <a href="#dm" class="bg-dm pad-top-s pad-bottom-s margin-bottom-xs col-3_sm-12">
+    <a href="#dm" class="bg-dm pad-top-s pad-bottom-s margin-bottom-xs col-3_sm-12 nudge-down">
       <h3 class="text-white text-b text-bg-orange">Digital</h3><br>
       <h3 class="text-white text-b text-bg-orange">Marketing</h3>
     </a>
-    <a href="#ba" class="bg-ba pad-top-s pad-bottom-s margin-bottom-xs col-3_sm-12">
+    <a href="#bc" class="bg-ba pad-top-s pad-bottom-s margin-bottom-xs col-3_sm-12 nudge-down">
       <h3 class="text-white text-b text-bg-orange">Business</h3><br>
-      <h3 class="text-white text-b text-bg-orange">Automation</h3>
+      <h3 class="text-white text-b text-bg-orange">Consulting</h3>
     </a>
   </div>
 </section>
@@ -64,7 +64,7 @@ business-service:
 <section id="wd">
   <div>
     <img />
-    <h2 class="text-bg-black">Web Design</h2>
+    <h2 class="text-bg-black">Web Design Packages</h2>
   </div>
   <h4 class="pad-top-xs pad-bottom-xs">The first step in your digital growth is a great website. Let's show the world who you are.</h4>
   <!-- container for pricing modules -->
@@ -78,7 +78,7 @@ business-service:
         <h4>One-Page Website</h4>
         <h4>Self-Maintenance</h4>
         <h3 class="pad-all-s">฿10,000</h3>
-        <a href="start/starter.html" class="button">Choose This Package</a>
+        <a href="start/starter.html"><button>Choose This Package</button></a>
       </div>
     </div>
     <div class="col-3_sm-12 pad-bottom-s" id="plan-entrepreneur">
@@ -90,7 +90,7 @@ business-service:
         <h4>One-Page Website</h4>
         <h4>Incl 5 Hrs Maintenance</h4>
         <h3 class="pad-all-s">฿30,000</h3>
-        <a href="start/entrepreneur.html" class="button">Choose This Package</a>
+        <a href="start/entrepreneur.html"><button>Choose This Package</button></a>
       </div>
     </div>
     <div class="col-3_sm-12 pad-bottom-s" id="plan-merchant">
@@ -102,7 +102,7 @@ business-service:
         <h4>Up to 5 Pages</h4>
         <h4>Incl 10 Hrs Maintenance</h4>
         <h3 class="pad-all-s">฿50,000</h3>
-        <a href="start/merchant.html" class="button">Choose This Package</a>
+        <a href="start/merchant.html"><button>Choose This Package</button></a>
       </div>
     </div>
   </div>
@@ -130,7 +130,7 @@ business-service:
       <h4>10 Pages and Up</h4>
       <h4>Incl 5 Hrs Maintenance Per Month</h4>
       <h3 class="pad-bottom-s pad-top-s">Starting at ฿120,000</h3>
-      <a href="start/bespoke.html" class="button">Get A Project Quote</a>
+      <a href="start/bespoke.html"><button>Get A Project Quote</button></a>
     </div>
     <div class="col-5_sm-12 pad-left-s">
       <h3>Best for:</h3>
@@ -155,36 +155,70 @@ business-service:
 <!-- this is the digital marketing section ------------------------------------------------------------------------------>
 <section id="dm">
   <div>
-    <h2 class="text-bg-black">Digital Marketing</h2>
+    <h2 class="text-bg-black">Digital Marketing Packages</h2>
   </div>
-  <h4 class="pad-top-xs pad-bottom-xs">Connect your website, enhance your brand, and reach more customers.</h4>
-  <div class="pad-bottom-s pad-right-m">
-    {% for marketing-service in page.marketing-service%}
-    <div class="grid-middle-spaceBetween pad-bottom-xs pad-right-xl">
-      <h4 class="product-title">{{marketing-service.name}}</h4>
-      <h4>{{marketing-service.price}}</h4>
+  <h4 class="pad-top-xs">Connect your website, enhance your brand, and reach more customers.</h4>
+  <div class="pad-bottom-s">
+    {% for marketing-package in page.marketing-package%}
+    <!-- this is the container giving the nested container a grid -->
+    <div class="grid package pad-top-xs">
+      <!-- this is the container limiting the width of the displayed packages -->
+      <div class="col-8_sm-12 grid pad-bottom-xs open">
+        <!-- this is the container giving the package container and the yellow read more toggle widths -->
+        <div class="col-11_sm-10">
+          <!-- this is the container for the description and the price outlined in orange -->
+          <div class="outline-orange grid-middle-spaceBetween pad-all-xs">
+            <h4>{{marketing-package.name}}</h4>
+            <h4>{{marketing-package.price}}</h4>
+          </div>
+        </div>
+        <!-- this h4 contains the icon for the read more toggle -->
+        <h4 class="col-1_sm-2 bg-yellow text-center text-m"><a><i class="read-more fa fa-angle-double-down" aria-hidden="true"></i></a></h4>
+        <!-- this is the container for the package description hidden until toggled -->
+        <div class="bg-grey margin-bottom-xs">
+          <p class="pad-all-xs packageDescription">
+            {{marketing-package.description}}
+          </p>
+        </div>
+      </div>
     </div>
     {%endfor%}
     <h4 class="pad-top-xs pad-bottom-xs">Other projects priced at an hourly rate of ฿1,500.</h4>
-    <a href="contact.html" target="blank" class="button">Email Me to Get Started</a>
+    <a href="/contact.html"><button>Email Me to Get Started</button></a>
   </div>
 </section>
 <!-- this is the business automation section ---------------------------------------------------------------------------->
-<section id="ba">
+<section id="bc">
   <div>
-    <h2 class="text-bg-black">Business Automation</h2>
+    <h2 class="text-bg-black">Business Consulting Packages</h2>
   </div>
   <h4 class="pad-top-xs pad-bottom-xs">Digitize your business. Save time and money, and make your customers happy.</h4>
-  <div class="pad-bottom-s pad-right-m">
-    {% for business-service in page.business-service%}
-    <div class="grid-middle-spaceBetween pad-bottom-xs pad-right-xl">
-      <h4 class="product-title">{{business-service.name}}</h4>
-      <h4>{{business-service.price}}</h4>
+  <div class="pad-bottom-s">
+    {% for business-package in page.business-package%}
+    <!-- this is the container giving the nested container a grid -->
+    <div class="grid package pad-top-xs">
+      <!-- this is the container limiting the width of the displayed packages -->
+      <div class="col-8_sm-12 grid pad-bottom-xs open">
+        <!-- this is the container giving the package container and the yellow read more toggle widths -->
+        <div class="col-11_sm-10">
+          <!-- this is the container for the description and the price outlined in orange -->
+          <div class="outline-orange grid-middle-spaceBetween pad-all-xs">
+            <h4>{{business-service.name}}</h4>
+            <h4>{{business-service.price}}</h4>
+          </div>
+        </div>
+        <!-- this h4 contains the icon for the read more toggle -->
+        <h4 class="col-1_sm-2 bg-yellow text-center text-m"><a><i class="read-more fa fa-angle-double-down" aria-hidden="true"></i></a></h4>
+        <!-- this is the container for the package description hidden until toggled -->
+        <div class="bg-grey margin-bottom-xs">
+          <p class="pad-all-xs packageDescription">
+            {{business-service.description}}
+          </p>
+        </div>
+      </div>
     </div>
     {%endfor%}
-    <p class="pad-bottom-xs">
-      Have a different back-of-house problem not solved by one of the solutions above? Let's work together to come up with a solution.
-    </p>
-    <a href="contact.html" target="blank" class="button">Email Me to Get Started</a>
+    <h4 class="pad-bottom-xs">Have a different back-of-house problem not solved by one of the packages above? Let's work together to come up with a solution.</h4>
+    <a href="/contact.html"><button>Email Me to Get Started</button></a>
   </div>
 </section>
