@@ -1,18 +1,18 @@
-// function init() {
-//     window.addEventListener('scroll', function(e){
-//         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-//             shrinkOn = 300,
-//             header = document.querySelector("header");
-//         if (distanceY > shrinkOn) {
-//             classie.add(header,"smaller");
-//         } else {
-//             if (classie.has(header,"smaller")) {
-//                 classie.remove(header,"smaller");
-//             }
-//         }
-//     });
-// }
-// window.onload = init();
+//load the DOM
+$(document).ready(function(){
+
+  //log
+  console.log('ready!');
+
+  //click hamburger icon
+  $('.toggle-mobile-menu').click(function(){
+
+      //show mobile menu
+      $('#mobile-menu').toggleClass('mobile-menu-visible')
+  });
+
+});
+
 $(".open").click( function () {
   var container = $(this).parents(".package");
   var packageDescription = container.find(".packageDescription");
