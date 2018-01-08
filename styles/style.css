@@ -58,10 +58,11 @@ ul {
   display: inline-block;
   padding: 0.3% 0.5%;
 }
-.text-bg-orange {
-  background-color: #f85a3e;
+.text-bg-yellow {
+  background-color: #ffd23f;
   display: inline-block;
   padding: 0.2% 0.3%;
+  margin: 5px;
 }
 .text-caps {
   text-transform: uppercase;
