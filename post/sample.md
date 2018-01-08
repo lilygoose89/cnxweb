@@ -3,9 +3,8 @@ layout: post
 title: sample post title
 description: this is a sample blog post description
 author: lily
-author-image: /images/lilybruns-headshot.jpeg
-date:
-hero-image: /images/man-people-space-desk.jpg
+author_image:
+hero_image:
 excerpt_separator: <!-- excerpt -->
 tags:
   - websites
