@@ -1,6 +1,6 @@
 ---
 layout: post
-title: sample post title
+title: This is my post title
 description: this is a sample blog post description
 date: 2018-01-07 00:00:00
 author: lily
