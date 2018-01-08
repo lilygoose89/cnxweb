@@ -53,16 +53,13 @@ ul {
 .text-black {
   color: #2d2a32;
 }
+.text-grey {
+  color: #EFEFEF;
+}
 .text-bg-black {
   background-color: #2d2a32;
   display: inline-block;
   padding: 0.3% 0.5%;
-}
-.text-bg-yellow {
-  background-color: #ffd23f;
-  display: inline-block;
-  padding: 0.2% 0.3%;
-  margin: 5px;
 }
 .text-caps {
   text-transform: uppercase;
@@ -94,7 +91,7 @@ section {
 .hero-image {
   background-size: cover;
   background-position: center;
-  height: 78vh;
+  height: 79vh;
 }
 @media all and (max-width:576px) {
   section {
@@ -573,6 +570,14 @@ footer h3 {
 
 
 
+
+/* blog and posts */
+.tags {
+  background-color: #ffd23f;
+  display: inline-block;
+  padding: 0.2% 0.3%;
+}
+
 /* about page */
 .hero-image-about {
   background-image: url("/images/man-people-space-desk.jpg");
@@ -581,10 +586,12 @@ footer h3 {
   height: 78vh;
 }
 
+
 /* 404 page */
 .image-404 {
   max-height: 50vh;
 }
+
 
 /* thank you page*/
 .image-thank-you {

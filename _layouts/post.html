@@ -4,35 +4,40 @@ title:
 description:
 hero_image:
 tags:
-  - 
+  -
 keywords:
+url:
 date:
 author:
 author_image:
 excerpt_separator: <!-- excerpt -->
+published: true
 ---
 <section>
-  <div class="hero-image" style="background-image: url("{{page.hero_image}}")">
+  <div class="hero-image" style="background-image: url('{{page.hero_image}}');)">
     <h1 class="text-bg-black margin-top-xs margin-left-xs">{{page.title}}</h1>
   </div>
+  <h4 class="pad-top-xs pad-bottom-xs">Published: {{page.date | date: '%B %d, %Y'}}</h4>
   <!-- container for blog post and author card and tags -->
-  <div>
+  <div class="grid-spaceBetween-top">
     <!-- container for blog post content - left column -->
-    <h6 class="pad-top-xs pad-bottom-xs">Published: {{page.date | date: '%B %d, %Y'}}</h6>
-    <div class="grid-spaceBetween-top">
-      <div class="col-8">
-        <p>
-          {{content}}
-        </p>
-      </div>
-      <div class="col-3">
-        <img src="{{page.author_image}}" alt="{{page.author}} image"/>
-        <h5>Author: {{page.author}}</h5>
-        <h5>Filed Under:</h5>
-        <div class="text-bg-yellow">
-          {{page.tags}}
-        </div>
-      </div>
+    <div class="col-9">
+      <p>
+        {{content}}
+      </p>
+    </div>
+    <!-- container for author and tags - right column -->
+    <div class="col-2">
+      <img src="{{page.author_image}}" alt="{{page.author}} image"/>
+      <h5>Author: {{page.author}}</h5>
+      <h5>Filed Under:</h5>
+      <div>
+        {% for tags in page.tags %}
+        <h5 class="tags">{{page.tags}}</h5>
+        {%endfor%}
       </div>
     </div>
+  </div>
+  <span class="hor-line"></span>
+  <a href="/blog"><button>Go back to main blog page</button></a>
 </section>

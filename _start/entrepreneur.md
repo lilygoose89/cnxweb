@@ -28,4 +28,3 @@ faq:
     answer: here is the second answer
 ---
 blabbity blah blah blah
-
