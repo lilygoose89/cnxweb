@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Sample Post Copy 2
+title: this is the oldest post
 description: this is a sample blog post description
 author: lily
-author-image: /images/lilybruns-headshot.jpeg
-date: 2018-01-06 00:00:00
+author_image: /images/lilybruns-headshot.jpeg
+date: 2018-01-01 00:00:00
 hero_image: /images/man-people-space-desk.jpg
 excerpt_separator: <!-- excerpt -->
 tags:
