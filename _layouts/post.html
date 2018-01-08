@@ -18,12 +18,12 @@ excerpt_separator: <!-- excerpt -->
 ---
 <section>
   <div style="background-image: url("{{post.hero_image}}")">
-    <h1 class="text-bg-black">{{post.title}}</h1>
+    <h1 class="text-bg-black">{{page.title}}</h1>
   </div>
   <!-- container for blog post and author card and tags -->
   <div>
     <!-- container for blog post content - left column -->
-    <h6>Published {{post.date | date: '%B %d, %Y'}}</h6>
+    <h6>Published: {{page.date | date: '%B %d, %Y'}}</h6>
     <div class="grid-spaceBetween-top">
       <div class="col-8">
         <p>
@@ -31,11 +31,11 @@ excerpt_separator: <!-- excerpt -->
         </p>
       </div>
       <div class="col-3">
-        <img src="{{post.author_image}}" alt="{{post.author}} image"/>
-        <h5>Author: {{post.author}}</h5>
+        <img src="{{page.author_image}}" alt="{{page.author}} image"/>
+        <h5>Author: {{page.author}}</h5>
         <h5>Filed Under:</h5>
         <div class="text-bg-yellow">
-          {{post.tags}}
+          {{page.tags}}
         </div>
       </div>
       </div>
