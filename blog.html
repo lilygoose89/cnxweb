@@ -1,33 +1,33 @@
 ---
 layout: default
-title: CNX Web - Blog Posts
+title: CNX Web - Blog postss
 description: Tips, tricks, and useful information about websites and small business marketing.
 ---
 <section>
-  {% assign post = site.posts.first %}
+  {% assign posts = site.postss.first %}
 </section>
 <section>
-  {% for post in site.post limit:1 %}
-  <div class="hero-image" style="background-image: url('{{post.hero_image}}');)">
-    <h1 class="text-bg-black margin-top-xs margin-left-xs">{{post.title}}</h1>
+  {% for posts in site.posts limit:1 %}
+  <div class="hero-image" style="background-image: url('{{posts.hero_image}}');)">
+    <h1 class="text-bg-black margin-top-xs margin-left-xs">{{posts.title}}</h1>
   </div>
-  <h4 class="pad-top-xs pad-bottom-xs">Published: {{post.date | date: '%B %d, %Y'}}</h4>
+  <h4 class="pad-top-xs pad-bottom-xs">Published: {{posts.date | date: '%B %d, %Y'}}</h4>
   <!-- container for blog post and author card and tags -->
   <div class="grid-spaceBetween-top">
     <!-- container for blog post content - left column -->
     <div class="col-9">
       <p>
-        {{post.content}}
+        {{posts.content}}
       </p>
     </div>
     <!-- container for author and tags - right column -->
     <div class="col-2">
-      <img src="{{post.author_image}}" alt="{{post.author}} image"/>
-      <h5>Author: {{post.author}}</h5>
+      <img src="{{posts.author_image}}" alt="{{posts.author}} image"/>
+      <h5>Author: {{posts.author}}</h5>
       <h5>Filed Under:</h5>
       <div>
-        {% for tags in post.tags %}
-        <h5 class="tags">{{post.tags}}</h5>
+        {% for tags in posts.tags %}
+        <h5 class="tags">{{posts.tags}}</h5>
         {%endfor%}
       </div>
     </div>
@@ -35,19 +35,19 @@ description: Tips, tricks, and useful information about websites and small busin
   {% endfor %}
   <span class="hor-line margin-bottom-xs"></span>
   <h2 class="text-bg-black margin-top-xs">Older Posts:</h2>
-  {% for post in site.post limit:5 offset:1 %}
+  {% for posts in site.posts limit:5 offset:1 %}
   <div class="outline-turq pad-all-xs margin-top-xs margin-bottom-xs">
-    <h3>{{post.title}}</h3>
-    <p>{{post.excerpt}}</p>
-    <a href="{{post.url}}" class="col-2_sm-12 text-right"><button class="button">Read More</button></a>
+    <h3>{{posts.title}}</h3>
+    <p>{{posts.excerpt}}</p>
+    <a href="{{posts.url}}" class="col-2_sm-12 text-right"><button class="button">Read More</button></a>
   </div>
   {% endfor %}
   <h2 class="text-bg-black margin-top-xs">Explore Tags:</h2>
   {% for tag in site.tags %}
   <h2>{{ tag[0] }}</h2>
   <ul>
-    {% for post in tag[1] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% for posts in tag[1] %}
+      <li><a href="{{ posts.url }}">{{ posts.title }}</a></li>
     {% endfor %}
   </ul>
 {% endfor %}

@@ -2,7 +2,7 @@ collections:
   example:
     output: true
     permalink: /:collection/:name
-  post:
+  posts:
     output: true
     permalink: /:collection/:name
   start:
