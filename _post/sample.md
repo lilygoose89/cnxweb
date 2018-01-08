@@ -5,7 +5,7 @@ description: this is a sample blog post description
 author: lily
 author-image: /images/lilybruns-headshot.jpeg
 date: 2018-01-06 00:00:00
-hero-image: /images/man-people-space-desk.jpg
+hero_image: /images/man-people-space-desk.jpg
 excerpt_separator: <!-- excerpt -->
 tags:
   - websites
