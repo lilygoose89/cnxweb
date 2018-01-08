@@ -3,7 +3,11 @@ layout: default
 title: CNX Web - Blog Posts
 ---
 <section>
-  <h1>Posts Filed Under {{site.tag}}</h1>
+  {% for post in site.tags[page.tag] %}
+  <a href="{{ post.url | absolute_url }}">
+    {{ post.title }}
+  </a>
+  <h1>Posts Filed Under {{site.tag[page.tag]}}</h1>
   <div>
     {% for post in site.tags.{{tag}} %}
     <div>
@@ -13,5 +17,4 @@ title: CNX Web - Blog Posts
     </div>
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
-  </div>
 </section>

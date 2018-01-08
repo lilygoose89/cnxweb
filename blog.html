@@ -4,6 +4,9 @@ title: CNX Web - Blog Posts
 description: Tips, tricks, and useful information about websites and small business marketing.
 ---
 <section>
+  {% assign post = site.posts.first %}
+</section>
+<section>
   {% for post in site.post limit:1 %}
   <div class="hero-image" style="background-image: url('{{post.hero_image}}');)">
     <h1 class="text-bg-black margin-top-xs margin-left-xs">{{post.title}}</h1>
