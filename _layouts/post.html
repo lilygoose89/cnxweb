@@ -2,11 +2,7 @@
 layout: default
 title:
 description:
-author:
-author_image:
-date:
 hero_image:
-excerpt_separator: <!-- excerpt -->
 tags:
   - websites
   - digital marketing
@@ -15,29 +11,33 @@ tags:
   - small business
   - wild things
 keywords:
+date:
+author:
+author_image:
+excerpt_separator: <!-- excerpt -->
 ---
 <section>
-  {{post.title}}
-  <div>
-    <img src="{{post.hero_image}}" alt="{{post.title}} hero image"/>
-    <h1>{{post.title}}</h1>
+  <div style="background-image: url("{{post.hero_image}}")">
+    <h1 class="text-bg-black">{{post.title}}</h1>
   </div>
   <!-- container for blog post and author card and tags -->
   <div>
     <!-- container for blog post content - left column -->
     <h6>Published {{post.date | date: '%B %d, %Y'}}</h6>
-    <p>
-      {{content}}
-    </p>
-    <div>
-      <img src="{{post.author_image}}" alt="{{post.author}} image"/>
-      <h5>Author: {{post.author}}</h5>
-      <h5>Filed Under:</h5>
-      <div class="text-bg-orange">
-        {{post.tags}}
+    <div class="grid-spaceBetween-top">
+      <div class="col-8">
+        <p>
+          {{content}}
+        </p>
+      </div>
+      <div class="col-3">
+        <img src="{{post.author_image}}" alt="{{post.author}} image"/>
+        <h5>Author: {{post.author}}</h5>
+        <h5>Filed Under:</h5>
+        <div class="text-bg-yellow">
+          {{post.tags}}
+        </div>
+      </div>
       </div>
     </div>
-    <!-- container for author card and tags - right column -->
-  </div>
-  <div class="hor-lin"></div>
 </section>
