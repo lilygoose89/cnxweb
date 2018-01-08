@@ -1,6 +1,6 @@
 ---
 layout: post
-title: this is my sample post in html
+title: sample post jan 2
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 hero_image: /images/man-people-space-desk.jpg
 tags:
@@ -9,7 +9,7 @@ tags:
   - more stuff
   - yet more tags
 keywords:
-date: 2018-01-01 00:00:00
+date: 2018-01-02 00:00:00
 author: Lily Bruns
 author_image: /images/lilybruns-headshot.jpeg
 excerpt_separator: <!-- excerpt -->

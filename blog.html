@@ -30,18 +30,16 @@ description: Tips, tricks, and useful information about websites and small busin
     </div>
   </div>
   {% endfor %}
-  <span class="hor-line"></span>
-  <h2 class="text-bg-black">Older Posts:</h2>
+  <span class="hor-line margin-bottom-xs"></span>
+  <h2 class="text-bg-black margin-top-xs">Older Posts:</h2>
   {% for post in site.post limit:5 offset:1 %}
-  <div class="outline-turq pad-all-xs margin-top-xs">
+  <div class="outline-turq pad-all-xs margin-top-xs margin-bottom-xs">
     <h3>{{post.title}}</h3>
     <p>{{post.excerpt}}</p>
     <a href="{{post.url}}" class="col-2_sm-12 text-right"><button class="button">Read More</button></a>
   </div>
   {% endfor %}
-</section>
-<section>
-  <h2 class="text-bg-black">Explore Tags:</h2>
+  <h2 class="text-bg-black margin-top-xs">Explore Tags:</h2>
   {% for tag in site.tags %}
   <h2>{{ tag[0] }}</h2>
   <ul>
