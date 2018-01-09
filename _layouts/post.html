@@ -22,9 +22,7 @@ published: true
   <div class="grid-spaceBetween-top">
     <!-- container for blog post content - left column -->
     <div class="col-9">
-      <p>
-        {{content}}
-      </p>
+      {{content}}
     </div>
     <!-- container for author and tags - right column -->
     <div class="col-2">
@@ -32,9 +30,7 @@ published: true
       <h5>Author: {{page.author}}</h5>
       <h5>Filed Under:</h5>
       <div>
-        {% for tags in page.tags %}
         <h5 class="tags">{{page.tags}}</h5>
-        {%endfor%}
       </div>
     </div>
   </div>

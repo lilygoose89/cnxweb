@@ -4,9 +4,6 @@ title: CNX Web - Blog postss
 description: Tips, tricks, and useful information about websites and small business marketing.
 ---
 <section>
-  {% assign posts = site.postss.first %}
-</section>
-<section>
   {% for posts in site.posts limit:1 %}
   <div class="hero-image" style="background-image: url('{{posts.hero_image}}');)">
     <h1 class="text-bg-black margin-top-xs margin-left-xs">{{posts.title}}</h1>
@@ -26,35 +23,20 @@ description: Tips, tricks, and useful information about websites and small busin
       <h5>Author: {{posts.author}}</h5>
       <h5>Filed Under:</h5>
       <div>
-        {% for tags in posts.tags %}
         <h5 class="tags">{{posts.tags}}</h5>
-        {%endfor%}
       </div>
     </div>
   </div>
-  {% endfor %}
+  {%endfor%}
   <span class="hor-line margin-bottom-xs"></span>
   <h2 class="text-bg-black margin-top-xs">Older Posts:</h2>
   {% for posts in site.posts limit:5 offset:1 %}
-  <div class="outline-turq pad-all-xs margin-top-xs margin-bottom-xs">
+  <div class="outline-turq margin-top-xs margin-bottom-xs pad-all-xs">
     <h3>{{posts.title}}</h3>
     <p>{{posts.excerpt}}</p>
     <a href="{{posts.url}}" class="col-2_sm-12 text-right"><button class="button">Read More</button></a>
   </div>
   {% endfor %}
   <h2 class="text-bg-black margin-top-xs">Explore Tags:</h2>
-  {% for tag in site.tags %}
-  <h2>{{ tag[0] }}</h2>
-  <ul>
-    {% for posts in tag[1] %}
-      <li><a href="{{ posts.url }}">{{ posts.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
 
-  <!-- {% for tags in site.tags %}
-  <div>
-    <h3>{{tag}}</h3>
-  </div>
-  {% endfor %} -->
 </section>
