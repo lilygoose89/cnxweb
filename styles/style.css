@@ -61,6 +61,11 @@ ul {
   display: inline-block;
   padding: 0.3% 0.5%;
 }
+.text-bg-orange {
+  background-color: #f85a3e;
+  display: inline-block;
+  padding: 0.3% 0.5%;
+}
 .text-caps {
   text-transform: uppercase;
 }
@@ -488,32 +493,32 @@ footer h3 {
 
 /* services page */
 .bg-wd {
-  background-image: url("https://images.pexels.com/photos/326424/pexels-photo-326424.jpeg");
+  background-image: url("/images/wd.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 25vw;
   height: 30vh;
 }
 .bg-dm {
-  background-image: url("https://images.pexels.com/photos/7374/startup-photos.jpg");
+  background-image: url("/images/dm.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 25vw;
   height: 30vh;
 }
-.bg-ba {
-  background-image: url("https://images.pexels.com/photos/53874/pexels-photo-53874.jpeg");
+.bg-bc {
+  background-image: url("/images/bc.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 25vw;
   height: 30vh;
 }
-.product-title {
+/* .product-title {
   background-color: #f85a3e;
   color: white;
   font-weight: bolder;
   padding: 0.2% 0.3%;
-}
+} */
 .line-icon-orange {
   max-height: 28px;
   max-width: 28px;
