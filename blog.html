@@ -6,7 +6,7 @@ description: Tips, tricks, and useful information about websites and small busin
 <section>
   {% for posts in site.posts limit:1 %}
   <div class="hero-image" style="background-image: url('{{posts.hero_image}}');)">
-    <h1 class="text-bg-black margin-top-xs margin-left-xs">{{posts.title}}</h1>
+    <h1 class="text-bg-black margin-top-xs margin-left-xs"><span>{{posts.title}}</span></h1>
   </div>
   <h4 class="pad-top-xs pad-bottom-xs">Published: {{posts.date | date: '%B %d, %Y'}}</h4>
   <!-- container for blog post and author card and tags -->
@@ -29,7 +29,7 @@ description: Tips, tricks, and useful information about websites and small busin
   </div>
   {%endfor%}
   <span class="hor-line margin-bottom-xs"></span>
-  <h2 class="text-bg-black margin-top-xs">Older Posts:</h2>
+  <h2 class="text-bg-black margin-top-xs"><span>Older Posts:</span></h2>
   {% for posts in site.posts limit:5 offset:1 %}
   <div class="outline-turq margin-top-xs margin-bottom-xs pad-all-xs">
     <h3>{{posts.title}}</h3>
@@ -37,6 +37,6 @@ description: Tips, tricks, and useful information about websites and small busin
     <a href="{{posts.url}}" class="col-2_sm-12 text-right"><button class="button">Read More</button></a>
   </div>
   {% endfor %}
-  <h2 class="text-bg-black margin-top-xs">Explore Tags:</h2>
+  <h2 class="text-bg-black margin-top-xs"><span>Explore Tags:</span></h2>
 
 </section>

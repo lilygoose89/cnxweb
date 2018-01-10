@@ -3,18 +3,12 @@ layout: default
 title: CNX Web - Blog Posts
 ---
 <section>
-  {% for post in site.tags[page.tag] %}
-  <a href="{{ post.url | absolute_url }}">
-    {{ post.title }}
-  </a>
-  <h1>Posts Filed Under {{site.tag[page.tag]}}</h1>
-  <div>
-    {% for post in site.tags.{{tag}} %}
-    <div>
+  <h1 class="text-bg-black"><span>Posts Filed Under {{site.tag[page.tag]}}</span></h1>
+    {% for post in site.tags[page.tag] %}
+    <div class="outline-turq margin-top-xs margin-bottom-xs pad-all-xs">
       <h3>{{post.title}}</h3>
       <p>{{post.excerpt}}</p>
-      <a href="{{post.url}}" class="button">Read More</a>
+      <a href="{{post.url | absolute_url}}" class="button">Read More</a>
     </div>
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </section>

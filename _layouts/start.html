@@ -23,16 +23,18 @@ faq:
 <section>
   <div>
     <img src="{{page.plan_image}}" alt="{{page.title}} image"/>
-    <h1 class="text-bg-black">{{page.title}}</h1>
+    <h1 class="text-bg-black"><span>{{page.title}}</span></h1>
     <h3>{{page.price}}</h3>
   </div>
   <!-- the description of the service goes here ------------------------------>
-  {{content}}
+  <div class="pad-top-xs pad-bottom-xs">
+    {{content}}
+  </div>
   <!-- the required steps for this service go here --------------------------->
   {% for steps in page.steps %}
   <div class="grid-middle">
     <div class="col-1">
-      <h2 class="text-orange text-vb ">{{steps.number}}</h2>
+      <h2 class="text-orange text-vb">{{steps.number}}</h2>
     </div>
     <div class="col-11">
       <h3>{{steps.description}}</h3>
@@ -41,7 +43,7 @@ faq:
   </div>
   {% endfor %}
   <!-- what's included, optional, and not included for this service goes here -->
-  <h3>What's included?</h3>
+  <h3 class="pad-bottom-xs">What's included?</h3>
   <ul>
     {% for what-include in page.what-include %}
       <li>
@@ -49,7 +51,7 @@ faq:
       </li>
     {% endfor %}
   </ul>
-  <h3>What else can be added?</h3>
+  <h3 class="pad-bottom-xs">What else can be added?</h3>
   <ul>
     {% for what-else-add in page.what-else-add %}
     <li>
@@ -57,7 +59,7 @@ faq:
     </li>
     {% endfor %}
   </ul>
-  <h3>What's <i>not</i> included?</h3>
+  <h3 class="pad-bottom-xs">What's <i>not</i> included?</h3>
     <ul>
     {% for what-not-include in page.what-not-include %}
       <li>
@@ -65,12 +67,10 @@ faq:
       </li>
     {% endfor %}
   </ul>
-</section>
-<section>
-  <h2 class="text-bg-black">Let's do this!</h2>
-  <h4>Please complete the following form to submit your website request. Submitting all your content and materials now will help me to create your website faster, but they are not required in order to begin. If you’d like, you can <a href="link to download form">download a checklist to prepare at this link</a>.</h4>
+  <h2 class="text-bg-black pad-top-s pad-bottom-xs"><span>Let's do this!</span></h2>
+  <p>Please complete the following form to submit your website request. Submitting all your content and materials now will help me to create your website faster, but they are not required in order to begin. If you’d like, you can <a href="link to download form">download a checklist to prepare at this link</a>.</p>
   <!-- the embedded form to sign up for this service goes here --------------->
-  <div>{{page.form}}</div>
+  <div class="pad-top-xs">{{page.form}}</div>
 </section>
 <section id="{{page.title}}-faq">
   <!-- the faq for this service  goes here ----------------------------------->
