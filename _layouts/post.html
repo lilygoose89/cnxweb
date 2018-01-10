@@ -15,21 +15,23 @@ published: true
 ---
 <section>
   <div class="hero-image" style="background-image: url('{{page.hero_image}}');)">
-    <h1 class="text-bg-black margin-top-xs margin-left-xs"><span>{{page.title}}</span></h1>
+    <h1 class="text-bg-black pad-top-xs pad-left-xs"><span>{{page.title}}</span></h1>
   </div>
   <h4 class="pad-top-xs pad-bottom-xs">Published: {{page.date | date: '%B %d, %Y'}}</h4>
   <!-- container for blog post and author card and tags -->
   <div class="grid-spaceBetween-top">
     <!-- container for blog post content - left column -->
-    <div class="col-9">
+    <div class="col-9_sm-12">
       {{content}}
     </div>
     <!-- container for author and tags - right column -->
-    <div class="col-2">
-      <img src="{{page.author_image}}" alt="{{page.author}} image"/>
-      <h5>Author: {{page.author}}</h5>
-      <h5>Filed Under:</h5>
+    <div class="col-2_sm-12">
       <div>
+        <img src="{{page.author_image}}" alt="{{page.author}} image"/>
+        <h5>Author: {{page.author}}</h5>
+      </div>
+      <div>
+        <h5>Filed Under:</h5>
         <h5 class="tags">{{page.tags}}</h5>
       </div>
     </div>

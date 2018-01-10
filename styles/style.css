@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* border: solid 0.25px powderblue; */
+  border: solid 0.25px powderblue;
 }
 [class*=grid-],[class*=grid_],[class~=grid]{
   margin: 0;
@@ -20,10 +20,8 @@ h1,h2 {
   font-family: 'Kanit', sans-serif;
   color: white;
   font-size: 2.2rem;
+  margin: 0;
 }
-/* h2 {
-  font-size: 2.5rem;
-} */
 h3,h4,h5,h6,p,ul {
   font-family: 'Athiti', sans-serif;
   color: #2d2a32;
@@ -39,10 +37,20 @@ h4 {
 }
 p {
   line-height: 1.5;
+  margin-bottom: 0.5em;
 }
 ul {
   padding-left: 30px;
   line-height: 1.5;
+}
+@media all and (max-width:576px) {
+  h1,h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
 }
 .text-orange {
   color: #f85a3e;

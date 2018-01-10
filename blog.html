@@ -6,30 +6,32 @@ description: Tips, tricks, and useful information about websites and small busin
 <section>
   {% for posts in site.posts limit:1 %}
   <div class="hero-image" style="background-image: url('{{posts.hero_image}}');)">
-    <h1 class="text-bg-black margin-top-xs margin-left-xs"><span>{{posts.title}}</span></h1>
+    <h1 class="text-bg-black pad-top-xs pad-left-xs"><span>{{posts.title}}</span></h1>
   </div>
   <h4 class="pad-top-xs pad-bottom-xs">Published: {{posts.date | date: '%B %d, %Y'}}</h4>
   <!-- container for blog post and author card and tags -->
   <div class="grid-spaceBetween-top">
     <!-- container for blog post content - left column -->
-    <div class="col-9">
+    <div class="col-9_sm-12">
       <p>
         {{posts.content}}
       </p>
     </div>
     <!-- container for author and tags - right column -->
-    <div class="col-2">
-      <img src="{{posts.author_image}}" alt="{{posts.author}} image"/>
-      <h5>Author: {{posts.author}}</h5>
-      <h5>Filed Under:</h5>
+    <div class="col-2_sm-12">
+      <div class="sm-0">
+        <img src="{{posts.author_image}}" alt="{{posts.author}} image"/>
+        <h5>Author: {{posts.author}}</h5>
+      </div>
       <div>
+        <h5>Filed Under:</h5>
         <h5 class="tags">{{posts.tags}}</h5>
       </div>
     </div>
   </div>
   {%endfor%}
   <span class="hor-line margin-bottom-xs"></span>
-  <h2 class="text-bg-black margin-top-xs"><span>Older Posts:</span></h2>
+  <h2 class="text-bg-black pad-top-xs pad-bottom-xs"><span>Older Posts:</span></h2>
   {% for posts in site.posts limit:5 offset:1 %}
   <div class="outline-turq margin-top-xs margin-bottom-xs pad-all-xs">
     <h3>{{posts.title}}</h3>
@@ -37,6 +39,6 @@ description: Tips, tricks, and useful information about websites and small busin
     <a href="{{posts.url}}" class="col-2_sm-12 text-right"><button class="button">Read More</button></a>
   </div>
   {% endfor %}
-  <h2 class="text-bg-black margin-top-xs"><span>Explore Tags:</span></h2>
+  <h2 class="text-bg-black pad-top-xs pad-bottom-xs"><span>Explore Tags:</span></h2>
 
 </section>
