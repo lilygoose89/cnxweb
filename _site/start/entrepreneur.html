@@ -65,11 +65,8 @@
   </header>
   <!-- copy styling from services section headers -->
 <section>
-  <div>
-    <img src="/images/man-people-space-desk.jpg" alt="CNX Web - Website Entrepreneur Plan image"/>
-    <h1 class="text-bg-black"><span>CNX Web - Website Entrepreneur Plan</span></h1>
-    <h3>$200,000</h3>
-  </div>
+  <h1 class="text-bg-black margin-bottom-xs"><span>CNX Web - Website Entrepreneur Plan</span></h1>
+  <h3>$200,000</h3>
   <!-- the description of the service goes here ------------------------------>
   <div class="pad-top-xs pad-bottom-xs">
     <p>blabbity blah blah blah</p>
@@ -82,8 +79,8 @@
       <h2 class="text-orange text-vb">1</h2>
     </div>
     <div class="col-11_sm-10">
-      <h3>description</h3>
-      <h4>details</h4>
+      <h4>description</h4>
+      <p>details</p>
     </div>
   </div>
   
@@ -92,8 +89,8 @@
       <h2 class="text-orange text-vb">2</h2>
     </div>
     <div class="col-11_sm-10">
-      <h3>description 2</h3>
-      <h4>details, details</h4>
+      <h4>description 2</h4>
+      <p>details, details</p>
     </div>
   </div>
   
@@ -102,34 +99,34 @@
       <h2 class="text-orange text-vb">3</h2>
     </div>
     <div class="col-11_sm-10">
-      <h3>description 3</h3>
-      <h4>details, details, details</h4>
+      <h4>description 3</h4>
+      <p>details, details, details</p>
     </div>
   </div>
   
   <!-- what's included, optional, and not included for this service goes here -->
-  <h3 class="pad-bottom-xs">What's included?</h3>
-  <ul>
+  <h4 class="pad-bottom-xs">What's included?</h4>
+  <ul class="pad-bottom-xs">
     
       <li>
         
       </li>
     
   </ul>
-  <h3 class="pad-bottom-xs">What else can be added?</h3>
-  <ul>
+  <h4 class="pad-bottom-xs">What else can be added?</h4>
+  <ul class="pad-bottom-xs">
     
     <li>
       thing you can add
     </li>
     
   </ul>
-  <h3 class="pad-bottom-xs">What's <i>not</i> included?</h3>
-    <ul>
+  <h4 class="pad-bottom-xs">What's <i>not</i> included?</h4>
+  <ul class="pad-bottom-xs">
     
-      <li>
-        thing that is not included
-      </li>
+    <li>
+      thing that is not included
+    </li>
     
   </ul>
   <h2 class="text-bg-black pad-top-s pad-bottom-xs"><span>Let's do this!</span></h2>
@@ -138,23 +135,45 @@
   <div class="pad-top-xs">embedded form goes here</div>
 </section>
 <section id="CNX Web - Website Entrepreneur Plan-faq">
+  <h4>Frequently Asked Questions</h4>
   <!-- the faq for this service  goes here ----------------------------------->
-  <!-- <div class="bg-grey">
-    <h3>Frequently Asked Questions</h3>
-    <ul>
-      
-      <li>
-        <h5>here is a question</h5>
-        <h6>here is the answer</h6>
-      </li>
-      
-      <li>
-        <h5>here is a second question</h5>
-        <h6>here is the second answer</h6>
-      </li>
-      
-    </ul>
-  </div> -->
+  
+  <!-- this is the container giving the nested container a grid -->
+  <div class="grid descriptionTitle pad-top-xs">
+    <!-- this is the container limiting the width of the displayed packages -->
+    <div class="col-9_sm-12 open">
+        <!-- this is the container for the answer -->
+      <div class="bg-turq grid-middle-spaceBetween pad-all-xs">
+        <h4 class="text-white">here is a question</h4>
+        <h4><i class="nudge-down text-white fa fa-angle-double-down" aria-hidden="true"></i></h4>
+      </div>
+      <!-- this is the container for the package description hidden until toggled -->
+      <div class="bg-grey">
+        <p class="pad-all-xs expandedDescription">
+          here is the answer
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- this is the container giving the nested container a grid -->
+  <div class="grid descriptionTitle pad-top-xs">
+    <!-- this is the container limiting the width of the displayed packages -->
+    <div class="col-9_sm-12 open">
+        <!-- this is the container for the answer -->
+      <div class="bg-turq grid-middle-spaceBetween pad-all-xs">
+        <h4 class="text-white">here is a second question</h4>
+        <h4><i class="nudge-down text-white fa fa-angle-double-down" aria-hidden="true"></i></h4>
+      </div>
+      <!-- this is the container for the package description hidden until toggled -->
+      <div class="bg-grey">
+        <p class="pad-all-xs expandedDescription">
+          here is the second answer
+        </p>
+      </div>
+    </div>
+  </div>
+  
 </section>
 
   <footer class="grid-middle bg-black text-center pad-all-xs">

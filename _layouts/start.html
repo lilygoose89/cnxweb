@@ -2,7 +2,6 @@
 layout: default
 title:
 description:
-image:
 price:
 steps:
   - number:
@@ -21,11 +20,8 @@ faq:
 ---
 <!-- copy styling from services section headers -->
 <section>
-  <div>
-    <img src="{{page.plan_image}}" alt="{{page.title}} image"/>
-    <h1 class="text-bg-black"><span>{{page.title}}</span></h1>
-    <h3>{{page.price}}</h3>
-  </div>
+  <h1 class="text-bg-black margin-bottom-xs"><span>{{page.title}}</span></h1>
+  <h3>{{page.price}}</h3>
   <!-- the description of the service goes here ------------------------------>
   <div class="pad-top-xs pad-bottom-xs">
     {{content}}
@@ -37,34 +33,34 @@ faq:
       <h2 class="text-orange text-vb">{{steps.number}}</h2>
     </div>
     <div class="col-11_sm-10">
-      <h3>{{steps.description}}</h3>
-      <h4>{{steps.detail}}</h4>
+      <h4>{{steps.description}}</h4>
+      <p>{{steps.detail}}</p>
     </div>
   </div>
   {% endfor %}
   <!-- what's included, optional, and not included for this service goes here -->
-  <h3 class="pad-bottom-xs">What's included?</h3>
-  <ul>
+  <h4 class="pad-bottom-xs">What's included?</h4>
+  <ul class="pad-bottom-xs">
     {% for what-include in page.what-include %}
       <li>
         {{include.does-include}}
       </li>
     {% endfor %}
   </ul>
-  <h3 class="pad-bottom-xs">What else can be added?</h3>
-  <ul>
+  <h4 class="pad-bottom-xs">What else can be added?</h4>
+  <ul class="pad-bottom-xs">
     {% for what-else-add in page.what-else-add %}
     <li>
       {{what-else-add.add}}
     </li>
     {% endfor %}
   </ul>
-  <h3 class="pad-bottom-xs">What's <i>not</i> included?</h3>
-    <ul>
+  <h4 class="pad-bottom-xs">What's <i>not</i> included?</h4>
+  <ul class="pad-bottom-xs">
     {% for what-not-include in page.what-not-include %}
-      <li>
-        {{what-not-include.not-include}}
-      </li>
+    <li>
+      {{what-not-include.not-include}}
+    </li>
     {% endfor %}
   </ul>
   <h2 class="text-bg-black pad-top-s pad-bottom-xs"><span>Let's do this!</span></h2>
@@ -73,16 +69,25 @@ faq:
   <div class="pad-top-xs">{{page.form}}</div>
 </section>
 <section id="{{page.title}}-faq">
+  <h4>Frequently Asked Questions</h4>
   <!-- the faq for this service  goes here ----------------------------------->
-  <!-- <div class="bg-grey">
-    <h3>Frequently Asked Questions</h3>
-    <ul>
-      {% for faq in page.faq %}
-      <li>
-        <h5>{{faq.question}}</h5>
-        <h6>{{faq.answer}}</h6>
-      </li>
-      {% endfor %}
-    </ul>
-  </div> -->
+  {% for faq in page.faq%}
+  <!-- this is the container giving the nested container a grid -->
+  <div class="grid descriptionTitle pad-top-xs">
+    <!-- this is the container limiting the width of the displayed packages -->
+    <div class="col-9_sm-12 open">
+        <!-- this is the container for the answer -->
+      <div class="bg-turq grid-middle-spaceBetween pad-all-xs">
+        <h4 class="text-white">{{faq.question}}</h4>
+        <h4><i class="nudge-down text-white fa fa-angle-double-down" aria-hidden="true"></i></h4>
+      </div>
+      <!-- this is the container for the package description hidden until toggled -->
+      <div class="bg-grey">
+        <p class="pad-all-xs expandedDescription">
+          {{faq.answer}}
+        </p>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
 </section>

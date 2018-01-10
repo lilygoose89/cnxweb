@@ -14,11 +14,11 @@ $(document).ready(function(){
 });
 
 $(".open").click( function () {
-  var container = $(this).parents(".package");
-  var packageDescription = container.find(".packageDescription");
+  var container = $(this).parents(".descriptionTitle");
+  var expandedDescription = container.find(".expandedDescription");
   var trigger = container.find(".faq-t");
 
-  packageDescription.slideToggle(200);
+  expandedDescription.slideToggle(200);
 
   if (trigger.hasClass("faq-o")) {
     trigger.removeClass("faq-o");

@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  border: solid 0.25px powderblue;
+  /* border: solid 0.25px powderblue; */
 }
 [class*=grid-],[class*=grid_],[class~=grid]{
   margin: 0;
@@ -582,12 +582,6 @@ footer a:hover {
   min-width: 25vw;
   height: 30vh;
 }
-/* .product-title {
-  background-color: #f85a3e;
-  color: white;
-  font-weight: bolder;
-  padding: 0.2% 0.3%;
-} */
 .line-icon-orange {
   max-height: 28px;
   max-width: 28px;
@@ -601,7 +595,7 @@ footer a:hover {
 .expanded{
   transition: all .3s ease-in-out;
 }
-.packageDescription{
+.expandedDescription{
   display:none;
 }
 /* .faq-t{
@@ -661,6 +655,10 @@ footer a:hover {
 }
 
 
+/* start pages and forms */
+
+
+
 /* 404 page */
 .image-404 {
   max-height: 50vh;
@@ -673,7 +671,7 @@ footer a:hover {
 }
 
 
-/* borders and backgrounds */
+/* border and background helpers */
 .hor-line {
     display: block;
     height: 1px;

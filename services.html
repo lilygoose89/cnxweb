@@ -156,7 +156,7 @@ business-package:
   <div class="pad-bottom-s">
     {% for marketing-package in page.marketing-package%}
     <!-- this is the container giving the nested container a grid -->
-    <div class="grid package pad-top-xs">
+    <div class="grid descriptionTitle pad-top-xs">
       <!-- this is the container limiting the width of the displayed packages -->
       <div class="col-8_sm-12 grid pad-bottom-xs open">
         <!-- this is the container giving the package container and the yellow read more toggle widths -->
@@ -171,7 +171,7 @@ business-package:
         <h4 class="col-1_sm-2 bg-yellow text-center text-m"><a><i class="read-more fa fa-angle-double-down" aria-hidden="true"></i></a></h4>
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs">
-          <p class="pad-all-xs packageDescription">
+          <p class="pad-all-xs expandedDescription">
             {{marketing-package.description}}
           </p>
         </div>
@@ -189,7 +189,7 @@ business-package:
   <div class="pad-bottom-s">
     {% for business-package in page.business-package%}
     <!-- this is the container giving the nested container a grid -->
-    <div class="grid package pad-top-xs">
+    <div class="grid descriptionTitle pad-top-xs">
       <!-- this is the container limiting the width of the displayed packages -->
       <div class="col-8_sm-12 grid pad-bottom-xs open">
         <!-- this is the container giving the package container and the yellow read more toggle widths -->
@@ -204,7 +204,7 @@ business-package:
         <h4 class="col-1_sm-2 bg-yellow text-center text-m"><a><i class="read-more fa fa-angle-double-down" aria-hidden="true"></i></a></h4>
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs">
-          <p class="pad-all-xs packageDescription">
+          <p class="pad-all-xs expandedDescription">
             {{business-service.description}}
           </p>
         </div>
