@@ -104,6 +104,7 @@ ul {
 /* site-wide padding */
 section {
   padding: 7.5% 10%;
+  min-height: 78vh;
 }
 .hero-section {
   padding: 7.5% 5.6% 0 5.6%;
@@ -566,21 +567,21 @@ footer a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 25vw;
-  height: 30vh;
+  height: 40vh;
 }
 .bg-dm {
   background-image: url("/images/dm.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 25vw;
-  height: 30vh;
+  height: 40vh;
 }
 .bg-bc {
   background-image: url("/images/bc.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 25vw;
-  height: 30vh;
+  height: 40vh;
 }
 .line-icon-orange {
   max-height: 28px;
@@ -644,6 +645,9 @@ footer a:hover {
   background-color: #ffd23f;
   display: inline-block;
   padding: 0.2% 0.3%;
+}
+.justify-content {
+  text-align: justify;
 }
 
 /* about page */

@@ -9,9 +9,12 @@ collections:
     output: true
     permalink: /:collection/:name
 
+gems:
+  - jekyll-archives
+
 jekyll-archives:
   enabled: 'all'
-  layout: 'default'
+  layout: 'blog-listing'
   permalinks:
     year: '/archives/year/:year/'
     month: '/archives/month/:year-:month/'
