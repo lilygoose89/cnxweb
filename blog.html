@@ -40,5 +40,19 @@ description: Tips, tricks, and useful information about websites and small busin
   </div>
   {% endfor %}
   <h2 class="text-bg-black pad-top-xs pad-bottom-xs"><span>Explore Tags:</span></h2>
+    <ul>
+      {% for tag in tags %}
+    {% assign tag_name = tag[0] %}
+    <li>
+      <a href="/tag/{{ tag_name | slugify }}/">{{ tag_name | replace: "-", " " }}</a>
+  	</li>
+  {% endfor %}
+  <!-- <ul>
+{% for category in categories %}
+  {% assign category_name = category[0] %}
+  <li>
+    <a href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
+	</li>
+{% endfor %} -->
 
 </section>

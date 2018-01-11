@@ -8,3 +8,11 @@ collections:
   start:
     output: true
     permalink: /:collection/:name
+
+jekyll-archives:
+  enabled: 'all'
+  layout: 'default'
+  permalinks:
+    year: '/archives/year/:year/'
+    month: '/archives/month/:year-:month/'
+    tag: '/archives/tag/:name/'
