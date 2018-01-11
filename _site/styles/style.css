@@ -84,6 +84,9 @@ ul {
 .text-caps {
   text-transform: uppercase;
 }
+.text-bold {
+  font-weight: bolder;
+}
 .text-center {
   text-align: center;
 }
@@ -114,9 +117,21 @@ section {
   background-position: center;
   height: 79vh;
 }
+.short-section {
+  padding: 7.5% 10% 2.5% 10%;
+  min-height: 10vh;
+}
+.very-short-section {
+  padding: 2.5% 10% 2.5% 10%;
+  min-height: 5vh;
+}
 @media all and (max-width:576px) {
   section {
     padding: 10% 10%;
+    min-height: 50vh;
+  }
+  .mobile-section-top {
+    padding-top: 60px;
   }
 }
 
@@ -202,9 +217,6 @@ button:hover {
 
 
 /* form styling */
-.short-section {
-  padding: 5% 10% 2.5% 10%;
-}
 input,textarea,button,select {
   font-family: 'Athiti', sans-serif;
   color: #2d2a32;
@@ -582,6 +594,11 @@ footer a:hover {
   background-repeat: no-repeat;
   min-width: 25vw;
   height: 40vh;
+}
+@media all and (max-width:576px) {
+  .bg-wd,.bg-dm,.bg-bc {
+    height: 25vh;
+  }
 }
 .line-icon-orange {
   max-height: 28px;

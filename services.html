@@ -38,7 +38,7 @@ business-package:
     price:
     description:
 ---
-<section>
+<section class="mobile-section-top short-section">
   <h1 class="text-bg-black pad-bottom-s"><span>Solutions for your small business</span></h1>
   <!-- <p>Are you looking for more customers? Better customers? Or are you looking for a way to serve your customers better? Whatever problem you're encountering in your small business, one of the most powerful solutions is communication, and that's what a website is. A better way to communicate with your customers. It's more than just a digital business card or "something you should just have." A website is how you show the world who you are and what you stand for. It's how you make it easy for customers to understand how you can help them and how to find you.</p> -->
   <div class="outline-turq pad-all-xs">
@@ -138,7 +138,7 @@ business-package:
   </div>
 </section>
 <!-- this is the not sure cta section ----------------------------------------------------------------------------------->
-<section class="bg-grey text-center pad-all-m">
+<section class="bg-grey short-section text-center pad-top-s pad-bottom-s">
   <h2 class="text-bg-black"><span>Not sure which package is right for you?</span></h2>
   <h3 class="pad-top-s">Call or message me for a free consultation</h3>
   <div class="grid-spaceAround-middle text-center pad-top-s">
@@ -163,7 +163,7 @@ business-package:
         <div class="col-11_sm-10">
           <!-- this is the container for the description and the price outlined in orange -->
           <div class="outline-orange grid-middle-spaceBetween pad-all-xs">
-            <h4>{{marketing-package.name}}</h4>
+            <h4 class="text-bold">{{marketing-package.name}}</h4>
             <h4>{{marketing-package.price}}</h4>
           </div>
         </div>
@@ -196,7 +196,7 @@ business-package:
         <div class="col-11_sm-10">
           <!-- this is the container for the description and the price outlined in orange -->
           <div class="outline-orange grid-middle-spaceBetween pad-all-xs">
-            <h4>{{business-service.name}}</h4>
+            <h4 class="text-bold">{{business-service.name}}</h4>
             <h4>{{business-service.price}}</h4>
           </div>
         </div>
@@ -211,7 +211,8 @@ business-package:
       </div>
     </div>
     {%endfor%}
-    <h4 class="pad-bottom-xs">Have a different back-of-house problem not solved by one of the packages above? Let's work together to come up with a solution.</h4>
+    <h4>Have a different back-of-house problem not solved by one of the packages above?</h4>
+    <h4 class="pad-bottom-xs">Let's work together to come up with a solution.</h4>
     <a href="/contact.html"><button>Email Me to Get Started</button></a>
   </div>
 </section>
