@@ -1,11 +1,11 @@
 ---
 layout: default
-title: CNX Web - Examples
+title: Examples
 description: Portfolio of websites and and projects completed by CNX Web
 ---
 <section class="mobile-section-top">
-  <h1 class="text-bg-black pad-bottom-xs"><span>Clients and examples of my work</span></h1>
-  <h4>Click the website images below to read the case studies and learn more about each of the projects.</h4>
+  <h1 class="text-bg-black pad-bottom-xs"><span>{{page.title}}</span></h1>
+  <h4 class="editable">Click the website images below to read the case studies and learn more about each of the projects.</h4>
   <div>
     <div>
       {% for example in site.example limit:6  %}
@@ -31,7 +31,7 @@ description: Portfolio of websites and and projects completed by CNX Web
   </div>
   <div class="grid pad-top-s">
     <div class="container-right text-right col-4_sm-12">
-      <h3 class="pad-bottom-s">Ready to get your own beautiful website?</h3>
+      <h3 class="editable pad-bottom-s">Ready to get your own beautiful website?</h3>
       <a href="/start/entrepreneur.html"><button>Yes!</button></a>
     </div>
   </div>
