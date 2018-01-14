@@ -8,7 +8,7 @@ description: Tips, tricks, and useful information about websites and small busin
   <div class="hero-image" style="background-image: url('{{posts.hero_image}}');)">
     <h1 class="text-bg-black pad-top-xs pad-left-xs"><span>{{posts.title}}</span></h1>
   </div>
-  <h4 class="pad-top-xs pad-bottom-xs">Published: {{posts.date | date: '%B %d, %Y'}}</h4>
+  <h4 class="pad-top-xs pad-bottom-xs">Published: {{posts.date | date: "%b %-d, %Y"}}</h4>
   <!-- container for blog post and author card and tags -->
   <div class="grid-spaceBetween-top">
     <!-- container for blog post content - left column -->
@@ -25,25 +25,30 @@ description: Tips, tricks, and useful information about websites and small busin
       </div>
       <div>
         <h5>Filed Under:</h5>
-        <h5 class="tags">{{posts.tags}}</h5>
+        {% for tag in posts.tags %}
+        <h5 class="tags nudge-down"><a href="/archives/tag/{{ tag | slugify }}">{{tag}}</a></h5>
+        {% endfor %}
       </div>
     </div>
   </div>
   {%endfor%}
-  <span class="hor-line margin-bottom-xs"></span>
+  <span class="hor-line margin-bottom-s"></span>
   <h2 class="text-bg-black pad-top-xs pad-bottom-xs"><span>Older Posts:</span></h2>
   {% for posts in site.posts limit:5 offset:1 %}
   <div class="outline-turq margin-top-xs margin-bottom-xs pad-all-xs">
     <h3>{{posts.title}}</h3>
+    <h6 class="pad-top-xs">{{ posts.date | date: "%b %-d, %Y" }}</h6>
     <p>{{posts.excerpt}}</p>
     <a href="{{posts.url}}" class="col-2_sm-12 text-right"><button class="button">Read More</button></a>
   </div>
   {% endfor %}
-  <h2 class="text-bg-black pad-top-xs pad-bottom-xs"><span>Explore Tags:</span></h2>
+  <a href="/blog-all"><button>See list of all blog posts</button></a>
+  <span class="hor-line margin-bottom-s"></span>
+  <h2 class="text-bg-black pad-bottom-xs"><span>Explore Tags:</span></h2>
     <div class="justify-content">
-      {% for tag in site.tags %}
-    {% assign tag_name = tag[0] %}
-      <a class="tags" href="/archives/tag/{{ tag_name | slugify }}/">{{ tag_name | replace: "-", " " }}</a>
-  {% endfor %}
+    {% for tag in site.tags %}
+      {% assign tag_name = tag[0] %}
+      <a class="tags big-tags nudge-down" href="/archives/tag/{{ tag_name | slugify }}/">{{ tag_name | replace: "-", " " }}</a>
+    {% endfor %}
     </div>
 </section>

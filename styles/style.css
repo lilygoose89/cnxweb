@@ -102,6 +102,9 @@ ul {
 .text-m {
   font-size: 1.5rem;
 }
+.capitalize {
+  text-transform: capitalize;
+}
 
 
 /* site-wide padding */
@@ -662,6 +665,12 @@ footer a:hover {
   background-color: #ffd23f;
   display: inline-block;
   padding: 0.2% 0.3%;
+  font-family: 'Athiti', sans-serif;
+  text-transform: capitalize;
+  margin-bottom: 1%;
+}
+.big-tags {
+  font-size: 1.5rem;
 }
 .justify-content {
   text-align: justify;

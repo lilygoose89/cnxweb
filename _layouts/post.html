@@ -17,7 +17,7 @@ published: true
   <div class="hero-image" style="background-image: url('{{page.hero_image}}');)">
     <h1 class="text-bg-black pad-top-xs pad-left-xs"><span>{{page.title}}</span></h1>
   </div>
-  <h4 class="pad-top-xs pad-bottom-xs">Published: {{page.date | date: '%B %d, %Y'}}</h4>
+  <h4 class="pad-top-xs pad-bottom-xs">Published: {{page.date | date: "%b %-d, %Y"}}</h4>
   <!-- container for blog post and author card and tags -->
   <div class="grid-spaceBetween-top">
     <!-- container for blog post content - left column -->
@@ -32,7 +32,10 @@ published: true
       </div>
       <div>
         <h5>Filed Under:</h5>
-        <h5 class="tags">{{page.tags}}</h5>
+        {% for tags in page.tags %}
+        <!-- <h5 class="tags">{{tags}}</h5> -->
+        <h5 class="tags nudge-down"><a href="/archives/tag/{{ tags | slugify }}">{{tags}}</a></h5>
+        {% endfor %}
       </div>
     </div>
   </div>

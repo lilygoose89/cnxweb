@@ -1,23 +1,16 @@
 ---
 layout: default
-title: CNX Web - Blog Posts
 ---
 <section class="mobile-section-top">
-  <h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1>
-<ul class="posts">
+  <h1 class="text-bg-black pad-bottom-xs"><span>Posts filed under <span class="capitalize">'{{ page.title }}'</span>:</span></h1>
   {% for post in page.posts %}
-    <li>
-      <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
+  <div class="outline-turq margin-top-xs margin-bottom-xs pad-all-xs">
+    <h3>{{post.title}}</h3>
+    <h6 class="pad-top-xs">{{ post.date | date: "%b %-d, %Y" }}</h6>
+    <p>{{post.excerpt}}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="col-2_sm-12 text-right"><button class="button">Read More</button></a>
+  </div>
   {% endfor %}
-</ul>
-  <!-- <h1 class="text-bg-black"><span>Posts Filed Under {{site.tag[page.tag]}}</span></h1>
-    {% for post in site.tags[page.tag] %}
-    <div class="outline-turq margin-top-xs margin-bottom-xs pad-all-xs">
-      <h3>{{post.title}}</h3>
-      <p>{{post.excerpt}}</p>
-      <a href="{{post.url | absolute_url}}" class="button">Read More</a>
-    </div>
-  {% endfor %} -->
+  <span class="hor-line"></span>
+  <a href="/blog"><button>Go back to main blog page</button></a>
 </section>
