@@ -206,7 +206,12 @@ button:hover {
 .read-more:visited {
   transform: rotate(180deg);
 }
-
+.share-hover {
+  margin: 0 5px;
+}
+.share-hover:hover {
+  color: #ffd23f;
+}
 
 /* animations */
 .nudge-down {
@@ -744,6 +749,11 @@ footer a:hover {
 }
 .outline-orange {
   border: solid 5px #f85a3e;
+}
+.outline-black-thin {
+  border: solid 1px #2d2a32;
+  padding: 1%;
+  display: inline-block;
 }
 
 
