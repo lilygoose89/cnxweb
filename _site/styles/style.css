@@ -61,6 +61,9 @@ ul {
 .text-black {
   color: #2d2a32;
 }
+.text-yellow {
+  color: #ffd23f;
+}
 .text-grey {
   color: #EFEFEF;
 }
@@ -573,6 +576,9 @@ footer a:hover {
   background-size: cover;
   background-position: center;
   height: 78vh;
+}
+.testimonials-image {
+  border-radius: 100%;
 }
 
 

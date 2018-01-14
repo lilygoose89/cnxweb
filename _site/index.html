@@ -104,20 +104,72 @@
 </section>
 <!-- this is the testimonials section ------------------------------------------------------------------------------------->
 <section id="testimonials">
-  <h3 class="pad-bottom-xs">Helping small business owners reach more customers.</h3>
-  <!-- container for testimonials -->
-  <div class="grid">
-    <!-- left scroll arrow -->
+  <h3 class="pad-bottom-s">Helping small business owners reach more customers.</h3>
+  <!-- this is the container for the testimonials which should cycle through like a gallery-->
+  <div class="grid-middle">
     <div class="col-1">
-      <i class="fa fa-angle-left" aria-hidden="true"></i>
+      <!-- this is the button or icon to click left to see previous testimonial -->
+    <a id="flex-left" href="#"><i class="text-b text-yellow fa fa-angle-left" aria-hidden="true"></i></a>
     </div>
-    <!-- testimonials box -->
-    <div class="col-10 container-center outline-turq">
-
+    <div id="testimonial" class="col-10 outline-turq padding-all-s">
+      <!-- these are the testimonial itself -->
+      <div class="flexslider margin-all-s">
+        <ul class="slides">
+          
+          <li>
+            <div class="grid">
+              <div class="col-8_sm-12">
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
+                <h4 class="text-right pad-to-xs">- Happy Client 1</h4>
+              </div>
+              <div class="container-right col-3_sm-12">
+                <img class="testimonials-image" src="/images/lilybruns-headshot.jpg"/>
+              </div>
+            </div>
+          </li>
+          
+          <li>
+            <div class="grid">
+              <div class="col-8_sm-12">
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
+                <h4 class="text-right pad-to-xs">- Happy Client 2</h4>
+              </div>
+              <div class="container-right col-3_sm-12">
+                <img class="testimonials-image" src="/images/lilybruns-headshot.jpg"/>
+              </div>
+            </div>
+          </li>
+          
+          <li>
+            <div class="grid">
+              <div class="col-8_sm-12">
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
+                <h4 class="text-right pad-to-xs">- Happy Client 3</h4>
+              </div>
+              <div class="container-right col-3_sm-12">
+                <img class="testimonials-image" src="/images/lilybruns-headshot.jpg"/>
+              </div>
+            </div>
+          </li>
+          
+          <li>
+            <div class="grid">
+              <div class="col-8_sm-12">
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
+                <h4 class="text-right pad-to-xs">- Happy Client 4</h4>
+              </div>
+              <div class="container-right col-3_sm-12">
+                <img class="testimonials-image" src="/images/lilybruns-headshot.jpg"/>
+              </div>
+            </div>
+          </li>
+          
+        </ul><!-- .slides -->
+      </div><!-- .flexslider -->
     </div>
-    <!-- right scroll arrow -->
     <div class="col-1 text-right">
-      <i class="fa fa-angle-right" aria-hidden="true"></i>
+      <!-- this is the button or icon to click right to see next testimonial -->
+      <a id="flex-right" href="#"><i  class="text-b text-yellow fa fa-angle-right" aria-hidden="true"></i></a>
     </div>
   </div>
 </section>
@@ -135,5 +187,6 @@
   document.write(new Date().getFullYear());</script></h5>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js"></script>
   <script src="/js/main.js" type="text/javascript"></script>
 </body>
