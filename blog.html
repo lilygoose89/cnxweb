@@ -1,7 +1,9 @@
 ---
 layout: default
-title: CNX Web - Blog
-description: Tips, tricks, and useful information about websites and small business marketing.
+title: Blog
+description: >-
+  Tips, tricks, and useful information about websites and small business
+  marketing.
 ---
 <section class="mobile-section-top">
   {% for posts in site.posts limit:1 %}
@@ -28,7 +30,7 @@ description: Tips, tricks, and useful information about websites and small busin
     <!-- container for author and tags - right column -->
     <div class="col-2_sm-12 grid">
       <div class="col-12_sm-0 margin-top-xs">
-        <img src="{{posts.author_image}}" alt="{{posts.author}} image"/>
+        <img src="{{posts.author_image}}" alt="{{posts.author}} image" />
         <h5>Author: {{posts.author}}</h5>
       </div>
       <div>
