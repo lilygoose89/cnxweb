@@ -92,18 +92,18 @@ business-package:
   <h2 class="text-bg-black"><span class="editable">Web Design Packages</span></h2>
   <h4 class="editable pad-top-xs pad-bottom-xs">The first step in your digital growth is a great website. Let's show the world who you are.</h4>
   <!-- container for pricing modules -->
-  <div class="grid-spaceBetween-middle text-center pad-top-xs">
+  <div class="grid-spaceBetween-middle text-center pad-top-xs margin-left-xs margin-right-xs">
     {% for web-package in page.web-package limit:3 %}
-    <div class="col-3_sm-12 pad-bottom-s">
-      <div class="outline-orange pad-all-s">
-        <h3 class="text-bold">{{web-package.name}}</h3>
+    <div class="col-4_sm-12 pad-bottom-s grid">
+      <div class="col-11 outline-orange pad-all-s">
+        <h3>{{web-package.name}}</h3>
       </div>
-      <div class="bg-grey pad-all-s">
+      <div class="col-11 bg-grey pad-all-s">
         <h4>{{web-package.design}}</h4>
         <h4>{{web-package.pages}}</h4>
         <h4>{{web-package.maintenance}}</h4>
         <h3 class="pad-all-s">฿10,000</h3>
-        <a href="start/starter.html"><button>Choose This Package</button></a>
+        <a href="start/starter.html"><button><span class="editable"></span>Choose This Package</button></a>
       </div>
     </div>
     {% endfor %}
@@ -118,6 +118,7 @@ business-package:
   <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Content management system (CMS) for self-updating</h4>
   <h3 class="editable pad-top-s">Optional add-ons to supercharge your website:</h3>
   <div class="grid"><div class="hor-line col-7_md-10_sm-12"></div></div>
+  <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Premium Hosting for ฿1000/month*</h4>
   <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Blogging for ฿5000</h4>
   <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Online Booking for ฿10,000*</h4>
   <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> E-Commerce for ฿30,000*</h4>
@@ -126,13 +127,13 @@ business-package:
     <h2 class="editable col-12 text-bg-black margin-bottom-s"><span>Looking for a more full service web design option?</span></h2>
     {% for web-package in page.web-package offset:3 limit:1 %}
     <div class="col-7_sm-12 outline-orange text-center pad-all-xs">
-      <h3 class="editable text-bold">{{web-package.name}}</h3>
+      <h3>{{web-package.name}}</h3>
     </div>
     <div class="col-7_sm-12 bg-grey pad-all-s text-center">
-      <h4 class="editable">{{web-package.design}}</h4>
-      <h4 class="editable">{{web-package.pages}}</h4>
-      <h4 class="editable">{{web-package.maintenance}}</h4>
-      <h3 class="editable pad-bottom-s pad-top-s">{{web-package.price}}</h3>
+      <h4>{{web-package.design}}</h4>
+      <h4>{{web-package.pages}}</h4>
+      <h4>{{web-package.maintenance}}</h4>
+      <h3 class="pad-bottom-s pad-top-s">{{web-package.price}}</h3>
       <a href="start/bespoke.html"><button class="editable">Get A Project Quote</button></a>
     </div>
     {% endfor %}
