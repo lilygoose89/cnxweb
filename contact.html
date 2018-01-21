@@ -40,7 +40,7 @@ description: Get in touch with CNX Web with your questions about web design and 
       <!--  <label for="client-domain">If yes, what is your current domain name?</label>-->
       <!--  <input type="text" name="client-domain" placeholder="Your domain name">-->
       <!--</div>-->
-      <div class="col-7_sm-12 pad-bottom-xs">
+      <div class="col-12 pad-bottom-xs">
         <label for="_subject">What are you writing about today? *</label>
         <select name="subject" style="border-radius: 0; width: 100%;">
           <option value="I'd like to learn more about your services">I'd like to learn more about your services</option>
@@ -50,15 +50,17 @@ description: Get in touch with CNX Web with your questions about web design and 
           <option value="Other">Other</option>
         </select>
       </div>
-      <div class="col-7_sm-12 pad-bottom-xs">
+      <div class="col-12 pad-bottom-xs">
         <label for="message">Message *</label>
         <textarea name="message" placeholder="Your message" required></textarea>
       </div>
       <div class="col-12 pad-bottom-xs">
         <label>What services are you interested in?</label>
-        <label class="checkmark-container"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
-        <label class="checkmark-container"><input type="checkbox" name="dm" value="Digital Marketing">Digital Marketing<span class="checkmark"></span></label>
-        <label class="checkmark-container"><input type="checkbox" name="ba" value="Business Automation">Business Automation<span class="checkmark"></span></label>
+        <div class="grid-middle-spaceBetween">
+          <label class="checkmark-container col-3_sm-12"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
+          <label class="checkmark-container col-3_sm-12"><input type="checkbox" name="dm" value="Digital Marketing">Digital Marketing<span class="checkmark"></span></label>
+          <label class="checkmark-container col-3_sm-12"><input type="checkbox" name="ba" value="Business Automation">Business Automation<span class="checkmark"></span></label>
+        </div>
       </div>
       <button type="submit" class="button-wide">Send</button>
     </form>
