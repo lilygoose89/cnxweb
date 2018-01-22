@@ -30,9 +30,9 @@
         <!-- links -->
         <div class="bg-turq nav-links col-9_sm-10_xs-0 grid-spaceAround-middle">
           <a href="/services"><h2>services</h2></a>
-          <a href="/examples"><h2>examples</h2></a>
+          <!--<a href="/examples"><h2>examples</h2></a>-->
           <a href="/about"><h2>about</h2></a>
-          <a href="/blog"><h2>blog</h2></a>
+          <!--<a href="/blog"><h2>blog</h2></a>-->
           <a href="/contact"><h2>contact</h2></a>
         </div>
         <div class="turq-skew col-1_sm-0"></div>
@@ -41,9 +41,9 @@
       <div class="col-3_md-2_sm-3 grid-middle">
         <span class="col-2_md-0 yellow-outline-skew"></span>
         <div class="col-6_md-12 nav-cta grid-middle">
-          <h2 class="text-black nudge-down"><a href="/start/entrepreneur.html">get started</a></h2>
+          <h2 class="text-black nudge-down"><a href="/contact.html">get started</a></h2>
         </div>
-        <a class="col-3_md-0 translation-icon"></a>
+        <!--<a class="col-3_md-0 translation-icon"></a>-->
       </div>
     </nav>
     <!-- mobile menu -->
@@ -56,16 +56,16 @@
       </a>
       <a href="/"><h2>home</h2></a>
       <a href="/services"><h2>services</h2></a>
-      <a href="/examples"><h2>examples</h2></a>
+      <!--<a href="/examples"><h2>examples</h2></a>-->
       <a href="/about"><h2>about</h2></a>
-      <a href="/blog"><h2>blog</h2></a>
+      <!--<a href="/blog"><h2>blog</h2></a>-->
       <a href="/contact"><h2>contact</h2></a>
-      <a class=><img src="/images/black-language-icon-english-thai.png" alt="translate between thai and english" style="height: 45px; margin-top: 15px;"/></a>
+      <!--<a class=><img src="/images/black-language-icon-english-thai.png" alt="translate between thai and english" style="height: 45px; margin-top: 15px;"/></a>-->
     </nav>
   </header>
   <section class="mobile-section-top short-section">
   <h1 class="text-bg-black pad-bottom-xs"><span>Contact</span></h1>
-  <h4 class="editable">I’m here to help and to answer your questions.</h4>
+  <h4 class="editable">Do you need help with your business?</h4>
 </section>
 <section class="bg-orange very-short-section" id="contact-form">
   <div>
@@ -89,36 +89,38 @@
         <label for="phone">Phone *</label>
         <input type="tel" name="phone" placeholder="Your phone number" required>
       </div>
+      <!--<div class="col-12 pad-bottom-xs">-->
+      <!--  <label>Are you a current CNX Web client?</label>-->
+      <!--  <div class="grid">-->
+      <!--    <label class="radio-container col-2_sm-12"><input type="radio" name="client" value="yes"/>Yes<span class="radio"></span></label>-->
+      <!--    <label class="radio-container col-2_sm-12"><input type="radio" name="client" value="no"/>Not Yet<span class="radio"></span></label>-->
+      <!--  </div>-->
+      <!--</div>-->
+      <!--<div class="col-7_sm-12 pad-bottom-xs">-->
+      <!--  <label for="client-domain">If yes, what is your current domain name?</label>-->
+      <!--  <input type="text" name="client-domain" placeholder="Your domain name">-->
+      <!--</div>-->
       <div class="col-12 pad-bottom-xs">
-        <label>Are you a current CNX Web client?</label>
-        <div class="grid">
-          <label class="radio-container col-2_sm-12"><input type="radio" name="client" value="yes"/>Yes<span class="radio"></span></label>
-          <label class="radio-container col-2_sm-12"><input type="radio" name="client" value="no"/>Not Yet<span class="radio"></span></label>
-        </div>
-      </div>
-      <div class="col-7_sm-12 pad-bottom-xs">
-        <label for="client-domain">If yes, what is your current domain name?</label>
-        <input type="text" name="client-domain" placeholder="Your domain name">
-      </div>
-      <div class="col-7_sm-12 pad-bottom-xs">
-        <label for="_subject">What are you writing about today?</label>
-        <select name="subject">
+        <label for="_subject">What are you writing about today? *</label>
+        <select name="subject" style="border-radius: 0; width: 100%;">
           <option value="I'd like to learn more about your services">I'd like to learn more about your services</option>
-          <option value="I would like to hire you">I would like to hire you</option>
-          <option value="I would like to collaborate with you">I would like to collaborate with you</option>
+          <option value="I would like to hire you">I'd like to hire you</option>
+          <option value="I would like to collaborate with you">I'd like to collaborate with you</option>
           <option value="I need help a website you made for me">I need help with a website you made for me</option>
           <option value="Other">Other</option>
         </select>
       </div>
-      <div class="col-7_sm-12 pad-bottom-xs">
+      <div class="col-12 pad-bottom-xs">
         <label for="message">Message *</label>
         <textarea name="message" placeholder="Your message" required></textarea>
       </div>
       <div class="col-12 pad-bottom-xs">
         <label>What services are you interested in?</label>
-        <label class="checkmark-container"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
-        <label class="checkmark-container"><input type="checkbox" name="dm" value="Digital Marketing">Digital Marketing<span class="checkmark"></span></label>
-        <label class="checkmark-container"><input type="checkbox" name="ba" value="Business Automation">Business Automation<span class="checkmark"></span></label>
+        <div class="grid-middle-spaceBetween">
+          <label class="checkmark-container md-12"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
+          <label class="checkmark-container md-12"><input type="checkbox" name="dm" value="Digital Marketing">Digital Marketing<span class="checkmark"></span></label>
+          <label class="checkmark-container md-12"><input type="checkbox" name="ba" value="Business Automation">Business Consulting<span class="checkmark"></span></label>
+        </div>
       </div>
       <button type="submit" class="button-wide">Send</button>
     </form>

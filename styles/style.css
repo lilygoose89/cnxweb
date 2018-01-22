@@ -703,8 +703,21 @@ footer a:hover {
 /* about page */
 .hero-image-about {
   background-size: cover;
-  background-position: center;
+  background-position: right;
   height: 78vh;
+}
+.hi-lily {
+  position: absolute;
+  top: 24%;
+  left: 11%;
+}
+@media all and (max-width:576px) {
+  .hero-image-about {
+    height: 56vh;
+  }
+  .hi-lily {
+    position: static;
+  }
 }
 
 
