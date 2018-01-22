@@ -702,7 +702,6 @@ footer a:hover {
 
 /* about page */
 .hero-image-about {
-  background-image: url("/images/man-people-space-desk.jpg");
   background-size: cover;
   background-position: center;
   height: 78vh;
