@@ -1,6 +1,6 @@
 ---
 layout: default
-title: clientss
+title: Examples
 description: Portfolio of websites and and projects completed by CNX Web
 ---
 <section class="mobile-section-top">
@@ -8,23 +8,23 @@ description: Portfolio of websites and and projects completed by CNX Web
   <h4 class="editable">Click the website images below to read the case studies and learn more about each of the projects.</h4>
   <div>
     <div>
-      {% for clients in site.clients limit:6  %}
+      {% for example in site.example limit:6  %}
       <div>
-        <img src="{{clients.image}}"/>
+        <img src="{{example.image}}"/>
       </div>
       {% endfor %}
     </div>
     <div>
-      {% for clients in site.clients limit:5 offset:6 %}
+      {% for example in site.example limit:5 offset:6 %}
       <div>
-        <img src="{{clients.image}}"/>
+        <img src="{{example.image}}"/>
       </div>
       {% endfor %}
     </div>
     <div>
-      {% for clients in site.clients limit:5 offset:11 %}
+      {% for example in site.example limit:5 offset:11 %}
       <div>
-        <img src="{{clients.image}}"/>
+        <img src="{{example.image}}"/>
       </div>
       {% endfor %}
     </div>
