@@ -41,36 +41,24 @@ testimonials:
     testimonials_image: /images/lilybruns-headshot.jpg
 ---
 <!-- this is the introduction section ------------------------------------------------------------------------------------>
-<section id="intro" class="hero-section mobile-section-top">
+<section id="intro" class="mobile-section-top hero-section bg-turq-grad">
+  <img src="/images/CNX-Web-LOGO.png" alt="cnx web logo white"/>
+  <h2 class="editable pad-top-s pad-bottom-s">Websites and digital solutions for your  <span class="txt-rotate" data-period="100" data-rotate='[ "small business.   ", "start-up.   ", "agency.   ", "non-profit.   "]'></span></h2>
+    <div class="grid">
+      <a href="#home" class="margin-right-s"><button class="button-footer"><span class="editable text-m">Learn more</span></button></a>
+      <a href="/contact"><button class="button-footer"><span class="editable text-m">Get in touch</span></button></a>
+    </div>
+</section>
+<section id="home">
   <div class="hero-image-home">
     <h1 class="text-bg-black pad-top-xs pad-left-xs"><span class="editable">Supporting small businesses with big dreams.</span></h1>
   </div>
-</section>
-<section>
-  <div class="pad-bottom-s">
+  <div class="pad-top-m pad-bottom-s">
     <div class="grid">
       <h3 class="editable pad-bottom-s col-12">Get a new website built with as much love and care as you put into your small business.</h3>
       <h3 class="editable col-12">Why work with me?</h3>
       <div class="hor-line col-3_md-6_sm-10_xs-12"></div>
       <h4 class="editable col-12">With my experience helping small businesses and startups, I don’t just help you build a website, I can help you build a foundation to grow your business and reach your goals.</h4>
-    </div>
-  </div>
-  <div class="grid-spaceBetween">
-    <h3 class="editable col-12">Your website will be:</h3>
-    <div class="col-3_sm-12 bg-orange text-center pad-all-xs margin-top-xs">
-      <h3 class="editable text-caps text-white">beautiful</h3>
-      <h2><i class="fa fa-eye" aria-hidden="true"></i></h2>
-      <h4 class="editable text-white">Elegant, modern design that focuses on the content. Your website will be mobile responsive and look great on any screen.</h4>
-    </div>
-    <div class="col-3_sm-12 bg-orange text-center pad-all-xs margin-top-xs">
-      <h3 class="editable text-caps text-white">easy to use</h3>
-      <h2><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></h2>
-      <h4 class="editable text-white">All the right things in all the right places - make it easy for your customers to find the information they need and get in contact.</h4>
-    </div>
-    <div class="col-3_sm-12 bg-orange text-center pad-all-xs margin-top-xs">
-      <h3 class="editable text-caps text-white">easy to find</h3>
-      <h2><i class="fa fa-search" aria-hidden="true"></i></h2>
-      <h4 class="editable text-white">Optimized for SEO and speedy load times, putting you in front of more customers so your business can grow.</h4>
     </div>
   </div>
 </section>
@@ -81,37 +69,39 @@ testimonials:
   <div class="pad-top-s text-m"><a href="/contact" class="button"><button><span class="editable">Get in touch</span></button></a></div>
 </section>
 <!-- this is the testimonials section ------------------------------------------------------------------------------------->
-<!--<section id="testimonials">-->
-<!--  <h3 class="editable pad-bottom-s">Helping small business owners reach more customers.</h3>-->
-  <!-- this is the container for the testimonials which should cycle through like a gallery-->
-<!--  <div class="grid-middle">-->
-<!--    <div class="col-1">-->
+<section id="testimonials">
+ <h3 class="editable text-center pad-bottom-s">Helping small business owners to succeed.</h3>
+  <!-- this is the container for the testimonials which should cycle through like a gallery -->
+  <div class="grid-middle">
+    <div class="col-1">
       <!-- this is the button or icon to click left to see previous testimonial -->
-<!--    <a id="flex-left" href="#"><i class="text-b text-yellow fa fa-angle-left" aria-hidden="true"></i></a>-->
-<!--    </div>-->
-<!--    <div id="testimonial" class="col-10 outline-turq padding-all-s">-->
+      <a id="flex-left" href="#"><i class="text-b text-yellow fa fa-angle-left" aria-hidden="true"></i></a>
+    </div>
+    <div id="testimonial" class="col-10 outline-turq padding-all-s">
       <!-- these are the testimonial itself -->
-<!--      <div class="flexslider margin-all-s">-->
-<!--        <ul class="slides">-->
-<!--          {% for testimonials in page.testimonials %}-->
-<!--          <li>-->
-<!--            <div class="grid">-->
-<!--              <div class="col-8_sm-12">-->
-<!--                <blockquote>{{testimonials.quote}}</blockquote>-->
-<!--                <h4 class="text-right pad-to-xs">- {{testimonials.client}}</h4>-->
-<!--              </div>-->
-<!--              <div class="container-right col-3_sm-12">-->
-<!--                <img class="testimonials-image" src="{{testimonials.testimonials_image}}" />-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </li>-->
-<!--          {% endfor %}-->
-<!--        </ul><!-- .slides -->
-<!--      </div><!-- .flexslider -->
-<!--    </div>-->
-<!--    <div class="col-1 text-right">-->
+      <div class="flexslider margin-all-s">
+        <ul class="slides">
+        {% for testimonials in page.testimonials %}
+          <li>
+            <div class="grid">
+              <div class="col-8_sm-12">
+                <blockquote>{{testimonials.quote}}</blockquote>
+                <h4 class="text-right pad-to-xs">- {{testimonials.client}}</h4>
+              </div>
+              <div class="container-right col-3_sm-12">
+                <img class="testimonials-image" src="{{testimonials.testimonials_image}}" />
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+        </ul>
+         <!-- .slides -->
+      </div>
+        <!-- .flexslider -->
+    </div>
+    <div class="col-1 text-right">
       <!-- this is the button or icon to click right to see next testimonial -->
-<!--      <a id="flex-right" href="#"><i class="text-b text-yellow fa fa-angle-right" aria-hidden="true"></i></a>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+      <a id="flex-right" href="#"><i class="text-b text-yellow fa fa-angle-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
