@@ -5,7 +5,7 @@ description: Get in touch with CNX Web with your questions about web design and 
 ---
 <section class="mobile-section-top short-section">
   <h1 class="text-bg-black pad-bottom-xs"><span>{{page.title}}</span></h1>
-  <h4 class="editable">Do you need help with your business?</h4>
+  <h4 class="editable">How can I help you today?</h4>
 </section>
 <section class="bg-orange very-short-section" id="contact-form">
   <div>
@@ -51,20 +51,30 @@ description: Get in touch with CNX Web with your questions about web design and 
         </select>
       </div>
       <div class="col-12 pad-bottom-xs">
+        <label>What is your budget for this project? *</label>
+        <select name="budget" style="border-radius: 0; width: 100%;">
+          <option value="฿5,000 - ฿10,000">฿5,000 - ฿10,000</option>
+          <option value="฿10,000 - ฿50,000">฿10,000 - ฿50,000</option>
+          <option value="฿50,000 - ฿100,000">฿50,000 - ฿100,000</option>
+          <option value="฿100,000 or higher">฿100,000 or higher</option>
+          <option value="Under ฿5,000">Under ฿5,000</option>
+        </select>
+      </div>
+      <div class="col-12 pad-bottom-xs">
         <label for="message">Message *</label>
         <textarea name="message" placeholder="Your message" required></textarea>
       </div>
       <div class="col-12 pad-bottom-xs">
         <label>What services are you interested in?</label>
         <div class="grid-middle">
-          <label class="checkmark-container col-3_md-12"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
-          <label class="checkmark-container col-3_md-12"><input type="checkbox" name="ba" value="Business Automation">Consulting<span class="checkmark"></span></label>
+          <label class="checkmark-container col-3_md-12" style="font-family: athiti; font-weight: 300; text-transform: none;"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
+          <label class="checkmark-container col-3_md-12" style="font-family: athiti; font-weight: 300; text-transform: none;"><input type="checkbox" name="ba" value="Business Automation">Consulting<span class="checkmark"></span></label>
         </div>
       </div>
       <button type="submit" class="button-wide">Send</button>
     </form>
   </div>
 </section>
-<section class="very-short-section">
+<!-- <section class="very-short-section">
   <h4 class="editable">What will you do today to help your business? Sometimes all it takes is starting a conversation.</h4>
-</section>
+</section> -->

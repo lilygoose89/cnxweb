@@ -28,35 +28,27 @@
   <header>
     <!-- <div id="hero" class="hero-image" style="background-image: url('{{page.hero_image}}')">
     </div> -->
-    <nav class="grid">
-      <!-- main nav div splits into two for logo+links and getstarted+translationicon-->
-      <!-- splits again into 2 divs for logo and links -->
-      <div class="col-9_md-10_sm-9 grid-middle">
-        <!-- logo -->
-        <div class="bg-turq height-50 col-2_xs-5 grid-middle">
-          <a href="/"><img src="/images/CNX-Web-LOGO-space.png" alt="cnx web logo"/></a>
-        </div>
-        <!-- links -->
-        <div class="bg-turq nav-links col-9_sm-10_xs-0 grid-spaceAround-middle">
-          <a href="/web-design"><h2>Web Design</h2></a>
-          <a href="/consulting"><h2>Consulting</h2></a>
-          <!--<a href="/examples"><h2>examples</h2></a>-->
-          <a href="/about"><h2>about</h2></a>
-          <!--<a href="/blog"><h2>blog</h2></a>-->
-          <!-- <a href="/contact"><h2>contact</h2></a> -->
-        </div>
-        <div class="turq-skew col-1_sm-0"></div>
+    <nav id="menu" class="grid-middle text-center bg-turq">
+      <div class="col-3 grid-middle-spaceAround">
+        <a href="/web-design"><h2>Web Design</h2></a>
+        <a href="/consulting"><h2>Consulting</h2></a>
+        <!-- <a href="/blog"><h2>blog</h2></a> -->
       </div>
-      <!-- and here it splits into two for getstarted+translationicon -->
-      <div class="col-3_md-2_sm-3 grid-middle">
-        <span class="col-2_md-0 yellow-outline-skew"></span>
-        <div class="col-6_md-12 nav-cta grid-middle">
-          <h2 class="text-black nudge-down"><a href="/contact.html">get started</a></h2>
+      <div id="logo" class="col-2">
+        <a href="/#home"><img src="/images/CNX-Web-LOGO-space.png" alt="cnx web logo" class="nudge-down"/></a>
+      </div>
+      <div class="col-3 grid-middle-spaceAround">
+        <!-- <a href="/clients"><h2>clients</h2></a> -->
+        <a href="/about"><h2>about</h2></a>
+        <div class="header-cta wobble-up-down">
+          <a href="/contact"><h2>get started</h2></a>
         </div>
-        <!--<a class="col-3_md-0 translation-icon"></a>-->
       </div>
     </nav>
     <!-- mobile menu -->
+    <nav class="mobile-logo-container">
+      <a href="/#home"><img src="/images/CNX-Web-LOGO-turq-space.png" alt="cnx web logo" class="mobile-logo-container nudge-down"/></a>
+    </nav>
     <nav id="hamburger" href="#" title="home" class="toggle-mobile-menu mobile-menu-container text-center">
       <i class="pad-top-m text-b fa fa-bars nudge-down" aria-hidden="true"></i>
     </nav>
@@ -64,10 +56,10 @@
       <a href="#" class="col-12 toggle-mobile-menu">
         <h2><i class="fa fa-times" aria-hidden="true"></i></h2>
       </a>
-      <a href="/"><h2>home</h2></a>
+      <a href="/#home"><h2>home</h2></a>
       <a href="/web-design"><h2>Web Design</h2></a>
       <a href="/consulting"><h2>Consulting</h2></a>
-      <!--<a href="/examples"><h2>examples</h2></a>-->
+      <!--<a href="/clients"><h2>clients</h2></a>-->
       <a href="/about"><h2>about</h2></a>
       <!--<a href="/blog"><h2>blog</h2></a>-->
       <a href="/contact"><h2>contact</h2></a>
@@ -77,7 +69,7 @@
   {{content}}
   <footer class="grid-middle bg-black text-center pad-all-xs">
     <h4 class="col-12 text-white">Let's create something together.</h4>
-    <a class="col-12 pad-top-xs pad-bottom-xs" href="/contact"><button class="button-footer">Email me</button></a>
+    <a class="col-10 pad-top-xs pad-bottom-xs" href="/contact"><button class="button-footer">Contact</button></a>
     <div class="col-3 grid-middle-spaceAround text-yellow">
       <h3><a href="tel:+66612791306"><i class="fa fa-phone" aria-hidden="true"></i></a></h3>
       <a class="line-icon" target="blank" href="http://line.me/ti/p/~cnxlily"></a>

@@ -28,35 +28,27 @@
   <header>
     <!-- <div id="hero" class="hero-image" style="background-image: url('')">
     </div> -->
-    <nav class="grid">
-      <!-- main nav div splits into two for logo+links and getstarted+translationicon-->
-      <!-- splits again into 2 divs for logo and links -->
-      <div class="col-9_md-10_sm-9 grid-middle">
-        <!-- logo -->
-        <div class="bg-turq height-50 col-2_xs-5 grid-middle">
-          <a href="/"><img src="/images/CNX-Web-LOGO-space.png" alt="cnx web logo"/></a>
-        </div>
-        <!-- links -->
-        <div class="bg-turq nav-links col-9_sm-10_xs-0 grid-spaceAround-middle">
-          <a href="/web-design"><h2>Web Design</h2></a>
-          <a href="/consulting"><h2>Consulting</h2></a>
-          <!--<a href="/examples"><h2>examples</h2></a>-->
-          <a href="/about"><h2>about</h2></a>
-          <!--<a href="/blog"><h2>blog</h2></a>-->
-          <!-- <a href="/contact"><h2>contact</h2></a> -->
-        </div>
-        <div class="turq-skew col-1_sm-0"></div>
+    <nav id="menu" class="grid-middle text-center bg-turq">
+      <div class="col-3 grid-middle-spaceAround">
+        <a href="/web-design"><h2>Web Design</h2></a>
+        <a href="/consulting"><h2>Consulting</h2></a>
+        <!-- <a href="/blog"><h2>blog</h2></a> -->
       </div>
-      <!-- and here it splits into two for getstarted+translationicon -->
-      <div class="col-3_md-2_sm-3 grid-middle">
-        <span class="col-2_md-0 yellow-outline-skew"></span>
-        <div class="col-6_md-12 nav-cta grid-middle">
-          <h2 class="text-black nudge-down"><a href="/contact.html">get started</a></h2>
+      <div id="logo" class="col-2">
+        <a href="/#home"><img src="/images/CNX-Web-LOGO-space.png" alt="cnx web logo" class="nudge-down"/></a>
+      </div>
+      <div class="col-3 grid-middle-spaceAround">
+        <!-- <a href="/clients"><h2>clients</h2></a> -->
+        <a href="/about"><h2>about</h2></a>
+        <div class="header-cta wobble-up-down">
+          <a href="/contact"><h2>get started</h2></a>
         </div>
-        <!--<a class="col-3_md-0 translation-icon"></a>-->
       </div>
     </nav>
     <!-- mobile menu -->
+    <nav class="mobile-logo-container">
+      <a href="/#home"><img src="/images/CNX-Web-LOGO-turq-space.png" alt="cnx web logo" class="mobile-logo-container nudge-down"/></a>
+    </nav>
     <nav id="hamburger" href="#" title="home" class="toggle-mobile-menu mobile-menu-container text-center">
       <i class="pad-top-m text-b fa fa-bars nudge-down" aria-hidden="true"></i>
     </nav>
@@ -64,23 +56,110 @@
       <a href="#" class="col-12 toggle-mobile-menu">
         <h2><i class="fa fa-times" aria-hidden="true"></i></h2>
       </a>
-      <a href="/"><h2>home</h2></a>
+      <a href="/#home"><h2>home</h2></a>
       <a href="/web-design"><h2>Web Design</h2></a>
       <a href="/consulting"><h2>Consulting</h2></a>
-      <!--<a href="/examples"><h2>examples</h2></a>-->
+      <!--<a href="/clients"><h2>clients</h2></a>-->
       <a href="/about"><h2>about</h2></a>
       <!--<a href="/blog"><h2>blog</h2></a>-->
       <a href="/contact"><h2>contact</h2></a>
       <!--<a class=><img src="/images/black-language-icon-english-thai.png" alt="translate between thai and english" style="height: 45px; margin-top: 15px;"/></a>-->
     </nav>
   </header>
-  <section class="mobile-section-top short-section">
-  <h1 class="text-bg-black pad-bottom-xs"><span>Solutions for your small business</span></h1>
-  <h4 class="editable margin-top-xs margin-bottom-s">Swamped with paper? Too many tasks to keep track of? Too distracted by the day to day running of your business to focus on passion and growth? There's a better way to work.<br /><br /> For your convenience, I'm offering my best services as fixed-price packages. If you don't find the service package to meet your needs below, please don't hesitate to <a href="/contact">get in touch with me for a free consultation</a>.</h4>
+  <section class="mobile-section-top hero-section text-center">
+  <h1 class="text-bg-black pad-top-xs pad-bottom-s"><span>Solutions for your small business</span></h1>
+  <h4 class="editable">You're looking to grow online. To connect with new customers. To deliver better services.</h4>
+  <h3 class="editable pad-top-xs pad-bottom-xs">Having trouble getting started on your own?</h3>
+  <h4 class="editable pad-bottom-xs">I'm here to help you develop a vision, create a gameplan, and lay the groundwork for a better business.</h4>
+  <h3 class="editable pad-top-xs pad-bottom-xs">With solutions for:</h3>
+  <div class="grid-spaceBetween text-center pad-top-xs">
+    
+    <div class="col-3_sm-12 grid-spaceBetween">
+      <div class="col-12">
+        <div>
+          <h3 class="text-caps">Digital Marketing</h3>
+          <h3><i class="fa fa-bullhorn text-orange text-vb pad-all-s" aria-hidden="true"></i></h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-3_sm-12 grid-spaceBetween">
+      <div class="col-12">
+        <div>
+          <h3 class="text-caps">Customer Support</h3>
+          <h3><i class="fa fa-life-ring text-orange text-vb pad-all-s" aria-hidden="true"></i></h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-3_sm-12 grid-spaceBetween">
+      <div class="col-12">
+        <div>
+          <h3 class="text-caps">Employee Training</h3>
+          <h3><i class="fa fa-book text-orange text-vb pad-all-s" aria-hidden="true"></i></h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-3_sm-12 grid-spaceBetween">
+      <div class="col-12">
+        <div>
+          <h3 class="text-caps">Product Management</h3>
+          <h3><i class="fa fa-cog text-orange text-vb pad-all-s" aria-hidden="true"></i></h3>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <h4 class="editable pad-top-xs">For your convenience, I'm offering my best services as fixed-price packages. If you don't see a package that meet your needs below, please don't hesitate to <a href="/contact">get in touch with me for a free consultation</a>.</h4>
+  <a href="#consulting"><i class="fa fa-angle-down text-vb text-yellow nudge-down hidden-mobile" aria-hidden="true"></i></a>
+</section>
+<section id="consulting" class="short-section">
+  
+  <div class="margin-text-in pad-bottom-m">
+    <h3 class="text-bg-orange text-white pad-bottom-xs"><span>Quick Question</span></h3>
+    <p class="pad-top-xs">I like to learn about what's happening in Chiang Mai, and I love to help. If you'd like to "pick my brain" over a cup of coffee, I can see if I can fit you into my schedule.</p>
+    <h5>One latte ☕️</h5>
+    <p class="pad-top-xs"><a href="/contact">Email me to get started</a></p>
+  </div>
+  
+  <div class="margin-text-in pad-bottom-m">
+    <h3 class="text-bg-orange text-white pad-bottom-xs"><span>Strategy Session</span></h3>
+    <p class="pad-top-xs">Sometimes all it takes is a push in the right direction or smidge of advice from somebody with experience. Schedule a strategy session with me to get some quick answers and guidance on the next steps you should take to succeed in your project.</p>
+    <h5>฿1500 per hour</h5>
+    <p class="pad-top-xs"><a href="/contact">Email me to get started</a></p>
+  </div>
+  
+  <div class="margin-text-in pad-bottom-m">
+    <h3 class="text-bg-orange text-white pad-bottom-xs"><span>Local Search Audit</span></h3>
+    <p class="pad-top-xs">Featuring the same Name, Address and Phone number (NAP) consistently across all search platforms and directories plays a huge part in how well Google ranks you in local search. Get a detailed report of where your business is indexed and where your NAP listing needs to be fixed, plus recommendations on how to optimize your most important listings. Boost your local search rankings and improve your SEO.</p>
+    <h5>฿10,000</h5>
+    <p class="pad-top-xs"><a href="/contact">Email me to get started</a></p>
+  </div>
+  
+  <div class="margin-text-in pad-bottom-m">
+    <h3 class="text-bg-orange text-white pad-bottom-xs"><span>Social Media Audit</span></h3>
+    <p class="pad-top-xs">Social media influences how customers perceive your brand and ultimately impacts their decision making. Are you making the right impression? Get feedback on your content and performance on your two most important channels, as well as practical advice on how you can improve performance. I will also include a one-week content calendar to help guide your future efforts.</p>
+    <h5>฿15,000</h5>
+    <p class="pad-top-xs"><a href="/contact">Email me to get started</a></p>
+  </div>
+  
+  <div class="margin-text-in pad-bottom-m">
+    <h3 class="text-bg-orange text-white pad-bottom-xs"><span>Customer Journey Mapping</span></h3>
+    <p class="pad-top-xs">Are you feeling stuck but not sure what's getting in the way of your team's success? Whether it's your sales, support, or tech team that are having a hard time, creating a customer journey map can be a powerful tool for capturing insight. During this series of in-house workshops, we'll do a deep dive into your business processes to discover what parts are, or are not serving your customers and your team, so you can take action to improve the experience.</p>
+    <h5>฿30,000</h5>
+    <p class="pad-top-xs"><a href="/contact">Email me to get started</a></p>
+  </div>
+  
+  <span class="hor-line margin-left-m margin-right-m"></span>
+  <p class="margin-text-in pad-bottom-s">
+    And that's just a small selection! From setting up a sales and marketing pipeline, to creating an onboarding process for new employees, to digitizing your office and going paperless, there are so many ways I can help you to <i>work better</i>. If you don't see the answer to your problems above, let's work together to come up with a solution.
+  </p>
+  <a href="/contact.html" class="pad-left-m"><button><span class="editable">Email Me to Get Started</span></button></a>
 </section>
 <section id="faq">
-  <h2 class="text-bg-black"><span class="editable">Frequently Asked Questions</span></h2>
-  <div class="pad-top-xs pad-bottom-s">
+  <h2 class="text-bg-black text-center"><span class="editable">Frequently Asked Questions</span></h2>
+  <div class="pad-top-xs pad-bottom-s margin-text-in">
     
     <!-- this is the container giving the nested container a grid -->
     <div class="grid descriptionTitle pad-top-xs">
@@ -98,7 +177,7 @@
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs grid">
           <p class="col-11_sm-12 pad-all-xs expandedDescription">
-            One-time assignments (like writing, copyediting, social media audits, etc.) begin at ฿15,000, and are quoted based on the amount of research, time, and effort required to deliver the best result.<br /><br />Large projects or packages (like brand voice guidelines, brand storytelling + launch strategy, product photography, etc.) begin at $2500, and are also quoted based on scope.
+            One-time assignments (like audits, research, template design, copy-writing etc.) begin at ฿10,000, and are quoted based on the amount of research, time, and effort required to deliver the best result.<br /><br />Large projects or projects which take place over the course of several weeks or even months (such as going paperless, creating a customer help center, or launching a new product, etc.) begin at ฿50,000, and are also quoted based on scope.
           </p>
         </div>
       </div>
@@ -120,7 +199,7 @@
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs grid">
           <p class="col-11_sm-12 pad-all-xs expandedDescription">
-            I prefer to charge a retainer based on the scope of a project and the deliverables/results. You're paying for the value of the finished product, not the time spent producing it.<br />However, if you're looking for a quick consulting call or have a small project that won't take more than a couple hours, I begin at ฿1500 per hour.
+            I prefer to charge a retainer based on the scope of a project so I can focus on delivering results instead of watching the clock. You're paying for the value of the finished product, not the time spent producing it.<br /><br />However, if you're looking for a quick consulting call, help with trouble-shooting, or have a small project that won't take more than a couple hours, my rate begins at ฿1500 per hour.
           </p>
         </div>
       </div>
@@ -142,7 +221,7 @@
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs grid">
           <p class="col-11_sm-12 pad-all-xs expandedDescription">
-            Clients want to work with me because I deliver results. They believe in paying for quality, and know the result is going to have a high ROI. If you're looking to get fast food prices and mediocre results, you're in the wrong place.
+            Clients come to me for well thought out solutions, not band-aids. They believe in paying for quality, and know the result is going to have a high ROI.<br /><br />I also prefer not to take on too many projects at a time so I can better focus my effort and attention. My rates reflect this level of care.
           </p>
         </div>
       </div>
@@ -156,7 +235,7 @@
         <div class="col-11_sm-10">
           <!-- this is the container for the description and the price outlined in orange -->
           <div class="outline-turq grid-middle-spaceBetween pad-all-xs">
-            <h4>What is your new client onboarding process?</h4>
+            <h4>What is the typical process to get started?</h4>
           </div>
         </div>
         <!-- this h4 contains the icon for the read more toggle -->
@@ -164,7 +243,7 @@
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs grid">
           <p class="col-11_sm-12 pad-all-xs expandedDescription">
-            If the project is on site, we'll be communicating closely. However, if we're working together remotely, I never want you to feel like you have to check in. My goal is always to keep you informed, and I always add a reporting cadence to every client contract, so there are no communication issues. My reports typically include what work has been completed, what I need from you to keep moving forward, and what I expect to accomplish in the coming days. If you prefer to do this over the phone or Google Hangout, that works great as well! For small projects, I’ll often be finished before you can even think to ask how things are going. Once the final product is delivered, I’ll send over a final invoice for the outstanding balance.
+            When you first get in touch, I'll send you a quick intake survey to complete. This helps me better understand your business, your goals, and what I can do to help you reach them. If you provide enough information when you initially contact me, we might even be able to skip this.<br /><br />If it seems like a good fit for my skills, I’ll schedule a meeting so we can discuss the project in detail, I can learn more about your business, and your specific needs and goals.<br /><br />Once we've both agreed this is a goof opportunity for both of us, I’ll send over an invoice + scope of work for the project. I require a 50% deposit up front, so once that's been paid, we’ll get started.
           </p>
         </div>
       </div>
@@ -186,7 +265,7 @@
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs grid">
           <p class="col-11_sm-12 pad-all-xs expandedDescription">
-            Each one of my clients goes through an easy three-step process. When you first contact me, I'll shoot you a quick intake survey to complete. This helps me better understand your needs, your core objectives, and what I can do to help you reach them. Sometimes this is even unnecessary if you provide enough detail up front. If it seems like a good fit for my skills, I’ll schedule an intro call, so we can discuss the project in detail, I can learn more about your business, and your specific needs/goals. Once we've both said, "Heck Yes! Let's work together!" I’ll send over an invoice + contract for the project. I require a 50% deposit up front, so once that's been paid, we’ll get started.
+            I aim to communicate closely, without becoming a distraction for you. I will report back to you on an agreed upon timeline, and my reports will include what work has been completed, what I need from you to keep moving forward, and what I expect to accomplish in the coming days.<br /><br />For small projects (such as audits, research, or copywriting) I try to have these wrapped up in a week or less.<br /><br />Once the work is complete, I'll send you a final invoice for the outstanding balance and deliver the project once it's paid.
           </p>
         </div>
       </div>
@@ -208,7 +287,7 @@
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs grid">
           <p class="col-11_sm-12 pad-all-xs expandedDescription">
-            I generally request a 1-2 week lead time for new projects. The sooner we can start the conversation, the better. If you need me IMMEDIATELY, I’ll move you to the top of my PRIORITY list, but a 15% fee will be added for the VIP treatment.
+            I generally work first-come-first-serve, so the sooner we can start the conversation, the better! If you need me IMMEDIATELY, I’ll move you to the top of my PRIORITY list, but a 20% fee will be added for the VIP treatment.
           </p>
         </div>
       </div>
@@ -230,20 +309,18 @@
         <!-- this is the container for the package description hidden until toggled -->
         <div class="bg-grey margin-bottom-xs grid">
           <p class="col-11_sm-12 pad-all-xs expandedDescription">
-            I accept payments via PayPal or SquareCash. If you choose to use a CC, a 3% fee will be added to cover the transaction fee cost.
+            I accept payments via PayPal, Promptpay, or bank transfer (within Thailand).
           </p>
         </div>
       </div>
     </div>
     
-    <p class="editable pad-top-xs">Have a different back-of-house problem not solved by one of the packages above? Let's work together to come up with a solution.</p>
-    <a href="/contact.html"><button><span class="editable">Email Me to Get Started</span></button></a>
   </div>
 </section>
 
   <footer class="grid-middle bg-black text-center pad-all-xs">
     <h4 class="col-12 text-white">Let's create something together.</h4>
-    <a class="col-12 pad-top-xs pad-bottom-xs" href="/contact"><button class="button-footer">Email me</button></a>
+    <a class="col-10 pad-top-xs pad-bottom-xs" href="/contact"><button class="button-footer">Contact</button></a>
     <div class="col-3 grid-middle-spaceAround text-yellow">
       <h3><a href="tel:+66612791306"><i class="fa fa-phone" aria-hidden="true"></i></a></h3>
       <a class="line-icon" target="blank" href="http://line.me/ti/p/~cnxlily"></a>

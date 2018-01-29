@@ -13,6 +13,28 @@ $(document).ready(function(){
 
 });
 
+// // collapsing header
+// $(document).on("scroll", function(){
+//   if
+//     ($(document).scrollTop() > 100){
+//     $("header").addClass("shrink");
+//   }
+//   else
+//   {
+//     $("header").removeClass("shrink");
+//   }
+//   if
+//     ($(document).scrollTop() > 100){
+//     $("#logo").removeClass("col-6");
+//   }
+//   else
+//   {
+//     $("#logo").addClass("col-2");
+//   }
+// });
+
+
+// faqs and expanding accordions
 $(".open").click( function () {
   var container = $(this).parents(".descriptionTitle");
   var expandedDescription = container.find(".expandedDescription");
@@ -169,3 +191,10 @@ $('a[href*="#"]')
       }
     }
   });
+
+//   // show on scroll
+//   $('.show-on-scroll').hide();
+//
+// $(window).scroll(function(){
+//     $('.show-on-scroll').fadeIn(500);
+// });

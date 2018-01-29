@@ -41,41 +41,65 @@ testimonials:
     testimonials_image: /images/lilybruns-headshot.jpg
 ---
 <!-- this is the introduction section ------------------------------------------------------------------------------------>
-<section id="intro" class="mobile-section-top hero-section bg-turq-grad">
-  <img src="/images/CNX-Web-LOGO.png" alt="cnx web logo white"/>
-  <h2 class="editable pad-top-s pad-bottom-s">Websites and digital solutions for your  <span class="txt-rotate" data-period="100" data-rotate='[ "small business.   ", "start-up.   ", "agency.   ", "non-profit.   "]'></span></h2>
-    <div class="grid">
+<section id="intro" class="container hero-section home-hero-section bg-turq-grad text-center">
+  <h2 class="editable pad-top-xl pad-bottom-s">Websites and digital solutions for your <span class="txt-rotate" data-period="100" data-rotate='[ "small business.   ", "start-up.   ", "agency.   ", "non-profit.   ", "store.   "]'></span></h2>
+    <!-- <div class="grid">
       <a href="#home" class="margin-right-s"><button class="button-footer"><span class="editable text-m">Learn more</span></button></a>
-      <a href="/contact"><button class="button-footer"><span class="editable text-m">Get in touch</span></button></a>
-    </div>
+      <a href="/contact"><button class="button-footer"><span class="editable text-m">Get started</span></button></a>
+    </div> -->
+  <div class="text-center">
+    <a href="#home"><i class="fa fa-angle-down text-vb text-white nudge-down hidden-mobile" aria-hidden="true"></i></a>
+  </div>
 </section>
-<section id="home">
+<section id="home" class="mobile-section-top">
   <div class="hero-image-home">
     <h1 class="text-bg-black pad-top-xs pad-left-xs"><span class="editable">Supporting small businesses with big dreams.</span></h1>
   </div>
-  <div class="pad-top-m pad-bottom-s">
-    <div class="grid">
-      <h3 class="editable pad-bottom-s col-12">Get a new website built with as much love and care as you put into your small business.</h3>
-      <h3 class="editable col-12">Why work with me?</h3>
-      <div class="hor-line col-3_md-6_sm-10_xs-12"></div>
-      <h4 class="editable col-12">With my experience helping small businesses and startups, I don’t just help you build a website, I can help you build a foundation to grow your business and reach your goals.</h4>
+  <div class="grid pad-top-s">
+    <h3 class="editable col-10 margin-text-in">Work with me</h3>
+    <div class="hor-line col-3_md-6_sm-10 margin-left-m"></div>
+    <h4 class="editable col-10 margin-text-in">With my experience helping small businesses and startups, I don’t just deliver a solution that looks good, I build a foundation that allows you to grow your business and achieve your goals.</h4>
+    <div class="grid-spaceBetween-middle text-center pad-top-s pad-bottom-s">
+      <div class="col-6_sm-12 service-container">
+        <a href="/web-design"><div class="bg-web-design nudge-down margin-right-xs margin-bottom-s">
+          <h3 class="text-center text-b text-bg-yellow pad-top-l"><span class="editable">Web</span></h3><br />
+          <h3 class="text-center text-b text-bg-yellow"><span class="editable">Design</span></h3>
+        </div></a>
+      </div>
+      <div class="col-6_sm-12 service-container">
+        <a href="/consulting"><div class="bg-consulting nudge-down margin-left-xs margin-bottom-s">
+          <h3 class="text-center text-b text-bg-yellow pad-top-l"><span class="editable">Business</span></h3><br />
+          <h3 class="text-center text-b text-bg-yellow"><span class="editable">Consulting</span></h3>
+        </div></a>
+      </div>
     </div>
+    <ul>
+      <li class="editable pad-top-xs margin-text-in">
+        <h4>If you're an entrepreneur with passion for your business and customers that adore you, but you're struggling to get to the next level, I can help.</h4>
+      </li>
+      <li class="editable pad-top-xs margin-text-in">
+        <h4>If you've been making do with cheap and D-I-Y solutions, but need a professional to whip things into shape, I've got your fix.</h4>
+      </li>
+      <li class="editable pad-top-xs margin-text-in">
+        <h4>If you need someone committed but don't have the resources to bring somebody in full time, I'm here for you.</h4>
+      </li>
+    </ul>
   </div>
 </section>
 <!-- this is the call to action section ----------------------------------------------------------------------------------->
 <section class="bg-grey short-section pad-top-s pad-bottom-s text-center">
-  <h2 class="text-bg-black"><span class="editable">How can I help your business to succeed?</span></h2>
+  <h2 class="text-bg-black"><span class="editable">Are you ready to take your business to the next level?</span></h2>
   <!-- this links to the contact page -->
-  <div class="pad-top-s text-m"><a href="/contact" class="button"><button><span class="editable">Get in touch</span></button></a></div>
+  <div class="pad-top-s text-m"><a href="/contact" class="button"><button><span class="editable">Yes!</span></button></a></div>
 </section>
 <!-- this is the testimonials section ------------------------------------------------------------------------------------->
-<section id="testimonials">
+<section id="testimonials" style="display: none;">
  <h3 class="editable text-center pad-bottom-s">Helping small business owners to succeed.</h3>
   <!-- this is the container for the testimonials which should cycle through like a gallery -->
   <div class="grid-middle">
     <div class="col-1">
       <!-- this is the button or icon to click left to see previous testimonial -->
-      <a id="flex-left" href="#"><i class="text-b text-yellow fa fa-angle-left" aria-hidden="true"></i></a>
+      <a id="flex-left" href="#"><i class="text-b text-yellow fa fa-angle-left nudge-left" aria-hidden="true"></i></a>
     </div>
     <div id="testimonial" class="col-10 outline-turq padding-all-s">
       <!-- these are the testimonial itself -->
@@ -101,7 +125,7 @@ testimonials:
     </div>
     <div class="col-1 text-right">
       <!-- this is the button or icon to click right to see next testimonial -->
-      <a id="flex-right" href="#"><i class="text-b text-yellow fa fa-angle-right" aria-hidden="true"></i></a>
+      <a id="flex-right" href="#"><i class="text-b text-yellow fa fa-angle-right nudge-right" aria-hidden="true"></i></a>
     </div>
   </div>
 </section>

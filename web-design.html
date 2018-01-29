@@ -10,7 +10,7 @@ specs:
     description: All the right things in all the right places - make it easy for your customers to find the information they need and get in contact.
   - title: EASY TO FIND
     icon: search
-    description: Optimized for SEO and speedy load times, putting you in front of more customers so your business can grow.
+    description: Optimized for SEO and speedy load times, putting you in front of the right customers so your business can reach its full potential.
 web-package:
   - name: Starter
     design: Template Design
@@ -39,55 +39,65 @@ web-package:
 keywords:
 layout: default
 ---
-<section class="mobile-section-top">
-  <h1 class="text-bg-black pad-bottom-xs"><span>{{page.description}}</span></h1>
-  <div class="grid-spaceBetween-middle pad-top-s text-center">
+<section class="mobile-section-top hero-section text-center">
+  <h1 class="text-bg-black pad-top-xs pad-bottom-xs"><span>{{page.description}}</span></h1>
+  <div class="grid-spaceBetween pad-top-s text-center">
     {% for specs in page.specs %}
-    <div class="col-4_sm-12 grid pad-bottom-s">
-      <div class="col-11 bg-turq pad-all-s" style="min-height: 242px;">
-        <h3 class="text-caps text-white">{{specs.title}}</h3>
-        <h2><i class="fa fa-{{specs.icon}}" aria-hidden="true"></i></h2>
-        <h4 class="text-white">{{specs.description}}</h4>
+    <div class="col-4_sm-12 grid-spaceBetween">
+      <div class="col-12">
+        <div class="pad-all-s">
+          <h3 class="text-caps">{{specs.title}}</h3>
+          <h3><i class="fa fa-{{specs.icon}} text-orange text-vb pad-all-s" aria-hidden="true"></i></h3>
+          <h4 class="web-design-specs">{{specs.description}}</h4>
+        </div>
       </div>
     </div>
     {% endfor %}
   </div>
+  <a href="#web-design"><i class="fa fa-angle-down text-vb text-yellow nudge-down hidden-mobile" aria-hidden="true"></i></a>
+  <!-- <h4 class="editable">Scroll down to select the best package for your business.</h4> -->
 </section>
-<section>
-  <h4 class="editable margin-top-s margin-bottom-m">The first step in your digital growth is a great website. Let's show the world who you are!</h4>
-  <h2 class="text-bg-black pad-bottom-s"><span class="editable">Web Design Packages</span></h2>
+<section id="web-design" class="short-section">
+  <h2 class="text-bg-black text-center"><span class="editable">Web Design Packages</span></h2>
+  <div class="grid text-center">
+    <h4 class="editable col-12_md-7_sm-12 margin-top-xs margin-bottom-xs">The first step in your digital growth is a great website. Let's show the world who you are.</h4>
+  </div>
   <!-- container for pricing modules -->
-  <div class="grid-spaceBetween-middle text-center pad-bottom-xs">
+  <div class="grid-spaceBetween-middle text-center margin-top-xs pad-bottom-xs">
     {% for web-package in page.web-package limit:3 %}
-    <div class="col-4_sm-12  grid">
-      <div class="col-11 outline-orange pad-all-s">
-        <h3>{{web-package.name}}</h3>
-      </div>
-      <div class="col-11 bg-grey pad-all-s">
-        <h4>{{web-package.design}}</h4>
-        <h4>{{web-package.pages}}</h4>
-        <h4>{{web-package.maintenance}}</h4>
-        <h3 class="pad-all-s">{{web-package.price}}</h3>
-        <a href="{{web-package.link}}"><button><span class="editable"></span>Choose This Package</button></a>
+    <div class="col-4_md-7_sm-12 grid">
+      <div class="col-12 pad-right-s pad-bottom-s">
+        <div class="outline-orange pad-all-s">
+          <h3>{{web-package.name}}</h3>
+        </div>
+        <div class="bg-grey pad-all-s">
+          <h4>{{web-package.design}}</h4>
+          <h4>{{web-package.pages}}</h4>
+          <h4>{{web-package.maintenance}}</h4>
+          <h3 class="pad-all-s">{{web-package.price}}</h3>
+          <a href="{{web-package.link}}"><button><span class="editable"></span>Choose This Package</button></a>
+        </div>
       </div>
     </div>
     {% endfor %}
   </div>
-  <h3 class="editable pad-top-xs">All website plans include:</h3>
-  <div class="grid"><div class="hor-line col-4_md-8_sm-12"></div></div>
-  <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> 1 year of hosting</h4>
-  <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Pointed at your custom domain</h4>
-  <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Unlimited storage</h4>
-  <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> On-page SEO optimization</h4>
-  <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Google Analytics</h4>
-  <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Content management system (CMS) for self-updating</h4>
-  <h3 class="editable pad-top-s">Optional add-ons to supercharge your website:</h3>
-  <div class="grid"><div class="hor-line col-7_md-10_sm-12"></div></div>
-  <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Premium Hosting for ฿1000/month</h4>
-  <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Blogging for ฿5000</h4>
-  <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Online Booking for ฿30,000*</h4>
-  <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> E-Commerce for ฿50,000*</h4>
-  <p class="editable pad-bottom-s">* Does not include additional software fees.</p>
+  <div class="pad-left-m margin-text-in">
+    <h3 class="editable pad-top-xs">All website plans include:</h3>
+    <div class="grid"><div class="hor-line col-4_md-8_sm-12"></div></div>
+    <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> 1 year of hosting</h4>
+    <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Pointed at your custom domain</h4>
+    <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Unlimited storage</h4>
+    <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> On-page SEO optimization</h4>
+    <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Google Analytics</h4>
+    <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Content management system (CMS) for self-updating</h4>
+    <h3 class="editable pad-top-s">Optional add-ons to supercharge your website:</h3>
+    <div class="grid"><div class="hor-line col-7_md-10_sm-12"></div></div>
+    <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Premium Hosting for ฿1000/month</h4>
+    <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Blogging for ฿5000</h4>
+    <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Online Booking for ฿30,000*</h4>
+    <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> E-Commerce for ฿50,000*</h4>
+    <p class="editable pad-bottom-s">* Does not include additional software fees.</p>
+  </div>
   <div class="grid">
     <h2 class="editable col-12 text-bg-black margin-bottom-s"><span>Looking for a more full service web design option?</span></h2>
     {% for web-package in page.web-package offset:3 limit:1 %}
@@ -115,9 +125,9 @@ layout: default
   <h2 class="text-bg-black"><span class="editable">Not sure which package is right for you?</span></h2>
   <h3 class="editable pad-top-s">Call or message me for a free consultation</h3>
   <div class="grid-middle text-center pad-top-s">
-    <h3 class="text-yellow col-7_sm-12 nudge-down"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+66612791306"> 061-279-1306</a></h3>
+    <h3 class="text-orange col-7_sm-12 nudge-down"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+66612791306"> 061-279-1306</a></h3>
     <div class="col-4 _sm-12 grid-middle pad-top-xs nudge-down">
-      <a target="blank" href="http://line.me/ti/p/~cnxlily"><img class="line-icon-yellow" src="/images/lineicon-yellow.png" alt="line icon" /></a><h3 class="display-inline text-yellow">
+      <a target="blank" href="http://line.me/ti/p/~cnxlily"><img class="line-icon-orange" src="/images/lineicon-orange.png" alt="line icon" /></a><h3 class="display-inline text-orange">
       <a class="pad-top-xs margin-left-m" target="blank" href="http://line.me/ti/p/~cnxlily">CNXLILY</a></h3>
     </div>
   </div>
