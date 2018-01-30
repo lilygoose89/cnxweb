@@ -44,10 +44,10 @@ faq:
   - question: How do you accept payments?
     answer: I accept payments via PayPal, Promptpay, or bank transfer (within Thailand).
 ---
-<section class="mobile-section-top hero-section text-center">
-  <h1 class="text-bg-black pad-top-xs pad-bottom-s"><span>{{page.description}}</span></h1>
-  <h4 class="editable">You're looking to grow online. To connect with new customers. To deliver better services.</h4>
-  <h3 class="editable pad-top-xs pad-bottom-xs">Having trouble getting started on your own?</h3>
+<section class="hero-section text-center con-wid-three-quarters">
+  <h1 class="text-bg-black pad-top-xs pad-bottom-xs"><span>{{page.description}}</span></h1>
+  <!-- <h4 class="editable">You're looking to grow online. To connect with new customers. To deliver better services.</h4> -->
+  <h3 class="editable text-orange text-bold pad-top-xs pad-bottom-xs">Having trouble getting started on your own?</h3>
   <h4 class="editable pad-bottom-xs">I'm here to help you develop a vision, create a gameplan, and lay the groundwork for a better business.</h4>
   <h3 class="editable pad-top-xs pad-bottom-xs">With solutions for:</h3>
   <div class="grid-spaceBetween text-center pad-top-xs">
@@ -55,34 +55,63 @@ faq:
     <div class="col-3_sm-12 grid-spaceBetween">
       <div class="col-12">
         <div>
-          <h3 class="text-caps">{{solutions.title}}</h3>
-          <h3><i class="fa fa-{{solutions.icon}} text-orange text-vb pad-all-s" aria-hidden="true"></i></h3>
+          <h4 class="text-caps pad-top-xs">{{solutions.title}}</h4>
+          <h3><i class="fa fa-{{solutions.icon}} text-orange text-b pad-all-s" aria-hidden="true"></i></h3>
         </div>
       </div>
     </div>
     {% endfor %}
-  </div>
+    </div>
   <h4 class="editable pad-top-xs">For your convenience, I'm offering my best services as fixed-price packages. If you don't see a package that meet your needs below, please don't hesitate to <a href="/contact">get in touch with me for a free consultation</a>.</h4>
   <a href="#consulting"><i class="fa fa-angle-down text-vb text-yellow nudge-down hidden-mobile" aria-hidden="true"></i></a>
 </section>
-<section id="consulting" class="short-section">
-  {% for consulting-package in page.consulting-package %}
-  <div class="margin-text-in pad-bottom-m">
-    <h3 class="text-bg-orange text-white pad-bottom-xs"><span>{{consulting-package.title}}</span></h3>
-    <p class="pad-top-xs">{{consulting-package.description}}</p>
-    <h5>{{consulting-package.price}}</h5>
-    <p class="pad-top-xs"><a href="/contact">Email me to get started</a></p>
+<section id="consulting" class="con-wid-three-quarters text-center">
+  <div class="grid-top con-wid-three-quarters">
+    {% for consulting-package in page.consulting-package limit:4 %}
+    <div class="col-6_sm-12 pad-all-s">
+      <div class="outline-orange pad-all-xs">
+        <h3 class="">{{consulting-package.title}}</h3>
+      </div>
+      <div class="bg-grey pad-all-s">
+        <p class="pad-top-xs">{{consulting-package.description}}</p>
+        <h5>{{consulting-package.price}}</h5>
+        <p class="pad-top-s"><a href="/contact">Email me to get started</a></p>
+      </div>
+    </div>
+    {% endfor %}
+    {% for consulting-package in page.consulting-package offset:4 limit:1 %}
+    <div class="col-12 pad-all-s">
+      <div class="outline-orange pad-all-xs">
+        <h3 class="pad-bottom-xs">{{consulting-package.title}}</h3>
+      </div>
+      <div class="bg-grey pad-all-s">
+        <p class="pad-top-xs">{{consulting-package.description}}</p>
+        <h5>{{consulting-package.price}}</h5>
+        <p class="pad-top-s"><a href="/contact">Email me to get started</a></p>
+      </div>
+    </div>
+    {% endfor %}
+    <p class="col-12 pad-left-s pad-right-s pad-bottom-xs">
+      And that's just a small selection! From setting up a sales and marketing pipeline, to creating an onboarding process for new employees, to digitizing your office and going paperless, there are so many ways I can help you to <i>work better</i>. If you don't see the answer to your problems above, let's work together to come up with a solution.
+    </p>
   </div>
-  {% endfor %}
-  <span class="hor-line margin-left-m margin-right-m"></span>
-  <p class="margin-text-in pad-bottom-s">
-    And that's just a small selection! From setting up a sales and marketing pipeline, to creating an onboarding process for new employees, to digitizing your office and going paperless, there are so many ways I can help you to <i>work better</i>. If you don't see the answer to your problems above, let's work together to come up with a solution.
-  </p>
-  <a href="/contact.html" class="pad-left-m"><button><span class="editable">Email Me to Get Started</span></button></a>
+  <a href="/contact.html"><button><span class="editable">Schedule a free consultation</span></button></a>
 </section>
-<section id="faq">
-  <h2 class="text-bg-black text-center"><span class="editable">Frequently Asked Questions</span></h2>
-  <div class="pad-top-xs pad-bottom-s margin-text-in">
+<!-- this is the not sure cta section ----------------------------------------------------------------------------------->
+<section class="bg-grey text-center pad-top-s pad-bottom-s">
+  <h2 class="text-bg-black"><span class="editable">Not sure which package is right for you?</span></h2>
+  <h3 class="editable pad-top-s">Call or message me for a free consultation</h3>
+  <div class="grid-middle text-center pad-top-s">
+    <h3 class="text-orange col-5_sm-12 nudge-down"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+66612791306"> 061-279-1306</a></h3>
+    <div class="col-4_sm-12 grid-middle pad-top-xs text-center nudge-down">
+      <a target="blank" href="http://line.me/ti/p/~cnxlily"><img class="line-icon-orange" src="/images/lineicon-orange.png" alt="line icon" /></a><h3 class="display-inline text-orange">
+      <a class="pad-top-xs pad-left-xs" target="blank" href="http://line.me/ti/p/~cnxlily">CNXLILY</a></h3>
+    </div>
+  </div>
+</section>
+<section id="faq" class="con-wid-two-thirds">
+  <h3 class="editable text-center">Frequently Asked Questions</h3>
+  <div class="pad-top-xs pad-bottom-s">
     {% for faq in page.faq%}
     <!-- this is the container giving the nested container a grid -->
     <div class="grid descriptionTitle pad-top-xs">

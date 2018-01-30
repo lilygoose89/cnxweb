@@ -3,12 +3,12 @@ layout: default
 title: Contact
 description: Get in touch with CNX Web with your questions about web design and business consulting in Chiang Mai.
 ---
-<section class="mobile-section-top short-section">
+<section class="top-section text-center-mobile">
   <h1 class="text-bg-black pad-bottom-xs"><span>{{page.title}}</span></h1>
   <h4 class="editable">How can I help you today?</h4>
 </section>
-<section class="bg-orange very-short-section" id="contact-form">
-  <div>
+<section class="bg-orange" id="contact-form">
+  <div class="con-wid-half">
     <form method="POST" action="http://formspree.io/lily@cnxweb.site" class="grid-spaceBetween margin-all-xs">
       <input class="hidden" type="text" name="_replyto" placeholder="lily@cnxweb.site" />
       <input type="hidden" name="_next" value="/thank-you.html" />
@@ -41,7 +41,7 @@ description: Get in touch with CNX Web with your questions about web design and 
       <!--  <input type="text" name="client-domain" placeholder="Your domain name">-->
       <!--</div>-->
       <div class="col-12 pad-bottom-xs">
-        <label for="_subject">What are you writing about today? *</label>
+        <label for="_subject">What are you writing about today?</label>
         <select name="subject" style="border-radius: 0; width: 100%;">
           <option value="I'd like to learn more about your services">I'd like to learn more about your services</option>
           <option value="I would like to hire you">I'd like to hire you</option>
@@ -51,7 +51,7 @@ description: Get in touch with CNX Web with your questions about web design and 
         </select>
       </div>
       <div class="col-12 pad-bottom-xs">
-        <label>What is your budget for this project? *</label>
+        <label>What is your budget?</label>
         <select name="budget" style="border-radius: 0; width: 100%;">
           <option value="฿5,000 - ฿10,000">฿5,000 - ฿10,000</option>
           <option value="฿10,000 - ฿50,000">฿10,000 - ฿50,000</option>
@@ -67,8 +67,8 @@ description: Get in touch with CNX Web with your questions about web design and 
       <div class="col-12 pad-bottom-xs">
         <label>What services are you interested in?</label>
         <div class="grid-middle">
-          <label class="checkmark-container col-3_md-12" style="font-family: athiti; font-weight: 300; text-transform: none;"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
-          <label class="checkmark-container col-3_md-12" style="font-family: athiti; font-weight: 300; text-transform: none;"><input type="checkbox" name="ba" value="Business Automation">Consulting<span class="checkmark"></span></label>
+          <label class="checkmark-container col-3_md-6"><input type="checkbox" name="wd" value="Web Design">Web Design<span class="checkmark"></span></label>
+          <label class="checkmark-container col-3_md-6" style="font-family: athiti; font-weight: 300; text-transform: none;"><input type="checkbox" name="ba" value="Business Automation">Consulting<span class="checkmark"></span></label>
         </div>
       </div>
       <button type="submit" class="button-wide">Send</button>
