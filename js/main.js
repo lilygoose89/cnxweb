@@ -13,48 +13,29 @@ $(document).ready(function(){
 
 });
 
-// // collapsing header
-// $(document).on("scroll", function(){
-//   if
-//     ($(document).scrollTop() > 100){
-//     $("header").addClass("shrink");
-//   }
-//   else
-//   {
-//     $("header").removeClass("shrink");
-//   }
-//   if
-//     ($(document).scrollTop() > 100){
-//     $("#logo").removeClass("col-6");
-//   }
-//   else
-//   {
-//     $("#logo").addClass("col-2");
-//   }
-// });
+//collapsing logo on homepage
+if($(".home-hero-section").length){
+  $("body").addClass("home")
 
+  $(window).scroll(function (){
+    if($(this).scrollTop() > 10){
+      $("body").addClass("scrolling");
+      $("#logo").removeClass("col-6").addClass("col-2");
+    } else {
+      $("body").removeClass("scrolling");
+      $("#logo").removeClass("col-2").addClass("col-6");
+    }
+  });
+} else {
+  $("#logo").removeClass("col-6").addClass("col-2");
+}
 
 // faqs and expanding accordions
-$(".open").click( function () {
-  var container = $(this).parents(".descriptionTitle");
-  var expandedDescription = container.find(".expandedDescription");
-  var trigger = container.find(".faq-t");
+$(".open").click(function () {
 
-  expandedDescription.slideToggle(200);
+  $(this).toggleClass("expanded");
+  $(this).find(".expandedDescription").slideToggle(200);
 
-  if (trigger.hasClass("faq-o")) {
-    trigger.removeClass("faq-o");
-  }
-  else {
-    trigger.addClass("faq-o");
-  }
-
-  if (container.hasClass("expanded")) {
-    container.removeClass("expanded");
-  }
-  else {
-    container.addClass("expanded");
-  }
 });
 
 // Assign flexslider function to class .flexslider
@@ -154,47 +135,13 @@ window.onload = function() {
   document.body.appendChild(css);
 };
 
-// smooth scrolling
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-      &&
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+//smooth scrolling better because rachel
+$('a[href^="#"]').on('click',function () {
+  var link = this.hash.substr(1);
+  var section = $('*[id=' + link + ']');
 
-//   // show on scroll
-//   $('.show-on-scroll').hide();
-//
-// $(window).scroll(function(){
-//     $('.show-on-scroll').fadeIn(500);
-// });
+  $('html,body').animate({
+    scrollTop: section.offset().top - 48
+  }, 800);
+  return false;
+});

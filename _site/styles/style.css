@@ -151,8 +151,8 @@ section {
 }
 .anchor {
   display: block;
-  height: 15vh;
-  margin-top: 15vh;
+  height: 12vh;
+  margin-top: 12vh;
 }
 .hero-image {
   background-size: cover;
@@ -173,6 +173,9 @@ section {
   }
 }
 @media all and (max-width:576px) {
+  section {
+    padding: 5%;
+  }
   /* .hero-section {
     margin-top: 5vh;
   }
@@ -533,7 +536,8 @@ nav h2 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-nav a {
+nav a,
+nav #logo {
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -547,6 +551,13 @@ nav a:hover {
   -ms-transform: translateY(3px);
   -o-transform: translateY(3px);
   transform: translateY(3px);
+}
+.home nav #logo {
+  position: relative;
+  bottom: -125px;
+}
+.scrolling nav #logo {
+  bottom: 0;
 }
 .header-cta {
   border: solid white 2px;
