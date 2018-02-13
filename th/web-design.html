@@ -92,7 +92,7 @@ handle: /web-design
           <h4>{{web-package.pages}}</h4>
           <h4>{{web-package.maintenance}}</h4>
           <h3 class="pad-all-s">{{web-package.price}}</h3>
-          <a href="{{web-package.link}}"><button><span class="editable"></span>Choose This Package</button></a>
+          <a href="{% if page.url contains 'th' %}/th{% endif %}/contact"><button><span class="editable"></span>Choose This Package</button></a>
         </div>
       </div>
     </div>
@@ -130,7 +130,7 @@ handle: /web-design
       <h4>{{web-package.pages}}</h4>
       <h4>{{web-package.maintenance}}</h4>
       <h3 class="pad-bottom-s pad-top-s">{{web-package.price}}</h3>
-      <a href="{{web-package.link}}"><button><span class="editable">Get A Project Quote</span></button></a>
+      <a href="{% if page.url contains 'th' %}/th{% endif %}/contact"><button><span class="editable">Get A Project Quote</span></button></a>
     </div>
     {% endfor %}
     <div class="col-5_sm-12 pad-left-s">
