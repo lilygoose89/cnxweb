@@ -71,7 +71,7 @@
           <a href="{% if page.url contains 'th' %}/th{% endif %}/contact"><h2>{% if page.url contains 'th' %} เริ่มต้นงานใหม่ {% else %}get started{% endif %}</h2></a>
         </div>
       </div>
-      <div class="language-switcher text-grey">
+      <div class="language-switcher text-grey" style="display: none;">
         <!-- <a href=><img src="/images/black-language-icon-english-thai.png" alt="translate between thai and english" style="height: 45px; margin-top: 15px;"/></a> -->
         {% if page.name contains "index" %}
         <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl }}/">🇬🇧 English</a>
