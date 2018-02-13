@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="{{ page.lang }}">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112920115-1"></script>
@@ -15,7 +16,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-817535422');
   </script>
   <!-- End Google Adwords -->
@@ -55,28 +55,38 @@
 </head>
 <body>
   <header>
-    <!-- <div id="hero" class="hero-image" style="background-image: url('{{page.hero_image}}')">
-    </div> -->
     <nav id="menu" class="grid-middle text-center bg-turq">
       <div class="col-3 grid-middle-spaceAround">
-        <a href="/web-design"><h2>Web Design</h2></a>
-        <a href="/consulting"><h2>Consulting</h2></a>
-        <!-- <a href="/blog"><h2>blog</h2></a> -->
+        <a href="{% if page.url contains 'th' %}/th{% endif %}/web-design"><h2>{% if page.url contains 'th' %}ออกแบบเว็บ{% else %}web design{% endif %}</h2></a>
+        <a href="{% if page.url contains 'th' %}/th{% endif %}/consulting"><h2>{% if page.url contains 'th' %}ปรึกษาทางธุรกิจ{% else %}consulting{% endif %}</h2></a>
+        <!-- <a href="{% if page.url contains 'th' %}/th{% endif %}/blog"><h2>{% if page.url contains 'th' %}บล็อก{% else %}blog{% endif %}</h2></a> -->
       </div>
       <div id="logo" class="col-6">
-        <a href="/#home"><img src="/images/CNX-Web-LOGO-space.png" alt="cnx web logo" class="nudge-down"/></a>
+        <a href="{% if page.url contains 'th' %}/th{% endif %}/#home"><img src="/images/CNX-Web-LOGO-space.png" alt="cnx web logo" class="nudge-down"/></a>
       </div>
       <div class="col-3 grid-middle-spaceAround">
-        <!-- <a href="/clients"><h2>clients</h2></a> -->
-        <a href="/about"><h2>about</h2></a>
+        <!-- <a href="{% if page.url contains 'th' %}/th{% endif %}/clients"><h2>{% if page.url contains 'th' %}ลูกค้า{% else %}clients{% endif %}</h2></a -->
+        <a href="{% if page.url contains 'th' %}/th{% endif %}/about"><h2>{% if page.url contains 'th' %}เกี่ยวกับเรา{% else %}about{% endif %}</h2></a>
         <div class="header-cta wobble-up-down">
-          <a href="/contact"><h2>get started</h2></a>
+          <a href="{% if page.url contains 'th' %}/th{% endif %}/contact"><h2>{% if page.url contains 'th' %} เริ่มต้นงานใหม่ {% else %}get started{% endif %}</h2></a>
         </div>
+      </div>
+      <div class="language-switcher text-grey">
+        <!-- <a href=><img src="/images/black-language-icon-english-thai.png" alt="translate between thai and english" style="height: 45px; margin-top: 15px;"/></a> -->
+        {% if page.name contains "index" %}
+        <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl }}/">🇬🇧 English</a>
+         /
+        <a class="{% if page.url contains 'th' %}text-bold text-white{% else %}{% endif %}" href="{{ site.baseurl | append: "/th" }}">🇹🇭 ไทย</a>
+        {% else %}
+          <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl | append: page.handle }}">🇬🇧 English</a>
+           /
+          <a class="{% if page.url contains 'th' %}text-bold text-white{% else %}{% endif %}" href="{{ site.baseurl | append: "/th" | append: page.handle }}">🇹🇭 ไทย</a>
+        {% endif %}
       </div>
     </nav>
     <!-- mobile menu -->
     <nav class="mobile-logo-container">
-      <a href="/#home"><img src="/images/CNX-Web-LOGO-turq-space.png" alt="cnx web logo" class="mobile-logo-container nudge-down"/></a>
+      <a href="{% if page.url contains 'th' %}/th{% endif %}/#home"><img src="/images/CNX-Web-LOGO-turq-space.png" alt="cnx web logo" class="mobile-logo-container nudge-down"/></a>
     </nav>
     <nav id="hamburger" href="#" title="home" class="toggle-mobile-menu mobile-menu-container text-center">
       <i class="pad-top-m text-b fa fa-bars nudge-down" aria-hidden="true"></i>
@@ -85,28 +95,39 @@
       <a href="#" class="col-12 toggle-mobile-menu">
         <h2><i class="fa fa-times" aria-hidden="true"></i></h2>
       </a>
-      <a href="/"><h2>home</h2></a>
-      <a href="/web-design"><h2>Web Design</h2></a>
-      <a href="/consulting"><h2>Consulting</h2></a>
-      <!--<a href="/clients"><h2>clients</h2></a>-->
-      <a href="/about"><h2>about</h2></a>
-      <!--<a href="/blog"><h2>blog</h2></a>-->
-      <a href="/contact"><h2>contact</h2></a>
-      <!--<a class=><img src="/images/black-language-icon-english-thai.png" alt="translate between thai and english" style="height: 45px; margin-top: 15px;"/></a>-->
+      <a href="{% if page.url contains 'th' %}/th{% endif %}/"><h2>{% if page.url contains 'th' %}หน้าหลัก{% else %}home{% endif %}</h2></a>
+      <a href="{% if page.url contains 'th' %}/th{% endif %}/web-design"><h2>{% if page.url contains 'th' %}ออกแบบเว็บ{% else %}web design{% endif %}</h2></a>
+      <a href="{% if page.url contains 'th' %}/th{% endif %}/consulting"><h2>{% if page.url contains 'th' %}ปรึกษาทางธุรกิจ{% else %}consulting{% endif %}</h2></a>
+      <!--<a href="{% if page.url contains 'th' %}/th{% endif %}/clients"><h2>{% if page.url contains 'th' %}ลูกค้า{% else %}clients{% endif %}</h2></a>-->
+      <a href="{% if page.url contains 'th' %}/th{% endif %}/about"><h2>{% if page.url contains 'th' %}เกี่ยวกับเรา{% else %}about{% endif %}</h2></a>
+      <!--<a href="{% if page.url contains 'th' %}/th{% endif %}/blog"><h2>{% if page.url contains 'th' %}บล็อก{% else %}blog{% endif %}</h2></a>-->
+      <a href="{% if page.url contains 'th' %}/th{% endif %}/contact"><h2>{% if page.url contains 'th' %}ติดต่อ{% else %}contact{% endif %}</h2></a>
+      <div class="text-grey text-center pad-top-xs">
+        {% if page.name contains "index" %}
+        <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl }}/">🇬🇧 English</a>
+         /
+        <a class="{% if page.url contains 'th' %}text-bold text-white{% else %}{% endif %}" href="{{ site.baseurl | append: "/th" }}">🇹🇭 ไทย</a>
+        {% else %}
+          <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl | append: page.handle }}">🇬🇧 English</a>
+           /
+          <a class="{% if page.url contains 'th' %}text-bold text-white{% else %}{% endif %}" href="{{ site.baseurl | append: "/th" | append: page.handle }}">🇹🇭 ไทย</a>
+        {% endif %}
+      </div>
     </nav>
   </header>
   {{content}}
   <footer class="grid-middle bg-black text-center pad-all-xs">
-    <h4 class="col-12 text-white">Let's create something together.</h4>
-    <a class="col-10 pad-top-xs pad-bottom-xs" href="/contact"><button class="button-footer">Contact</button></a>
+    <h4 class="col-12 text-white">{{site.footer[page.language]}}</h4>
+    <a class="col-10 pad-top-xs pad-bottom-xs" href="{% if page.url contains 'th' %}/th{% endif %}/contact"><button class="button-footer">{{site.footer-button[page.language]}}</button></a>
     <div class="col-3 grid-middle-spaceAround text-yellow">
       <h3><a href="tel:+66612791306"><i class="fa fa-phone" aria-hidden="true"></i></a></h3>
       <a class="line-icon" target="blank" href="http://line.me/ti/p/~cnxlily"></a>
       <h3><a href="https://www.facebook.com/cnxwebsite/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></h3>
       <h3><a href="https://twitter.com/cnxweb" target="blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></h3>
     </div>
-    <h5 class="col-12 text-white pad-top-xs"><i class="fa fa-copyright" aria-hidden="true"></i> CNX Web <script type="text/javascript">
-  document.write(new Date().getFullYear());</script></h5>
+    <h5 class="col-12 text-white pad-top-xs"><i class="fa fa-copyright" aria-hidden="true"></i> CNX Web {% if page.url contains 'th' %}<script type="text/javascript">
+  document.write(new Date().getFullYear()+ 543);</script>{% else %}<script type="text/javascript">
+  document.write(new Date().getFullYear());</script>{% endif %}</h5>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js"></script>

@@ -1,0 +1,40 @@
+---
+title: CNX Web - ลูกค้าและผลงาน
+description: Portfolio of websites and and projects completed by CNX Web
+layout: default
+lang: th
+handle: /clients
+---
+<section class="mobile-section-top">
+  <h1 class="text-bg-black pad-bottom-xs"><span>{{page.title}}</span></h1>
+  <h4 class="editable">Click the website images below to read the case studies and learn more about each of the projects.</h4>
+  <div>
+    <div>
+      {% for clients in site.clients limit:6  %}
+      <div>
+        <img src="{{clients.image}}"/>
+      </div>
+      {% endfor %}
+    </div>
+    <div>
+      {% for clients in site.clients limit:5 offset:6 %}
+      <div>
+        <img src="{{clients.image}}"/>
+      </div>
+      {% endfor %}
+    </div>
+    <div>
+      {% for clients in site.clients limit:5 offset:11 %}
+      <div>
+        <img src="{{clients.image}}"/>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="grid pad-top-s">
+    <div class="container-right text-right col-4_sm-12">
+      <h3 class="editable pad-bottom-s">Ready to get your own beautiful website?</h3>
+      <a href="/start/entrepreneur.html"><button><span class="editable">Yes!</span></button></a>
+    </div>
+  </div>
+</section>

@@ -9,6 +9,14 @@ collections:
     output: true
     permalink: /:collection/:name
 
+footer:
+  en: Let's create something together
+  th: ลองสร้างอะไรด้วยกันไหม
+
+footer-button:
+  en: Contact
+  th: ติดต่อ
+
 gems:
   - jekyll-archives
 

@@ -71,7 +71,7 @@ ul {
   color: #f85a3e;
 }
 .text-white {
-  color: #fff;
+  color: #fff !important;
 }
 .text-black {
   color: #2d2a32;
@@ -80,7 +80,7 @@ ul {
   color: #ffd23f;
 }
 .text-grey {
-  color: #EFEFEF;
+  color: #d3d3d3;
 }
 .text-bg-black {
   line-height: 1.4;
@@ -111,6 +111,9 @@ ul {
 }
 .text-bold {
   font-weight: bolder;
+}
+.text-underline {
+  text-decoration: underline;
 }
 .text-center {
   text-align: center;
@@ -376,7 +379,8 @@ input,textarea,button,select {
 label {
   font-family: 'Kanit', sans-serif;
   font-size: 1.2em;
-  line-height: 2;
+  margin-top: 1em;
+  /* line-height: 2; */
   text-transform: uppercase;
   color: white;
   display: block;
@@ -402,6 +406,7 @@ textarea {
   position: relative;
   padding-left: 35px;
   padding-top: 8px;
+  margin-top: 0;
   margin-bottom: 12px;
   font-size: 22px;
   font-family: 'Athiti', sans-serif;
@@ -567,6 +572,25 @@ nav a:hover {
 .shrink {
   padding-top: 0;
 }
+.language-switcher {
+  position: fixed;
+  z-index: 9999;
+  top: 20px;
+  right: 20px;
+  font-size: 0.7em;
+  padding-top: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.language-switcher:hover {
+  transform: scale(1.2);
+}
+.language-switcher a:hover {
+  color: white;
+}
 
 
 /*  MOBILE MENU */
@@ -640,6 +664,9 @@ footer h3 {
   font-family: 'Kanit', sans-serif;
   font-size: 1.2em;
   text-transform: uppercase;
+}
+footer a:hover {
+  color: #ffd23f;
 }
 .footer-icon {
   color: white;
