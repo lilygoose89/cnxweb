@@ -1,0 +1,84 @@
+---
+title: ติดต่อ - ส่งอีเมลไปที่ CNX Web
+description: >-
+  Get in touch with CNX Web with your questions about web design and business
+  consulting in Chiang Mai.
+layout: default
+lang: th
+handle: /contact
+---
+<section class="top-section text-center-mobile">
+  <h1 class="text-bg-black con-wid-half pad-bottom-xs"><span>Contact</span></h1>
+  <h4 class="editable con-wid-half">How can I help you today?</h4>
+</section>
+<section class="bg-orange" id="contact-form">
+  <div class="con-wid-half">
+    <form method="POST" action="http://formspree.io/lily@cnxweb.site" class="grid-spaceBetween margin-all-xs">
+      <input class="hidden" type="text" name="_replyto" placeholder="lily@cnxweb.site" />
+      <input type="hidden" name="_next" value="/thank-you.html" />
+      <input type="hidden" name="_language" value="es" />
+      <div class="col-5_sm-12 pad-bottom-xs">
+        <label for="name">ชื่อ *</label>
+        <input type="name" name="name" placeholder="ชื่อของคุณ" required />
+      </div>
+      <div class="col-5_sm-12 pad-bottom-xs">
+        <label for="name">บริษัท</label>
+        <input type="name" name="name" placeholder="ชื่อบริษัทของคุณ" />
+      </div>
+      <div class="col-5_sm-12 pad-bottom-xs">
+        <label for="email">อีเมล *</label>
+        <input type="email" name="email" placeholder="อีเมลของคุณ" required />
+      </div>
+      <div class="col-5_sm-12 pad-bottom-xs">
+        <label for="phone">หมายเลขโทรศัพท์ *</label>
+        <input type="tel" name="phone" placeholder="หมายเลขโทรศัพท์ของคุณ" required />
+      </div>
+      <!--<div class="col-12 pad-bottom-xs">-->
+      <!--  <label>Are you a current CNX Web client?</label>-->
+      <!--  <div class="grid">-->
+      <!--    <label class="radio-container col-2_sm-12"><input type="radio" name="client" value="yes"/>Yes<span class="radio"></span></label>-->
+      <!--    <label class="radio-container col-2_sm-12"><input type="radio" name="client" value="no"/>Not Yet<span class="radio"></span></label>-->
+      <!--  </div>-->
+      <!--</div>-->
+      <!--<div class="col-7_sm-12 pad-bottom-xs">-->
+      <!--  <label for="client-domain">If yes, what is your current domain name?</label>-->
+      <!--  <input type="text" name="client-domain" placeholder="Your domain name">-->
+      <!--</div>-->
+      <div class="col-12 pad-bottom-xs">
+        <label for="_subject">ข้อความนี้เกี่ยวกับอะไร</label>
+        <select name="subject" style="border-radius: 0; width: 100%;">
+          <option value="ฉันต้องการเรียนรู้เพิ่มเติมเกี่ยวกับบริการของคุณ">ฉันต้องการเรียนรู้เพิ่มเติมเกี่ยวกับบริการของคุณ</option>
+          <option value="ฉันอยากจะจ้างคุณ">ฉันอยากจะจ้างคุณ</option>
+          <option value="ฉันสนใจที่จะร่วมงานกับคุณ">ฉันสนใจที่จะร่วมงานกับคุณ</option>
+          <option value="ฉันต้องการความช่วยเหลือเกี่ยวกับเว็บไซต์ที่คุณทำเพื่อฉัน">ฉันต้องการความช่วยเหลือเกี่ยวกับเว็บไซต์ที่คุณทำเพื่อฉัน</option>
+          <option value="เรื่องอื่น ๆ">เรื่องอื่น ๆ</option>
+        </select>
+      </div>
+      <div class="col-12 pad-bottom-xs">
+        <label>งบประมาณของคุณเท่าไร</label>
+        <select name="budget" style="border-radius: 0; width: 100%;">
+          <option value="฿5,000 - ฿10,000">฿5,000 - ฿10,000</option>
+          <option value="฿10,000 - ฿50,000">฿10,000 - ฿50,000</option>
+          <option value="฿50,000 - ฿100,000">฿50,000 - ฿100,000</option>
+          <option value="฿100,000 or higher">฿100,000 or higher</option>
+          <option value="Under ฿5,000">Under ฿5,000</option>
+        </select>
+      </div>
+      <div class="col-12 pad-bottom-xs">
+        <label>คุณสนใจบริการอะไร</label>
+        <div class="grid">
+          <label class="checkmark-container col-4_md-6"><input type="checkbox" name="wd" value="ออกแบบเว็บไซต์" />ออกแบบเว็บไซต์<span class="checkmark"></span></label>
+          <label class="checkmark-container col-4_md-6"><input type="checkbox" name="ba" value="ปรึกษาทางธุรกิจ" />ปรึกษาทางธุรกิจ<span class="checkmark"></span></label>
+        </div>
+      </div>
+      <div class="col-12 pad-bottom-xs">
+        <label for="message">ข้อความ *</label>
+        <textarea name="message" placeholder=" ข้อความ" required></textarea>
+      </div>
+      <button type="submit" class="button-wide">ส่ง</button>
+    </form>
+  </div>
+</section>
+<!-- <section class="very-short-section">
+  <h4 class="editable">What will you do today to help your business? Sometimes all it takes is starting a conversation.</h4>
+</section> -->

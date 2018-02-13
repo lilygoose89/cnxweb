@@ -1,0 +1,66 @@
+---
+title: CNX Web - บล็อกและคำแนะนำ
+description: >-
+  Tips, tricks, and useful information about websites and small business
+  marketing.
+layout: default
+lang: th
+handle: /blog
+---
+<section class="mobile-section-top">
+  {% for posts in site.posts limit:1 %}
+  <div class="hero-image" style="background-image: url('{{posts.hero_image}}');)">
+    <h1 class="text-bg-black pad-top-xs pad-left-xs"><span>{{posts.title}}</span></h1>
+  </div>
+  <h4 class="pad-top-xs pad-bottom-xs">Published: {{posts.date | date: "%b %-d, %Y"}}</h4>
+  <!-- container for blog post and author card and tags -->
+  <div class="grid-spaceBetween-top">
+    <!-- container for blog post content - left column -->
+    <div class="col-9_sm-12 pad-left-m">
+      <p>
+        {{posts.content}}
+      </p>
+      <div class="outline-black-thin">
+        <h6>Share this on &rarr;
+          <a class="share-hover" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcnxweb.site&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;">Facebook</a>
+          <a class="share-hover" href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcnxweb.site&text=:%20http%3A%2F%2Fcnxweb.site&via=cnxweb" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;">Twitter</a>
+          <a class="share-hover" href="https://plus.google.com/share?url=http%3A%2F%2Fcnxweb.site" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">Google+</a>
+          <a class="share-hover" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcnxweb.site&title=&summary=&source=http%3A%2F%2Fcnxweb.site" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">LinkedIn</a>
+        </h6>
+      </div>
+    </div>
+    <!-- container for author and tags - right column -->
+    <div class="col-2_sm-12 grid">
+      <div class="col-12_sm-0 margin-top-xs">
+        <img src="{{posts.author_image}}" alt="{{posts.author}} image" />
+        <h5>Author: {{posts.author}}</h5>
+      </div>
+      <div>
+        <h5>Filed Under:</h5>
+        {% for tag in posts.tags %}
+        <h5 class="tags nudge-down"><a href="/archives/tag/{{ tag | slugify }}">{{tag}}</a></h5>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+  <span class="hor-line margin-bottom-s"></span>
+  <h2 class="text-bg-black pad-top-xs pad-bottom-xs"><span class="editable">Older Posts:</span></h2>
+  {% for posts in site.posts limit:5 offset:1 %}
+  <div class="outline-turq margin-top-xs margin-bottom-xs pad-all-xs">
+    <h3>{{posts.title}}</h3>
+    <h6 class="pad-top-xs">{{ posts.date | date: "%b %-d, %Y" }}</h6>
+    <p>{{posts.excerpt}}</p>
+    <a href="{{posts.url}}" class="col-2_sm-12 text-right"><button class="button"><span class="editable"></span>Read More</button></a>
+  </div>
+  {% endfor %}
+  <a href="/blog-all"><button><span class="editable">See list of all blog posts</span></button></a>
+  <span class="hor-line margin-bottom-s"></span>
+  <h2 class="text-bg-black pad-bottom-xs"><span class="editable">Explore Tags:</span></h2>
+    <div class="justify-content">
+    {% for tag in site.tags %}
+      {% assign tag_name = tag[0] %}
+      <a class="tags big-tags nudge-down" href="/archives/tag/{{ tag_name | slugify }}/">{{ tag_name | replace: "-", " " }}</a>
+    {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,155 @@
+---
+title: เว็บดีไซน์สำหรับธุรกิจขในเชียงใหม่
+description: Get a better website for your small business
+specs:
+  - title: BEAUTIFUL
+    icon: eye
+    description: >-
+      Elegant, modern design that focuses on the content. Your website will be
+      mobile responsive and look great on any screen.
+  - title: EASY TO USE
+    icon: thumbs-o-up
+    description: >-
+      All the right things in all the right places - make it easy for your
+      customers to find the information they need and get in contact.
+  - title: EASY TO FIND
+    icon: search
+    description: >-
+      Optimized for SEO and speedy load times, putting you in front of the right
+      customers so your business can reach its full potential.
+web-package:
+  - name: Starter
+    design: Template Design
+    pages: One-Page Website
+    maintenance: Self-Maintenance
+    price: '฿10,000'
+    link: /contact.html
+  - name: Entrepreneur
+    design: Custom Design
+    pages: One-Page Website
+    maintenance: Incl 5 Hrs Maintenance
+    price: '฿30,000'
+    link: /contact.html
+  - name: Merchant
+    design: Custom Design
+    pages: Up to 5 Pages
+    maintenance: Incl 10 Hrs Maintenance
+    price: '฿50,000'
+    link: /contact.html
+  - name: Create Your Own Bespoke Package
+    design: Fully Custom Design
+    pages: 10 Pages and Up
+    maintenance: Incl 5 Hrs Maintenance Per Month<br>Premium Hosting
+    price: 'Starting at ฿120,000'
+    link: /contact.html
+keywords: >-
+  build a website chiang mai, make a website chiang mai, new website chiang mai,
+  small business website chiang mai, cheap website chiang mai, chiang mai web
+  design, modern web design chiang mai, best web designer in chiang mai, how to
+  get a new website chiang mai, thailand startup website cheap, website for
+  startup thailand, สร้างเว็บไซท์เชียงใหม่, เว็บไซต์ใหม่เชียงใหม่,
+  เว็บไซต์ธุรกิจเชียงใหม่, เว็บไซด์ราคาถูก, เชียงใหม่เว็บไซด์,
+  ออกแบบเว็บไซต์ใหม่เชียงใหม่, ดีไซน์เว็บที่ดีที่สุดในเชียงใหม่,
+  ทำอย่างไรเว็บไซต์ใหม่เชียงใหม่, ประเทศไทยเว็บไซต์เริ่มต้นราคาถูก,
+  เว็บไซต์สำหรับ startup ประเทศไทย
+layout: default
+lang: th
+handle: /web-design
+---
+<section class="hero-section text-center con-wid-three-quarters">
+  <h1 class="text-bg-black pad-top-xs pad-bottom-xs"><span>{{page.description}}</span></h1>
+  <div class="grid-spaceBetween pad-top-s text-center">
+    {% for specs in page.specs %}
+    <div class="col-4_sm-12 grid-spaceBetween">
+      <div class="col-12">
+        <div class="pad-all-s">
+          <h3 class="text-caps">{{specs.title}}</h3>
+          <h3><i class="fa fa-{{specs.icon}} text-orange text-b pad-all-s" aria-hidden="true"></i></h3>
+          <h4 class="web-design-specs">{{specs.description}}</h4>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="#web-design"><i class="fa fa-angle-down text-vb text-yellow nudge-down hidden-mobile" aria-hidden="true"></i></a>
+  <!-- <h4 class="editable">Scroll down to select the best package for your business.</h4> -->
+</section>
+<section id="web-design" class="con-wid-three-quarters">
+  <h2 class="text-bg-black text-center"><span class="editable">Web Design Packages</span></h2>
+  <div class="grid text-center">
+    <h4 class="editable col-12_md-7_sm-12 margin-top-xs margin-bottom-xs">The first step in your digital growth is a great website. Let's show the world who you are.</h4>
+  </div>
+  <!-- container for pricing modules -->
+  <div class="grid-spaceBetween-middle text-center margin-top-xs pad-bottom-xs">
+    {% for web-package in page.web-package limit:3 %}
+    <div class="col-4_sm-12 margin-all-xs grid">
+      <div class="col-12 pad-all-xs">
+        <div class="outline-orange pad-all-s">
+          <h3>{{web-package.name}}</h3>
+        </div>
+        <div class="bg-grey pad-all-s">
+          <h4>{{web-package.design}}</h4>
+          <h4>{{web-package.pages}}</h4>
+          <h4>{{web-package.maintenance}}</h4>
+          <h3 class="pad-all-s">{{web-package.price}}</h3>
+          <a href="{{web-package.link}}"><button><span class="editable"></span>Choose This Package</button></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="grid-spaceBetween">
+    <div class="col-6_sm-12 pad-all-s">
+      <h3 class="editable">All website plans include:</h3>
+      <div class="grid"><div class="hor-line col-12"></div></div>
+      <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> 1 year of hosting</h4>
+      <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Pointed at your custom domain</h4>
+      <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Unlimited storage</h4>
+      <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> On-page SEO optimization</h4>
+      <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Google Analytics</h4>
+      <h4 class="editable"><i class="fa fa-check" aria-hidden="true"></i> Content management system (CMS) for self-updating</h4>
+    </div>
+    <div class="col-6_sm-12 pad-all-s">
+      <h3 class="editable">Optional add-ons:</h3>
+      <div class="grid"><div class="hor-line col-12"></div></div>
+      <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Premium Hosting for ฿1000/month</h4>
+      <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Blogging for ฿5000</h4>
+      <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> Online Booking for ฿30,000*</h4>
+      <h4 class="editable"><i class="fa fa-plus" aria-hidden="true"></i> E-Commerce for ฿50,000*</h4>
+      <p class="editable pad-bottom-s">* Does not include additional software fees.</p>
+    </div>
+  </div>
+  <h2 class="editable col-12 text-bg-black text-center margin-bottom-s"><span>Looking for a more full service option?</span></h2>
+  <div class="grid">
+    {% for web-package in page.web-package offset:3 limit:1 %}
+    <div class="col-7_sm-12 outline-orange text-center pad-all-xs">
+      <h3>{{web-package.name}}</h3>
+    </div>
+    <div class="col-7_sm-12 bg-grey pad-all-s text-center">
+      <h4>{{web-package.design}}</h4>
+      <h4>{{web-package.pages}}</h4>
+      <h4>{{web-package.maintenance}}</h4>
+      <h3 class="pad-bottom-s pad-top-s">{{web-package.price}}</h3>
+      <a href="{{web-package.link}}"><button><span class="editable">Get A Project Quote</span></button></a>
+    </div>
+    {% endfor %}
+    <div class="col-5_sm-12 pad-left-s">
+      <h3 class="editable">Best for:</h3>
+      <h4 class="editable"><i class="fa fa-diamond" aria-hidden="true"></i> Hotels &amp; Resorts</h4>
+      <h4 class="editable"><i class="fa fa-diamond" aria-hidden="true"></i> Real Estate Agencies</h4>
+      <h4 class="editable"><i class="fa fa-diamond" aria-hidden="true"></i> Online Stores</h4>
+    </div>
+  </div>
+</section>
+<!-- this is the not sure cta section ----------------------------------------------------------------------------------->
+<section class="bg-grey text-center pad-top-s pad-bottom-s">
+  <h2 class="text-bg-black"><span class="editable">Not sure which package is right for you?</span></h2>
+  <h3 class="editable pad-top-s">Call or message me for a free consultation</h3>
+  <div class="grid-middle text-center pad-top-s">
+    <h3 class="text-orange col-5_sm-12 nudge-down"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+66612791306"> 061-279-1306</a></h3>
+    <div class="col-4_sm-12 grid-middle pad-top-xs text-center nudge-down">
+      <a target="blank" href="http://line.me/ti/p/~cnxlily"><img class="line-icon-orange" src="/images/lineicon-orange.png" alt="line icon" /></a><h3 class="display-inline text-orange">
+      <a class="pad-top-xs pad-left-xs" target="blank" href="http://line.me/ti/p/~cnxlily">CNXLILY</a></h3>
+    </div>
+  </div>
+</section>
