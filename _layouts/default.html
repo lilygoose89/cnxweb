@@ -102,17 +102,17 @@
       <a href="{% if page.url contains 'th' %}/th{% endif %}/about"><h2>{% if page.url contains 'th' %}เกี่ยวกับเรา{% else %}about{% endif %}</h2></a>
       <!--<a href="{% if page.url contains 'th' %}/th{% endif %}/blog"><h2>{% if page.url contains 'th' %}บล็อก{% else %}blog{% endif %}</h2></a>-->
       <a href="{% if page.url contains 'th' %}/th{% endif %}/contact"><h2>{% if page.url contains 'th' %}ติดต่อ{% else %}contact{% endif %}</h2></a>
-      <div class="text-grey text-center pad-top-xs">
-        {% if page.name contains "index" %}
-        <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl }}/">🇬🇧 English</a>
-         /
-        <a class="{% if page.url contains 'th' %}text-bold text-white{% else %}{% endif %}" href="{{ site.baseurl | append: "/th" }}">🇹🇭 ไทย</a>
-        {% else %}
-          <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl | append: page.handle }}">🇬🇧 English</a>
-           /
-          <a class="{% if page.url contains 'th' %}text-bold text-white{% else %}{% endif %}" href="{{ site.baseurl | append: "/th" | append: page.handle }}">🇹🇭 ไทย</a>
-        {% endif %}
-      </div>
+      <!--<div class="text-grey text-center pad-top-xs">-->
+      <!--  {% if page.name contains "index" %}-->
+      <!--  <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl }}/">🇬🇧 English</a>-->
+      <!--   /-->
+      <!--  <a class="{% if page.url contains 'th' %}text-bold text-white{% else %}{% endif %}" href="{{ site.baseurl | append: "/th" }}">🇹🇭 ไทย</a>-->
+      <!--  {% else %}-->
+      <!--    <a class="{% if page.url contains 'th' %}{% else %}text-bold text-white{% endif %}" href="{{ site.baseurl | append: page.handle }}">🇬🇧 English</a>-->
+      <!--     /-->
+      <!--    <a class="{% if page.url contains 'th' %}text-bold text-white{% else %}{% endif %}" href="{{ site.baseurl | append: "/th" | append: page.handle }}">🇹🇭 ไทย</a>-->
+      <!--  {% endif %}-->
+      <!--</div>-->
     </nav>
   </header>
   {{content}}
