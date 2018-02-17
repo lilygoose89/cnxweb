@@ -174,15 +174,17 @@ handle: /consulting
     </div>
     {% endfor %}
     <p class="editable col-12 pad-left-s pad-right-s pad-bottom-xs">
-      And that's just a small selection! From setting up a sales and marketing pipeline, to creating an onboarding process for new employees, to digitizing your office and going paperless, there are so many ways I can help you to <i>work better</i>. If you don't see the answer to your problems above, let's work together to come up with a solution.
+      และนั่นเป็นเพียงส่วนเล็กๆ ส่วนหนึ่งเท่านั้น ยังมีอีกหลายวิธีที่ฉันสามารถช่วยให้คุณ<em>ทำงานได้ดีขึ้น</em> ตั้งแต่สร้างเส้นทางการขายและการตลาด ไปจนถึงสร้างแนวทางการดูแลพนักงานใหม่ และการแปลงสำนักงานของคุณให้เป็นระบบดิจิตอลโดยไม่ต้องใช้กระดาษในการทำงาน หากข้างต้นยังไม่ใช่คำตอบของปัญหาที่คุณมี เรามาร่วมงานกันเพื่อหาทางแก้ไขกันเถอะค่ะ
     </p>
   </div>
-  <a href="{% if page.url contains 'th' %}/th{% endif %}/contact.html"><button><span class="editable">Schedule a free consultation</span></button></a>
+  <a href="{% if page.url contains 'th' %}/th{% endif %}/contact.html"><button><span class="editable">นัดหมายเพื่อรับคำปรึกษาฟรี</span></button></a>
 </section>
 <!-- this is the not sure cta section ----------------------------------------------------------------------------------->
 <section class="bg-grey text-center pad-top-s pad-bottom-s">
-  <h2 class="text-bg-black"><span class="editable">Not sure which package is right for you?</span></h2>
-  <h3 class="editable pad-top-s">Call or message me for a free consultation</h3>
+  <h2 class="text-bg-black"><span class="editable">หากไม่แน่ใจว่าแพ็กเกจไหนใช่สำหรับคุณ</span></h2>
+  <h3 class="editable pad-top-s">
+    กรุณาโทรหรือส่งข้อความหาฉัน เพื่อรับคำปรึกษาฟรี
+  </h3>
   <div class="grid-middle text-center pad-top-s">
     <h3 class="text-orange col-5_sm-12 nudge-down"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+66612791306"> 061-279-1306</a></h3>
     <div class="col-4_sm-12 grid-middle pad-top-xs text-center nudge-down">
@@ -192,7 +194,9 @@ handle: /consulting
   </div>
 </section>
 <section id="faq" class="con-wid-two-thirds">
-  <h3 class="editable text-center">Frequently Asked Questions</h3>
+  <h3 class="editable text-center">
+    คำถามที่พบบ่อย
+  </h3>
   <div class="pad-top-xs pad-bottom-s">
     {% for faq in page.faq%}
     <!-- this is the container giving the nested container a grid -->
