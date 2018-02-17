@@ -116,12 +116,19 @@ layout: default
 lang: th
 handle: /consulting
 ---
+
 <section class="hero-section text-center con-wid-three-quarters">
-  <h1 class="text-bg-black pad-top-xs pad-bottom-xs"><span class="editable">Solutions for your small business</span></h1>
+  <h1 class="text-bg-black pad-top-xs pad-bottom-xs"><span class="editable">ทางออกสำหรับธุรกิจขนาดเล็กของคุณ</span></h1>
   <!-- <h4 class="editable">You're looking to grow online. To connect with new customers. To deliver better services.</h4> -->
-  <h3 class="editable text-orange text-bold pad-top-xs pad-bottom-xs">Having trouble getting started on your own?</h3>
-  <h4 class="editable pad-bottom-xs">I'm here to help you develop a vision, create a gameplan, and lay the groundwork for a better business.</h4>
-  <h3 class="editable pad-top-xs pad-bottom-xs">With solutions for:</h3>
+  <h3 class="editable text-orange text-bold pad-top-xs pad-bottom-xs">
+    ไม่รู้จะเริ่มด้วยตัวเองอย่างไรอยู่ใช่ไหม
+  </h3>
+  <h4 class="editable pad-bottom-xs">
+    ฉันอยู่นี่แล้ว เพื่อช่วยคุณพัฒนามุมมอง วางแผนอย่างละเอียดรอบคอบ และวางรากฐานเพื่อธุรกิจที่ดียิ่งขึ้น
+  </h4>
+  <h3 class="editable pad-top-xs pad-bottom-xs">
+    ด้วยทางออกสำหรับ:
+  </h3>
   <div class="grid-spaceBetween text-center pad-top-xs">
     {% for solutions in page.solutions %}
     <div class="col-3_sm-12 grid-spaceBetween">
@@ -134,11 +141,13 @@ handle: /consulting
     </div>
     {% endfor %}
     </div>
-  <h4 class="editable pad-top-xs">For your convenience, I'm offering my best services as fixed-price packages. If you don't see a package that meets your needs below, please don't hesitate to <a href="{% if page.url contains 'th' %}/th{% endif %}/contact">get in touch with me for a free consultation</a>.</h4>
+  <h4 class="editable pad-top-xs">
+    และเพื่อความสะดวกสบายของคุณ ฉันขอเสนอบริการที่ดีที่สุดจากฉันเหล่านี้ในราคาเหมาจ่าย หากไม่เห็นแพ็กเกจใดๆ ต่อไปนี้ตรงตามความต้องการของคุณ กรุณาอย่าลังเลที่จะ <a href="/th/contact">ติดต่อฉันเพื่อรับการปรึกษาโดยไม่เสียค่าจ่าย</a>
+  </h4>
   <a href="#consulting"><i class="fa fa-angle-down text-vb text-yellow nudge-down hidden-mobile" aria-hidden="true"></i></a>
 </section>
 <section id="consulting" class="con-wid-three-quarters text-center">
-  <h2 class="text-bg-black text-center"><span class="editable">Consulting Packages</span></h2>
+  <h2 class="text-bg-black text-center"><span class="editable">แพ็กเกจให้คำปรึกษา</span></h2>
   <div class="grid-top con-wid-three-quarters">
     {% for consulting-package in page.consulting-package limit:4 %}
     <div class="col-6_sm-12 pad-all-s">
