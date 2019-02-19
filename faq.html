@@ -1,0 +1,95 @@
+---
+title: >-
+  Consulting and Support Services for Startups and Small Businesses in Chiang
+  Mai
+description: >-
+  Consulting, Digital Marketing, and Support Services for Startups and Small
+  Businesses in Chiang Mai.
+keywords:
+faq:
+  - question: What price point do most projects start at?
+    answer: >-
+      One-time assignments (like audits, research, template design, copy-writing
+      etc.) begin at ฿10,000, and are quoted based on the amount of research,
+      time, and effort required to deliver the best result.<br /><br />Large
+      projects or projects which take place over the course of several weeks or
+      even months (such as going paperless, creating a customer help center, or
+      launching a new product, etc.) begin at ฿50,000, and are also quoted based
+      on scope.
+  - question: Do you have any hourly pricing?
+    answer: >-
+      I prefer to charge a retainer based on the scope of a project so I can
+      focus on delivering results instead of watching the clock. You're paying
+      for the value of the finished product, not the time spent producing it.<br
+      /><br />However, if you're looking for a quick consulting call, help with
+      trouble-shooting, or have a small project that won't take more than a
+      couple hours, my rate begins at ฿1500 per hour.
+  - question: Why do your prices start at these amounts?
+    answer: >-
+      Clients come to me for well thought out solutions, not band-aids. They
+      believe in paying for quality, and know the result is going to have a high
+      ROI.<br /><br />I also prefer not to take on too many projects at a time
+      so I can better focus my effort and attention. My rates reflect this level
+      of care.
+  - question: What is the typical process to get started?
+    answer: >-
+      When you first get in touch, I'll send you a quick intake survey to
+      complete. This helps me better understand your business, your goals, and
+      what I can do to help you reach them. If you provide enough information
+      when you initially contact me, we might even be able to skip this.<br
+      /><br />If it seems like a good fit for my skills, I’ll schedule a meeting
+      so we can discuss the project in detail, I can learn more about your
+      business, and your specific needs and goals.<br /><br />Once we've both
+      agreed this is a good opportunity for both of us, I’ll send over an
+      invoice + scope of work for the project. I require a 50% deposit up front,
+      so once that's been paid, we’ll get started.
+  - question: What happens then?
+    answer: >-
+      I aim to communicate closely, without becoming a distraction for you. I
+      will report back to you on an agreed upon timeline, and my reports will
+      include what work has been completed, what I need from you to keep moving
+      forward, and what I expect to accomplish in the coming days.<br /><br
+      />For small projects (such as audits, research, or copywriting) I try to
+      have these wrapped up in a week or less.<br /><br />Once the work is
+      complete, I'll send you a final invoice for the outstanding balance and
+      deliver the project once it's paid.
+  - question: When can you start?
+    answer: >-
+      I generally work first-come-first-serve, so the sooner we can start the
+      conversation, the better! If you need me IMMEDIATELY, I’ll move you to the
+      top of my PRIORITY list, but a 20% fee will be added for the VIP
+      treatment.
+  - question: How do you accept payments?
+    answer: >-
+      I accept payments via PayPal, Promptpay, or bank transfer (within
+      Thailand).<br />If you're having trouble with payment options, please call me at (061) 279-1306.
+layout: default
+---
+<section id="faq" class="hero-section con-wid-two-thirds">
+  <h3 class="editable text-center">Frequently Asked Questions</h3>
+  <div class="pad-top-xs pad-bottom-s">
+    {% for faq in page.faq%}
+    <!-- this is the container giving the nested container a grid -->
+    <div class="grid descriptionTitle pad-top-xs">
+      <!-- this is the container limiting the width of the displayed packages -->
+      <div class="col-12_sm-12 grid pad-bottom-xs open">
+        <!-- this is the container giving the package container and the yellow read more toggle widths -->
+        <div class="col-11_sm-10">
+          <!-- this is the container for the description and the price outlined in orange -->
+          <div class="outline-turq grid-middle-spaceBetween pad-all-xs">
+            <h4>{{faq.question}}</h4>
+          </div>
+        </div>
+        <!-- this h4 contains the icon for the read more toggle -->
+        <h3 class="col-1_sm-2 bg-turq text-center text-m"><a><i class="read-more text-white fa fa-angle-double-down" aria-hidden="true"></i></a></h3>
+        <!-- this is the container for the package description hidden until toggled -->
+        <div class="bg-grey margin-bottom-xs grid">
+          <p class="col-11_sm-12 pad-all-xs expandedDescription">
+            {{faq.answer}}
+          </p>
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+</section>
